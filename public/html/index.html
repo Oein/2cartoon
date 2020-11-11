@@ -40,7 +40,7 @@
 
         </img>
         <a class="name" >
-            asd
+            두환이와 포커츄의 세계여행
         </a>
     </div>
 
@@ -49,7 +49,7 @@
             let names = document.getElementsByClassName("name");
 
             for(let i = 0;i < names.length;i++){
-                names[i].href="/cartoon/" + names[i].innerText + "/subCartoons.html";
+                names[i].href="/cartoon/" + names[i].innerText.replaceAll(" ","") + "/subCartoons.html";
             }
         }
     </script>
