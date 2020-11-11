@@ -11,8 +11,14 @@ app.get("/" , (req , res) => {
 fs.readdir(path + '/public/cartoons' , function(error , filelist) {
     console.log("cartoons : " + filelist);
 
-    filelist.forEach(element => {
-        app.use('/cartoon/' + element, express.static(path + '/public/cartoons/' + element));
+    filelist.forEach(fold => {
+        app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold));
+        fs.readdir(path + '/public/cartoons/' + fold , function(error , list){
+            list.forEach(element => {
+                app.use('/cartoon/' + fold + "/" + element, express.static(path + '/public/cartoons/' + fold + "/" + element));
+                console.log(path + '/public/cartoons/' + fold + "/" + element + "\t\t at " + '/cartoon/' + fold + "/" + element + "\n\n");
+            });
+        })
     });
 })
 
