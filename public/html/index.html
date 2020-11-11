@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2cartoon 매인 페이지</title>
+
+    <style>
+        div[class="cart"] {
+            background-color: rgba(184, 184, 184, 0.479);
+            width: 20%;
+            height: 20%;
+            padding: 1%;
+            padding-bottom: 1%;
+            border-radius: 5px;
+            overflow: hidden ;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            width: 98%;
+            height: 98%;
+            border-radius: 5px;
+            overflow: visible ;
+            padding: 0%;
+            padding-right: 2%;
+        }
+
+        a{
+            padding-left: 5%;
+            padding-bottom: 49%;
+            text-decoration: white;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div class="cart">
+        <img src="/ctI/1.png">
+
+        </img>
+        <a class="name" >
+            asd
+        </a>
+    </div>
+
+    <script>
+        function init(){
+            let names = document.getElementsByClassName("name");
+
+            for(let i = 0;i < names.length;i++){
+                names[i].href="/cartoon/" + names[i].innerText + "/subCartoons.html";
+            }
+        }
+    </script>
+</body>
+</html>
