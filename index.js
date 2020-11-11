@@ -2,7 +2,7 @@ let express = require("express");
 let fs = require("fs");
 let app = express();
 
-let path = `/Users/S/Desktop/discord Bot/2cartoon`;
+let path = `F:\\2cartoon`;
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
