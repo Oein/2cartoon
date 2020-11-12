@@ -72,7 +72,10 @@ app.get("/" , (req , res) => {
     </html>`;
 
     let a = document.createElement('table');
-    int cartoons
+    let cartoon_s_count = 0;
+
+    
+
     /* <td>
         <div class="cart">
             <a class="name" >
