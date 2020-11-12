@@ -82,7 +82,8 @@ app.get("/" , (req , res) => {
         let tr = document.createElement('tr');
         for(let i = 0;i < cartoon_s_count;i++){
             let td = document.createElement('td');
-            let 
+            let div = document.createElement('div');
+            div.className = "name";
         }
     }
 
