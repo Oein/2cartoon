@@ -83,6 +83,8 @@ app.get("/" , (req , res) => {
         for(let i = 0;i < cartoon_s_count;i++){
             let td = document.createElement('td');
             let div = document.createElement('div');
+            let a = document.createElement('a');
+            let img
             div.className = "name";
         }
     }
