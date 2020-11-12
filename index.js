@@ -74,7 +74,7 @@ app.get("/" , (req , res) => {
     let a = document.createElement('table');
     let cartoon_s_count = 0;
 
-    
+    fs.readdir
 
     /* <td>
         <div class="cart">
@@ -110,10 +110,10 @@ function init(){
     
                 app.get('/cartoon/' + fold + "/subCartoons.html" , (req , res) => {
                     res.send(subCartoons)
-                })
-            })
-        };
-    })
+                });
+            });
+        }
+    });
     
     app.use('/ctI', express.static(path + '/public/cartoons/image'));
     app.use('/fonts', express.static(path + '/public/fonts'));
