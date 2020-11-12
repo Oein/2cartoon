@@ -68,30 +68,11 @@ app.get("/" , (req , res) => {
         </a>
         <table>
             <tr>
-                <td>
-                    <div class="cart">
-                        <a class="name" >
-                            <img src="/ctI/1.png" class="name" />
-                            두환이와 포커츄의 세계여행
-                        </a>
-                    </div>
-                </td>
+                
             </tr>
         </table>
     
-    
         <p></p>
-    
-        <script>
-            function init(){
-    
-                let names = document.getElementsByClassName("name");
-    
-                for(let i = 0;i < names.length;i++){
-                    names[i].href="/cartoon/" + names[i].innerText.replaceAll(" ","") + "/subCartoons.html";
-                }
-            }
-        </script>
     </body>
     </html>`;
     res.send(data);
