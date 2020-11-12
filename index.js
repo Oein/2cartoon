@@ -72,9 +72,8 @@ app.get("/" , (req , res) => {
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
         cartoon_s_count = filelista.length;
         cartoons = filelista;
-    });
 
-    let table_html = `<table>`;
+        let table_html = `<table>`;
     const td_html = `<td>
                         <div class="cart">
                             <a class="name" >
@@ -100,6 +99,9 @@ app.get("/" , (req , res) => {
     data.replace("$1" , table_html);
 
     console.log(table);
+    });
+
+    
     res.send(data);
 });
 
