@@ -16,10 +16,12 @@
     </style>
 </head>
 <body>
-    <img src="/cartoon/두환이와포커츄의세계여행/1화/1.png" />
-    <img src="/cartoon/두환이와포커츄의세계여행/1화/2.png" />
-    <img src="/cartoon/두환이와포커츄의세계여행/1화/3.png" />
-    <img src="/cartoon/두환이와포커츄의세계여행/1화/4.png" />
-    <img src="/cartoon/두환이와포커츄의세계여행/1화/5.png" />
+    <script>
+        for(let i = 1;i <= 6;i++){
+            let img = document.createElement("img");
+            img.src = "/cartoon/두환이와포커츄의세계여행/1화/" + i + ".png";
+            document.body.append(img);
+        }
+    </script>
 </body>
 </html>
