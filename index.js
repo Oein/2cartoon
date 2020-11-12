@@ -87,25 +87,12 @@ app.get("/" , (req , res) => {
                                 $2
                             </a>
                         </div>
-                    </td>`
+                    </td>`;
 
     if(cartoon_s_count <= 3) {
         let tr = document.createElement('tr');
         for(let i = 0;i < cartoon_s_count;i++){
-            let td = document.createElement('td');
-            let div = document.createElement('div');
-            let a = document.createElement('a');
-            let img = document.createElement('img');
-            div.className = "name";
-            a.className = "name";
-            img.className = "name";
-            img.src = `/cartoon/` + cartoons[i] + `/sum.png`;
-            a.append(img);
-            a.innerText = a.innerText + cartoons[i];
             a.href = `/cartoon/` + cartoons[i] + `/subCartoons.html`;
-            div.append(a);
-            td.append(div);
-            tr.append(td);
         }
 
         table.append(tr);
