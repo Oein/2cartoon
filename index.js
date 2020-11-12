@@ -97,6 +97,7 @@ app.get("/" , (req , res) => {
         for(let i = 0;i < cartoon_s_count;i++){
             let td = td_html;
             td.replace("$1" , "/cartoon/" + cartoons[i] + "/sum.png");
+            td.replace("$2" , cartoons[i]);
         }
 
         table.append(tr);
