@@ -66,12 +66,11 @@ app.get("/" , (req , res) => {
     </body>
     </html>`;
 
-    let cartoon_s_count = 0;
-    let cartoons;
+    
 
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
-        cartoon_s_count = filelista.length;
-        cartoons = filelista;
+    let cartoon_s_count = filelista.length;
+    let cartoons = filelista;
 
         let table_html = `<table>`;
     const td_html = `<td>
