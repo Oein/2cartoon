@@ -66,15 +66,20 @@ app.get("/" , (req , res) => {
                     </h1>
             </div>
         </a>
-        <table>
-            <tr>
-                
-            </tr>
-        </table>
     
         <p></p>
     </body>
     </html>`;
+
+    
+    <td>
+        <div class="cart">
+            <a class="name" >
+                <img src="/ctI/1.png" class="name" />
+                두환이와 포커츄의 세계여행
+            </a>
+        </div>
+    </td>
     res.send(data);
 });
 
