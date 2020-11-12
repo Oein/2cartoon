@@ -73,6 +73,7 @@ app.get("/" , (req , res) => {
 
     let a = document.createElement('table');
     let cartoon_s_count = 0;
+    let cartoons;
 
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
         cartoon_s_count = filelista.length;
@@ -84,7 +85,7 @@ app.get("/" , (req , res) => {
             let td = document.createElement('td');
             let div = document.createElement('div');
             let a = document.createElement('a');
-            let img
+            let img = document.createElement('img');
             div.className = "name";
         }
     }
