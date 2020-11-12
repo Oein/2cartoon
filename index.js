@@ -80,7 +80,9 @@ app.get("/" , (req , res) => {
 
     if(cartoon_s_count <= 3) {
         let tr = document.createElement('tr');
-        
+        for(let i = 0;i < cartoon_s_count;i++){
+            
+        }
     }
 
     /* <td>
