@@ -80,7 +80,14 @@ app.get("/" , (req , res) => {
         cartoons = filelista;
     });
 
-    let td_html = ``
+    let td_html = `<td>
+                        <div class="cart">
+                            <a class="name" >
+                                <img src="$1" class="name" />
+                                $2
+                            </a>
+                        </div>
+                    </td>`
 
     if(cartoon_s_count <= 3) {
         let tr = document.createElement('tr');
@@ -105,15 +112,6 @@ app.get("/" , (req , res) => {
     }
 
     console.log(table);
-
-    /* <td>
-        <div class="cart">
-            <a class="name" >
-                <img src="/ctI/1.png" class="name" />
-                두환이와 포커츄의 세계여행
-            </a>
-        </div>
-    </td> */
     res.send(data);
 });
 
