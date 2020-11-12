@@ -71,7 +71,7 @@ app.get("/" , (req , res) => {
     </body>
     </html>`;
 
-    
+    table
     <td>
         <div class="cart">
             <a class="name" >
