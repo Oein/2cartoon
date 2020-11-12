@@ -78,7 +78,9 @@ app.get("/" , (req , res) => {
         cartoon_s_count = filelista.length;
     });
 
-    
+    if(cartoon_s_count <= 3) {
+        
+    }
 
     /* <td>
         <div class="cart">
