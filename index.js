@@ -60,13 +60,7 @@ app.get("/" , (req , res) => {
         <noscript>
             지원이 안되는 장치 입니다!
         </noscript>
-        <a href="/">
-            <div class="up">
-                    <h1>
-                        2cartoon
-                    </h1>
-            </div>
-        </a>
+        $1
     
         <p></p>
     </body>
@@ -104,7 +98,7 @@ app.get("/" , (req , res) => {
         table_html = table_html + "</tr></table>";
     }
 
-    
+    data.replace("$1" , table_html);
 
     console.log(table);
     res.send(data);
