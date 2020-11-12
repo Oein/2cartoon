@@ -80,7 +80,7 @@ app.get("/" , (req , res) => {
         cartoons = filelista;
     });
 
-    let table = document.createElement('table');
+    let td_html = ``
 
     if(cartoon_s_count <= 3) {
         let tr = document.createElement('tr');
