@@ -91,6 +91,8 @@ app.get("/" , (req , res) => {
             a.className = "name";
             img.className = "name";
             img.src = `/cartoon/` + cartoons[i] + `/sum.png`;
+            a.append(img);
+            a.innerText = a.innerText + cartoons[i];
         }
     }
 
