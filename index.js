@@ -93,6 +93,7 @@ app.get("/" , (req , res) => {
             img.src = `/cartoon/` + cartoons[i] + `/sum.png`;
             a.append(img);
             a.innerText = a.innerText + cartoons[i];
+            a.href = `/cartoon/` + cartoons[i] + `/sum.png`;
         }
     }
 
