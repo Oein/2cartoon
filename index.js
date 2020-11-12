@@ -95,7 +95,7 @@ app.get("/" , (req , res) => {
         table_html = table_html + "<tr>";
 
         for(let i = 0;i < cartoon_s_count;i++){
-            a.href = `/cartoon/` + cartoons[i] + `/subCartoons.html`;
+            let td = 
         }
 
         table.append(tr);
