@@ -1,3 +1,4 @@
+const { table } = require("console");
 let express = require("express");
 let fs = require("fs");
 const { encode } = require("punycode");
@@ -91,7 +92,8 @@ app.get("/" , (req , res) => {
                     </td>`;
 
     if(cartoon_s_count <= 3) {
-        let tr = document.createElement('tr');
+        table_html = table_html + "<tr>";
+
         for(let i = 0;i < cartoon_s_count;i++){
             a.href = `/cartoon/` + cartoons[i] + `/subCartoons.html`;
         }
