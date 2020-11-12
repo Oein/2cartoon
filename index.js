@@ -66,7 +66,6 @@ app.get("/" , (req , res) => {
     </body>
     </html>`;
 
-    let a = document.createElement('table');
     let cartoon_s_count = 0;
     let cartoons;
 
