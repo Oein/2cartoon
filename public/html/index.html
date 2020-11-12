@@ -75,10 +75,7 @@
     <p></p>
 
     <script>
-    function isMobileDevice() { var phoneArray = new Array('samsung-', 'sch-', 'shw-', 'sph-', 'sgh-', 'lg-', 'canu', 'im-', 'ev-', 'iphone', 'nokia', 'blackberry', 'lgtelecom', 'natebrowser', 'sonyericsson', 'mobile', 'android', 'ipad'); for (i = 0; i < phoneArray.length; i++) { if (navigator.userAgent.toLowerCase().indexOf(phoneArray[i]) > -1) { return true; } } return false; } function isTabletDevice() { if (!isMobileDevice()) { return false; } if (navigator.userAgent.toLowerCase().indexOf('ipad') > -1 || (navigator.userAgent.toLowerCase().indexOf('android') > -1 && navigator.userAgent.toLowerCase().indexOf('mobile') == -1)) { return true; } var galaxyTabModel = new Array('shw-'); for (i = 0; i < galaxyTabModel.length; i++) { if (navigator.userAgent.toLowerCase().indexOf(galaxyTabModel[i]) > -1) { return true; } } return false; }
-
         function init(){
-            if(isMobileDevice() || isTabletDevice()) alert("흠... 지원이 안되는 장치인것 같은데요?")
 
             let names = document.getElementsByClassName("name");
 
