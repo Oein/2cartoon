@@ -80,6 +80,7 @@ app.get("/" , (req , res) => {
         cartoons = filelista;
     });
 
+    let table_html = `<table>`;
     let td_html = `<td>
                         <div class="cart">
                             <a class="name" >
