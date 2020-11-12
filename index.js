@@ -94,6 +94,9 @@ app.get("/" , (req , res) => {
             a.append(img);
             a.innerText = a.innerText + cartoons[i];
             a.href = `/cartoon/` + cartoons[i] + `/subCartoons.html`;
+            div.append(a);
+            td.append(div);
+            tr.append(td);
         }
     }
 
