@@ -88,6 +88,9 @@ app.get("/" , (req , res) => {
             let a = document.createElement('a');
             let img = document.createElement('img');
             div.className = "name";
+            a.className = "name";
+            img.className = "name";
+            img.src
         }
     }
 
