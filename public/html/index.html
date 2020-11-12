@@ -7,45 +7,58 @@
 
     <style>
         div[class="cart"] {
-            background-color: rgba(184, 184, 184, 0.479);
-            width: 20%;
+            background-color: rgba(218, 218, 218, 0.479);
+            width: 90%;
             height: 20%;
-            padding: 1%;
+            margin: 2%;
+            padding: 2%;
             padding-bottom: 1%;
             border-radius: 5px;
-            overflow: hidden ;
+            align-items: center;
+            text-align: center;
+            word-break:break-all;word-wrap:break-word;
+        }
+
+        body{
             align-items: center;
             text-align: center;
         }
 
         img {
-            width: 98%;
-            height: 98%;
+            width: 30%;
+            height: 30%;
             border-radius: 5px;
             overflow: visible ;
             padding: 0%;
-            padding-right: 2%;
+            padding-right: 15%;
         }
 
         a{
-            padding-left: 5%;
-            padding-bottom: 49%;
             text-decoration: white;
         }
     </style>
 </head>
 <body onload="init()">
+    <noscript>
+        지원이 안되는 장치 입니다!
+    </noscript>
     <div class="cart">
-        <img src="/ctI/1.png">
+        <a class="name" >
+            <img src="/ctI/1.png" class="name">
 
         </img>
-        <a class="name" >
             두환이와 포커츄의 세계여행
         </a>
     </div>
 
+    <p></p>
+
     <script>
+    function isMobileDevice() { var phoneArray = new Array('samsung-', 'sch-', 'shw-', 'sph-', 'sgh-', 'lg-', 'canu', 'im-', 'ev-', 'iphone', 'nokia', 'blackberry', 'lgtelecom', 'natebrowser', 'sonyericsson', 'mobile', 'android', 'ipad'); for (i = 0; i < phoneArray.length; i++) { if (navigator.userAgent.toLowerCase().indexOf(phoneArray[i]) > -1) { return true; } } return false; } function isTabletDevice() { if (!isMobileDevice()) { return false; } if (navigator.userAgent.toLowerCase().indexOf('ipad') > -1 || (navigator.userAgent.toLowerCase().indexOf('android') > -1 && navigator.userAgent.toLowerCase().indexOf('mobile') == -1)) { return true; } var galaxyTabModel = new Array('shw-'); for (i = 0; i < galaxyTabModel.length; i++) { if (navigator.userAgent.toLowerCase().indexOf(galaxyTabModel[i]) > -1) { return true; } } return false; }
+
         function init(){
+            if(isMobileDevice() || isTabletDevice()) alert("흠... 지원이 안되는 장치인것 같은데요?")
+
             let names = document.getElementsByClassName("name");
 
             for(let i = 0;i < names.length;i++){
