@@ -100,7 +100,11 @@ app.get("/" , (req , res) => {
             td.append(div);
             tr.append(td);
         }
+
+        table.append(tr);
     }
+
+    console.log(table);
 
     /* <td>
         <div class="cart">
