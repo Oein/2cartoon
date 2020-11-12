@@ -79,6 +79,7 @@ app.get("/" , (req , res) => {
     });
 
     if(cartoon_s_count <= 3) {
+        let tr = document.createElement('tr');
         
     }
 
