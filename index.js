@@ -90,7 +90,7 @@ app.get("/" , (req , res) => {
             div.className = "name";
             a.className = "name";
             img.className = "name";
-            img.src
+            img.src = `/cartoons[i]
         }
     }
 
