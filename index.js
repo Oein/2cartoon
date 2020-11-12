@@ -101,8 +101,10 @@ app.get("/" , (req , res) => {
             table_html = table_html + td;
         }
 
-        
+        table_html = table_html + "</tr></table>";
     }
+
+    
 
     console.log(table);
     res.send(data);
