@@ -77,6 +77,7 @@ app.get("/" , (req , res) => {
 
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
         cartoon_s_count = filelista.length;
+        cartoons = filelista;
     });
 
     if(cartoon_s_count <= 3) {
