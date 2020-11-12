@@ -82,7 +82,7 @@ app.get("/" , (req , res) => {
     });
 
     let table_html = `<table>`;
-    const let td_html = `<td>
+    const td_html = `<td>
                         <div class="cart">
                             <a class="name" >
                                 <img src="$1" class="name" />
@@ -96,7 +96,7 @@ app.get("/" , (req , res) => {
 
         for(let i = 0;i < cartoon_s_count;i++){
             let td = td_html;
-
+            td.replace("$1" , )
         }
 
         table.append(tr);
