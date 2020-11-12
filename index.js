@@ -82,7 +82,7 @@ app.get("/" , (req , res) => {
     });
 
     let table_html = `<table>`;
-    let td_html = `<td>
+    const let td_html = `<td>
                         <div class="cart">
                             <a class="name" >
                                 <img src="$1" class="name" />
@@ -95,7 +95,8 @@ app.get("/" , (req , res) => {
         table_html = table_html + "<tr>";
 
         for(let i = 0;i < cartoon_s_count;i++){
-            let td = 
+            let td = td_html;
+
         }
 
         table.append(tr);
