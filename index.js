@@ -74,7 +74,11 @@ app.get("/" , (req , res) => {
     let a = document.createElement('table');
     let cartoon_s_count = 0;
 
-    fs.readdir
+    fs.readdir(path + '/public/cartoons' , function(error , filelista) {
+        cartoon_s_count = filelista.length;
+    });
+
+    
 
     /* <td>
         <div class="cart">
