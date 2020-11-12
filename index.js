@@ -98,9 +98,10 @@ app.get("/" , (req , res) => {
             let td = td_html;
             td.replace("$1" , "/cartoon/" + cartoons[i] + "/sum.png");
             td.replace("$2" , cartoons[i]);
+            table_html = table_html + td;
         }
 
-        table.append(tr);
+        
     }
 
     console.log(table);
