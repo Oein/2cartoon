@@ -67,7 +67,7 @@ function init_today(){
     setTimeout(init_today , 1000);
 }
 
-app.listen(80 , function() {
+app.listen(8280 , function() {
     console.log(`Erpress server started on 80 port`);
     init_today();
 });
