@@ -11,7 +11,7 @@ app.get("/" , (req , res) => {
 });
 
 app.get("tt" , (req , res) =>{
-    
+    res.send()
 })
 
 function init(){
