@@ -60,8 +60,10 @@ function init_today(){
     const todaya = new Date();
 
     if(todaya.getHours() == 0){
-        
+        today = 0;
     }
+
+    
 }
 
 app.listen(80 , function() {
