@@ -19,25 +19,6 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-app.post('/uploada', upload.single('userfile'), function(req, res){
-    res.send('Uploaded! : '+req.file); // object를 리턴함
-    console.log(req.file); // 콘솔(터미널)을 통해서 req.file Object 내용 확인 가능.
-});
-
-app.get('/upload' , (req , res) => {
-    res.send(`
-    <!doctype html>
-        <html>
-        <head>
-            <meta charset='utf-8' />
-        </head>
-        <body>
-            form(action='upload' method='post' enctype="multipart/form-data")
-            input(type='file' name='userfile')
-            input(type='submit')
-    `);
-});
-
 app.get("/tt" , (req , res) =>{
     let a = {};
     a["total"] = total;
