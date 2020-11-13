@@ -27,7 +27,7 @@ function init(){
     
             app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold));
             fs.readdir(path + '/public/cartoons/' + folda , function(error , list){
-                let subCartoons = `<style>* {font}</style>`;
+                let subCartoons = `<style>* {font-size: ;}</style>`;
     
                 for(let i = 0;i < list.length;i++){
                     let element = list[i];
