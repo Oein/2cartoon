@@ -4,8 +4,8 @@ let fs = require("fs");
 let app = express();
 
 let path = __dirname;
-let total = 0;
-let today = 0;
+
+let upload = multer({ dest: 'uploads/', limits: { fileSize: 5 * 1024 * 1024 } });
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
