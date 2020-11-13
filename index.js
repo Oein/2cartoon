@@ -11,6 +11,9 @@ app.get("/" , (req , res) => {
 });
 
 app.get("tt" , (req , res) =>{
+    let a = {};
+    a["total"] = total;
+    a[""]
     res.send()
 })
 
