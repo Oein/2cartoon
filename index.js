@@ -57,6 +57,8 @@ app.use(function(req , ers , next) {
 })
 
 function init_today(){
+    const today = new Date();
+
     
 }
 
