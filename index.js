@@ -25,6 +25,7 @@ app.post('/uploada', upload.single('userfile'), function(req, res){
 });
 
 app.get('/upload' , (req , res) => {
+    res.send(`
     doctype html
         html
         head
@@ -33,6 +34,7 @@ app.get('/upload' , (req , res) => {
             form(action='upload' method='post' enctype="multipart/form-data")
             input(type='file' name='userfile')
             input(type='submit')
+    `);
 });
 
 app.get("/tt" , (req , res) =>{
