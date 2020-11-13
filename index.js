@@ -7,7 +7,7 @@ let total = 0;
 let today = 0;
 
 app.get("/" , (req , res) => {
-    res.sendFile(path.)
+    res.sendFile(path + "/public/html/index.html")
 });
 
 function init(){
