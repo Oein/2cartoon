@@ -8,7 +8,7 @@ let today = 0;
 
 app.get("/" , (req , res) => {
     fs.readFileSync(path + "/public/html/index.html" , 'utf-8') , (err , data) => {
-        
+        res.send(data.repla)
     });
     res.sendFile(path + "/public/html/index.html");
 });
