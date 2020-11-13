@@ -1,6 +1,5 @@
 let express = require("express");
 let fs = require("fs");
-const { encode } = require("punycode");
 let app = express();
 
 let path = __dirname;
@@ -49,7 +48,9 @@ app.get("/reload" , (req , res) => {
     console.log("\n\n -- Someone come into /reload --\n\n")
 });
 
-app.use(function)
+app.use(function(req , ers , next) {
+
+})
 
 app.listen(80 , function() {
     console.log(`Erpress server started on 80 port`);
