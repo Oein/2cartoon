@@ -30,7 +30,8 @@ app.get('/upload' , (req , res) => {
         <html>
         <head>
             <meta charset='utf-8' />
-        body
+        </head>
+        <body>
             form(action='upload' method='post' enctype="multipart/form-data")
             input(type='file' name='userfile')
             input(type='submit')
