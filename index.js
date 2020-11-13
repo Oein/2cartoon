@@ -13,7 +13,7 @@ let storage = multer.diskStorage({
       cb(null, file.originalname) // cb 콜백함수를 통해 전송된 파일 이름 설정
     }
   });
-let upload = multer({ dest: 'uploads/' });
+let upload = multer({ dest: 'uploads/' , storage: storage });
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
