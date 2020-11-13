@@ -68,6 +68,6 @@ function init_today(){
 }
 
 app.listen(8280 , function() {
-    console.log(`Erpress server started on 80 port`);
+    console.log(`Erpress server started on 8280 port`);
     init_today();
 });
