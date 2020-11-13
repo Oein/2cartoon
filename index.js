@@ -51,7 +51,9 @@ app.get("/reload" , (req , res) => {
 });
 
 app.use(function(req , ers , next) {
-
+    total++;
+    today++;
+    
 })
 
 app.listen(80 , function() {
