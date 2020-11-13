@@ -56,6 +56,10 @@ app.use(function(req , ers , next) {
 
 })
 
+function init_today(){
+    
+}
+
 app.listen(80 , function() {
     console.log(`Erpress server started on 80 port`);
 });
