@@ -3,6 +3,8 @@ let fs = require("fs");
 let app = express();
 
 let path = __dirname;
+let total = 0;
+let today = 0;
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
