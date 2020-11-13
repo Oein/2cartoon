@@ -63,7 +63,7 @@ function init_today(){
         today = 0;
     }
 
-    setTimeout(1000)
+    setTimeout(1 , )
 }
 
 app.listen(80 , function() {
