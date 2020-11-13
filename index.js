@@ -11,10 +11,10 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-app.post('/photos/upload', upload.array('photos', 12), function (req, res, next) {
-    // req.files is array of `photos` files
-    // req.body will contain the text fields, if there were any
-  })
+app.post('/upload', upload.single('userfile'), function(req, res){
+    res.send('Uploaded! : '+req.file); // object를 리턴함
+    console.log(req.file); // 콘솔(터미널)을 통해서 req.file Object 내용 확인 가능.
+  });
 
 app.get("/tt" , (req , res) =>{
     let a = {};
