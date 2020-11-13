@@ -98,21 +98,6 @@
             for(let i = 0;i < names.length;i++){
                 names[i].href="/cartoon/" + names[i].innerText.replaceAll(" ","") + "/subCartoons.html";
             }
-
-            let tt = document.getElementsByClassName("up")[0];
-            let as;
-            $.ajax(
-                {
-                    type:"GET",
-                    url:"./tt",
-                    data: {},
-                    dataType: "json",
-                    success: (data) => {document.getElementsByClassName("up")[0].innerText.replaceAll("$1" , data["total"]).replaceAll("$2" , data["today"]);},
-                    error: (log)=>{alert("Oops!" + log)}
-                }
-            )
-
-            
         }
     </script>
 </body>
