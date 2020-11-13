@@ -27,8 +27,8 @@ app.post('/uploada', upload.single('userfile'), function(req, res){
 app.get('/upload' , (req , res) => {
     res.send(`
     <!doctype html>
-        html
-        head
+        <html>
+        <head>
             meta(charset='utf-8')
         body
             form(action='upload' method='post' enctype="multipart/form-data")
