@@ -1,5 +1,5 @@
 let express = require("express");
-let mul
+let multer = require("multer");
 let fs = require("fs");
 let app = express();
 
