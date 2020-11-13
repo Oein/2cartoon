@@ -8,9 +8,8 @@ let today = 0;
 
 app.get("/" , (req , res) => {
     fs.readFileSync(path + "/public/html/index.html" , 'utf-8') , (err , data) => {
-        res.send(data.replaceAll("$1" , total))
+        res.send(data.replaceAll("$1" , total).replaceAll("$2" , today));
     });
-    res.sendFile(path + "/public/html/index.html");
 });
 
 function init(){
