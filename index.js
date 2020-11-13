@@ -8,7 +8,7 @@ let today = 0;
 
 app.get("/" , (req , res) => {
     fs.readFile(path + "/public/html/index.html" , (err , data) => {
-        res.send(err.replaceAll("$1" , total).replaceAll("$2" , today));
+        res.send(err);
     });
 });
 
