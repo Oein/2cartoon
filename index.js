@@ -24,6 +24,10 @@ app.post('/uploada', upload.single('userfile'), function(req, res){
     console.log(req.file); // 콘솔(터미널)을 통해서 req.file Object 내용 확인 가능.
 });
 
+app.get('/upload' , (req , res) => {
+    
+});
+
 app.get("/tt" , (req , res) =>{
     let a = {};
     a["total"] = total;
