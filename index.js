@@ -10,6 +10,10 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
+app.get("tt" , (req , res) =>{
+    
+})
+
 function init(){
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
         console.log("cartoons : " + filelista);
