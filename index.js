@@ -5,7 +5,7 @@ let app = express();
 
 let path = __dirname;
 
-let upload = multer({ dest: 'uploads/' })
+let upload = multer({ dest: 'uploads/' });
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
