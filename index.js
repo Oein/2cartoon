@@ -5,7 +5,7 @@ let app = express();
 
 let path = __dirname;
 
-let storage = multer.diskStorage({
+let storagea = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'uploads/') // cb 콜백함수를 통해 전송된 파일 저장 디렉토리 설정
     },
@@ -13,7 +13,7 @@ let storage = multer.diskStorage({
       cb(null, file.originalname) // cb 콜백함수를 통해 전송된 파일 이름 설정
     }
   });
-let upload = multer({ dest: 'uploads/' , storage: storage });
+let upload = multer({ dest: 'uploads/' , storage: storagea });
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
