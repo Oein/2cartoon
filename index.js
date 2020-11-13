@@ -50,10 +50,12 @@ app.get("/reload" , (req , res) => {
     console.log("\n\n -- Someone come into /reload --\n\n")
 });
 
+if()
+
 app.use(function(req , ers , next) {
     total++;
     today++;
-    
+
 })
 
 app.listen(80 , function() {
