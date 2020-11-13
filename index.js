@@ -5,7 +5,7 @@ let app = express();
 
 let path = __dirname;
 
-let upload = multer({ dest: 'uploads/', limits: { fileSize: 5 * 1920 * 1080 } });
+let upload = multer({ dest: 'uploads/', limits: { fileSize: 20 * 1920 * 1080 } });
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
