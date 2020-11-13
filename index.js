@@ -11,6 +11,11 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
+app.post('/photos/upload', upload.array('photos', 12), function (req, res, next) {
+    // req.files is array of `photos` files
+    // req.body will contain the text fields, if there were any
+  })
+
 app.get("/tt" , (req , res) =>{
     let a = {};
     a["total"] = total;
