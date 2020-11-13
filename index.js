@@ -29,7 +29,7 @@ app.get('/upload' , (req , res) => {
     <!doctype html>
         <html>
         <head>
-            meta(charset='utf-8')
+            <meta charset='utf-8' />
         body
             form(action='upload' method='post' enctype="multipart/form-data")
             input(type='file' name='userfile')
