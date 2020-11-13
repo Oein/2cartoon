@@ -10,7 +10,7 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-app.get("tt" , (req , res) =>{
+app.get("/tt" , (req , res) =>{
     let a = {};
     a["total"] = total;
     a["today"] = today;
