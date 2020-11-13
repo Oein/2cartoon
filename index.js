@@ -59,7 +59,7 @@ app.use(function(req , ers , next) {
 function init_today(){
     const todaya = new Date();
 
-    if(todaya.getHours() )
+    if(todaya.getHours() %  == 0)
 }
 
 app.listen(80 , function() {
