@@ -7,7 +7,7 @@ let total = 0;
 let today = 0;
 
 app.get("/" , (req , res) => {
-    fs.readFileSync(path + "/public/html/index.html" , (err , data))
+    fs.readFileSync(path + "/public/html/index.html" , 'utf-8', (err , data))
     res.sendFile(path + "/public/html/index.html");
 });
 
