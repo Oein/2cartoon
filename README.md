@@ -38,8 +38,8 @@
         <tr>
             <img id="ad" src="" />
         </tr>
-        <tr>
-            <td>
+        New : <tr>
+        New :     <td>
                 <div class="cart">
                     <a class="name" >
                         <img src="/ctI/Thumbnail Name" />
