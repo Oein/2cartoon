@@ -97,7 +97,7 @@
             <td>
                 <div class="cart">
                     <a class="name" >
-                        <img src="/ctI/" />
+                        <img src="/ctI/Thum" />
                         New cartoon name
                     </a>
                 </div>
