@@ -9,7 +9,7 @@
 ## ㅤ
 # How to make `new cartoon`
 ## Add Thumbnail at `/public/cartoons/images/`
-
+### (Thumbnail Size : 1920 x 1920)
 ## Make folder at `/public/catoons/` 
 ## The folder name will be Your `new cartoon` name
 ## And change `/public/html/index.html`
