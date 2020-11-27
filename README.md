@@ -98,7 +98,7 @@
                 <div class="cart">
                     <a class="name" >
                         <img src="/ctI/1.png" />
-                        두환이와 포커츄의 세계여행
+                        New cartoon name
                     </a>
                 </div>
             </td>
