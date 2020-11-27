@@ -54,17 +54,6 @@ app.get("/reload" , (req , res) => {
     console.log("\n\n -- Someone come into /reload --\n\n")
 });
 
-function init_today(){
-    const todaya = new Date();
-
-    if(todaya.getHours() == 0){
-        today = 0;
-    }
-
-    setTimeout(init_today , 1000);
-}
-
 app.listen(8280 , function() {
     console.log(`Erpress server started on 8280 port`);
-    init_today();
 });
