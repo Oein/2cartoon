@@ -9,7 +9,7 @@
 ## ㅤ
 # How to make `new cartoon`
 ## Make folder at `/public/catoons/` 
-## The folder name will be Your `new` cartoon name
+## The folder name will be Your `new cartoon` name
 
 ## ㅤ
 ## ㅤ
