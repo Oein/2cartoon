@@ -10,3 +10,4 @@ main.html 그화의 main 파일
 ## And edit `max_ad_number` in ``/public/html/index.html``
 
 # How to add X화?
+## Make folder in /public/cartoons/
