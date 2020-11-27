@@ -8,7 +8,8 @@
 ## ㅤ
 ## ㅤ
 # How to make `new cartoon`
-## Make folder at `/public/catoons/`
+## Make folder at `/public/catoons/` 
+## Folder name will be 
 ## ㅤ
 ## ㅤ
 ## ㅤ
