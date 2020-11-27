@@ -120,7 +120,7 @@
 
             let ad = document.getElementById("ad");
             let max_ad_number = 2;
-            ad.src = "/ads/" + (Math.random() * (max_ad_number - 1) + 1) + ".png";
+            ad.src = "/ads/" + Math.floor(Math.random() * (max_ad_number - 1) + 1) + ".png";
         }
     </script>
 </body>
