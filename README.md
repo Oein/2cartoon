@@ -45,4 +45,4 @@ main.html 그화의 main 파일
 </body>
 </html>
 ```
-## You have to change Images_Count 
+## You have to change `Images_Count` and `CartoonName`
