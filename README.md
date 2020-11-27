@@ -15,6 +15,7 @@ main.html 그화의 main 파일
 ## If you finished to put images in that folder
 ## Make this file at `/public/cartoons/` ```CartoonName``` / `main.html`
 
+main.html ㅁ
 ```html
 
 ```
