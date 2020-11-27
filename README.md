@@ -102,25 +102,6 @@
                     </a>
                 </div>
             </td>
-
-            <td>
-                <div class="cart">
-                    <a class="name" >
-                        <img src="/ctI/2.png" />
-                        괴물과 귀신이 울고있다
-                    </a>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart">
-                    <a class="name" >
-                        <img src="/ctI/3.png" />
-                        대출금리는 너굴은행
-                    </a>
-                </div>
-            </td>
         </tr>
     </table>
     
