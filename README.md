@@ -40,14 +40,14 @@
         </tr>
         New : <tr>
         New :     <td>
-                <div class="cart">
-                    <a class="name" >
-                        <img src="/ctI/Thumbnail Name" />
-                        New cartoon name
-                    </a>
-                </div>
-            </td>
-        </tr>
+        New :         <div class="cart">
+        New :             <a class="name" >
+        New :                 <img src="/ctI/Thumbnail Name" />
+        New :                 New cartoon name
+        New :             </a>
+        New :         </div>
+        New :     </td>
+        New : </tr>
     </table>
     
 
