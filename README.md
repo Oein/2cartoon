@@ -11,7 +11,7 @@
 ## Make folder at `/public/catoons/` 
 ## The folder name will be Your `new cartoon` name
 ## And change `/public/html/index.html`
-## like this
+## like this ↓`
 ## ㅤ
 ## ㅤ
 ## ㅤ
