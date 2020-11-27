@@ -113,7 +113,8 @@
             }
 
             let ad = document.getElementById("ad");
-            ad.src = "/ads/" + Math.random * (1 - 1) + 1;
+            let max_ad_number = 1;
+            ad.src = "/ads/" + Math.random() * (max_ad_number - 1) + 1;
         }
     </script>
 </body>
