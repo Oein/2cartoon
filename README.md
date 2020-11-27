@@ -36,9 +36,9 @@ main.html 그화의 main 파일
 </head>
 <body>
     <script>
-        for(let i = 1;i <= 5;i++){
+        for(let i = 1;i <= Images_Count;i++){
             let img = document.createElement("img");
-            img.src = "/cartoon/대출금리는너굴은행/1화/" + i + ".png";
+            img.src = "/cartoon/CartoonName/1화/" + i + ".png";
             document.body.append(img);
         }
     </script>
