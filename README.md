@@ -12,3 +12,7 @@ main.html 그화의 main 파일
 # How to add X화?
 ## Make folder in /public/cartoons/`CartoonName`/`X화`
 ## And Put images in `/public/cartoons/` ```CartoonName``` / ```X화```
+
+`bash
+asd
+`
