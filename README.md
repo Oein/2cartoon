@@ -12,7 +12,9 @@
 ## The folder name will be Your `new cartoon` name
 ## And change `/public/html/index.html`
 ## `like this ↓`
+```html
 
+```
 ## ㅤ
 ## ㅤ
 ## ㅤ
