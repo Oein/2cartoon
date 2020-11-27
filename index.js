@@ -44,7 +44,6 @@ function init(){
     })
     
     app.use('/ctI', express.static(path + '/public/cartoons/image'));
-    app.use('/fonts', express.static(path + '/public/fonts'));
 }
 
 init();
