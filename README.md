@@ -1,14 +1,14 @@
 # 2cartoon
-### ㅤ
-### ㅤ
+## ㅤ
+## ㅤ
 # How to add ads?
-### Put ads image to ``/public/ads/XXXX.png``
-### And edit `max_ad_number` in ``/public/html/index.html``
-### ㅤ
-### ㅤ
-### ㅤ
+## Put ads image to ``/public/ads/XXXX.png``
+## And edit `max_ad_number` in ``/public/html/index.html``
+## ㅤ
+## ㅤ
+## ㅤ
 # How to make `new cartoon`
-### Add Thumbnail at `/public/cartoons/images/`
+## Add Thumbnail at `/public/cartoons/images/`
 ### (Thumbnail Size : 1920 x 1920)
 ## Make folder at `/public/catoons/` 
 ## The folder name will be Your `new cartoon` name
@@ -104,4 +104,4 @@
 ## You have to change `Images_Count` and `CartoonName`
 ## ㅤ
 ## ㅤ
-### ㅤ
+## ㅤ
