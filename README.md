@@ -5,10 +5,10 @@
 ## And edit `max_ad_number` in ``/public/html/index.html``
 .
 .
-.
-.
-.
-.
+## .
+## .
+## .
+## .
 
 # How to add X화?
 ## Make folder in /public/cartoons/`CartoonName`/`X화`
