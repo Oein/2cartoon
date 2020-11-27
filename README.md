@@ -58,7 +58,7 @@
 </html>
 ```
 ## You have to change `Thumbnail Name` and `New cartoon name`
-## If Accessor click This 
+## If Accessor click This `<td>` and
 ## ㅤ
 ## ㅤ
 ## ㅤ
