@@ -6,5 +6,5 @@ This node.js project is my cartoons page
 main.html 그화의 main 파일
 
 # How to add ads?
-## Put a ad 
+## Put ads image to /public/ads/
 
