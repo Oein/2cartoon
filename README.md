@@ -8,7 +8,7 @@
 ## ㅤ
 ## ㅤ
 # How to make `new cartoon`
-
+## Add Thumbnail at `/public/cartoons/images/`
 ## Make folder at `/public/catoons/` 
 ## The folder name will be Your `new cartoon` name
 ## And change `/public/html/index.html`
