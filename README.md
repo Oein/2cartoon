@@ -57,7 +57,7 @@
 </body>
 </html>
 ```
-## You have to change 
+## You have to change `Thumbnail Name` to ``
 ## ㅤ
 ## ㅤ
 ## ㅤ
