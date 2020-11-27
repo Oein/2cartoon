@@ -58,7 +58,7 @@
 </html>
 ```
 ## You have to change `Thumbnail Name` and `New cartoon name`
-## If Accessor click This `<td>` and webbrowser goes to `/cartoon/New Cartoon Name/subCartoons.html`
+## If Accessor click This `<td>` and webbrowser goes to `/cartoon/<New Cartoon Name>/subCartoons.html`
 ### (You have to don't make `subCartoons.html` , program will make it)
 
 ## ㅤ
