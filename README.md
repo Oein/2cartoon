@@ -7,6 +7,9 @@
 ## ㅤ
 ## ㅤ
 ## ㅤ
+
+## ㅤ
+## ㅤ
 ## ㅤ
 # How to add X화?
 ## Make folder in /public/cartoons/`CartoonName`/`X화`
