@@ -22,7 +22,7 @@ function init(){
         for(let i = 0;i < filelista.length;i++){
             let folda = filelista[i];
             let fold = encodeURI(folda);
-            app.use('/ads')
+            app.use('/ads' , express.static(path + '/public/ads'))
             app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold));
             fs.readdir(path + '/public/cartoons/' + folda , function(error , list){
                 let subCartoons = `<style>* {font-size: 1.3em;}</style>`;
