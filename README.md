@@ -57,7 +57,7 @@
 </body>
 </html>
 ```
-## You have to change `Thumbnail Name` to ``
+## You have to change `Thumbnail Name` to `1920 x 1920`
 ## ㅤ
 ## ㅤ
 ## ㅤ
