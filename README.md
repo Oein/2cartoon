@@ -52,17 +52,7 @@
     
 
     <script>
-        function init(){
-            let names = document.getElementsByClassName("name");
-
-            for(let i = 0;i < names.length;i++){
-                names[i].href="/cartoon/" + names[i].innerText.replaceAll(" ","") + "/subCartoons.html";
-            }
-
-            let ad = document.getElementById("ad");
-            let max_ad_number = 3;
-            ad.src = "/ads/" + Math.round(Math.random() * (max_ad_number - 1) + 1) + ".png";
-        }
+        ...
     </script>
 </body>
 </html>
