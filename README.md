@@ -58,7 +58,7 @@
 </html>
 ```
 ## You have to change `Thumbnail Name` and `New cartoon name`
-## If Accessor click This `<td>` and webbrowser goes to /car
+## If Accessor click This `<td>` and webbrowser goes to http://182.216.111.74:1981/cartoon/
 ## ㅤ
 ## ㅤ
 ## ㅤ
