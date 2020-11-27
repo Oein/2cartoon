@@ -59,7 +59,7 @@
 ```
 ## You have to change `Thumbnail Name` and `New cartoon name`
 ## If Accessor click This `<td>` and webbrowser goes to `/cartoon/New Cartoon Name/subCartoons.html`
-
+### (You don't )
 ## ㅤ
 ## ㅤ
 ## ㅤ
