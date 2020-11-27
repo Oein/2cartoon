@@ -8,7 +8,7 @@
 ## ㅤ
 ## ㅤ
 # How to make `new cartoon`
-
+## Make folder at `/public/catoons/`
 ## ㅤ
 ## ㅤ
 ## ㅤ
