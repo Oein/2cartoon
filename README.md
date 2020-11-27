@@ -9,4 +9,4 @@ main.html 그화의 main 파일
 ## Put ads image to ``/public/ads/XXXX.png``
 ## And edit `max_ad_number` in ``/public/html/index.html``
 
-# How to add 
+# How to add X화?
