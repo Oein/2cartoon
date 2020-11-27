@@ -4,8 +4,6 @@ let app = express();
 
 let path = __dirname;
 
-app.use((req , res) )
-
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
