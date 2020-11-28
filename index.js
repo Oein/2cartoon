@@ -6,7 +6,7 @@ let path = __dirname;
 
 let cartoonForm = "";
 
-let temp = fs.readFileSync(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
+let temp = fs.readFile(path + "/public/html/cartoonForm.html", function (err, data) {
     cartoonForm = data;
 });
 
