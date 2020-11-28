@@ -36,9 +36,10 @@ function init(){
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
                     
                     let imageCount = 0;
-                    fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL)){
+                    fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL){
                         imageCount = fileL.length;
-                    }
+                    });
+                    
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
                         res.send(cartoonForm.replace("$1" , imageCount).replace("$2" , folda).replace("$3" , element.replace("화" , "")))
                     })
