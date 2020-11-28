@@ -37,7 +37,7 @@ function init(){
                     
                     let imageCount = 0;
                     fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL)){
-
+                        imageCount = fileL.length;
                     }
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
                         res.send(cartoonForm.replaceAll("$1" , element))
