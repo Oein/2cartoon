@@ -34,7 +34,11 @@ function init(){
                     console.log(path + '/public/cartoons/' + folda + "/" + element + "\t\t at " + '/cartoon/' + folda + "/" + element + "\n\n");
     
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
-                    fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL))
+                    
+                    
+                    fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL)){
+
+                    }
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
                         res.send(cartoonForm.replaceAll("$1" , element))
                     })
