@@ -40,7 +40,7 @@ function init(){
                         imageCount = fileL.length;
                     }
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
-                        res.send(cartoonForm.replaceAll("$1" , element))
+                        res.send(cartoonForm.replaceAll("$1" , imageCount).replaceAll("$2" , ))
                     })
                 };
     
