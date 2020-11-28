@@ -5,9 +5,10 @@ let app = express();
 let path = __dirname;
 
 
-var cartoonForm = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
-    
-    console.log(data);
+var cartoonForm = 
+
+fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
+    cartoonForm = data;
 });
 
 app.get("/" , (req , res) => {
