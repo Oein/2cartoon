@@ -5,7 +5,7 @@ let app = express();
 let path = __dirname;
 
 
-var cartoonForm = 
+let cartoonForm;
 
 fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
     cartoonForm = data;
