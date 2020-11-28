@@ -4,8 +4,9 @@ let app = express();
 
 let path = __dirname;
 
+
 var cartoonForm = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
-    //파일 다 읽었을 대 호출 됨
+    
     console.log(data);
 });
 
