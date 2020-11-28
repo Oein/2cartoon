@@ -28,7 +28,9 @@ function init(){
     
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
 
-                    app.get('/cartoon/' + fold + "/" + element + `/main.html" , (req))
+                    app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
+                        
+                    })
                 };
     
                 app.get('/cartoon/' + fold + "/subCartoons.html" , function(req , res) {
