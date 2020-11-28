@@ -36,7 +36,7 @@ function init(){
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
 
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
-                        res.send(cartoonForm.replaceAll(""))
+                        res.send(cartoonForm.replaceAll("$1" , element))
                     })
                 };
     
