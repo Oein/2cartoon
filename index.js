@@ -35,7 +35,7 @@ function init(){
     
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
                     
-                    
+                    let imageCount = 0;
                     fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL)){
 
                     }
