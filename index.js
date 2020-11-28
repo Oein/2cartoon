@@ -40,8 +40,8 @@ function init(){
                         imageCount = fileL;
                     });
 
-                    app.get('/cartoon/' + folda + "/" + element + `/main.html"` , (req , res) => {
-                        res.send(cartoonForm.replace("$1" , imageCount).replace("$2" , folda).replace("$3" , element.replace("화" , "")))
+                    app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
+                        res.send(cartoonForm.replace("$1" , imageCount).replace("$2" , fold).replace("$3" , element.replace("화" , "")))
                     })
                 };
     
