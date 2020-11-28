@@ -8,6 +8,7 @@ let cartoonForm = "";
 
 let temp = fs.readFile(path + "/public/html/cartoonForm.html", function (err, data) {
     cartoonForm = data;
+    console.log(data);
 });
 
 console.log(cartoonForm);
