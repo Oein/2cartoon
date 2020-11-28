@@ -27,6 +27,8 @@ function init(){
                     console.log(path + '/public/cartoons/' + folda + "/" + element + "\t\t at " + '/cartoon/' + folda + "/" + element + "\n\n");
     
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
+
+                    app.get('/cartoon/' + fold + "/" + element + `/main.html" , (req))
                 };
     
                 app.get('/cartoon/' + fold + "/subCartoons.html" , function(req , res) {
