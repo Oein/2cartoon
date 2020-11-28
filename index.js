@@ -34,7 +34,7 @@ function init(){
                     console.log(path + '/public/cartoons/' + folda + "/" + element + "\t\t at " + '/cartoon/' + folda + "/" + element + "\n\n");
     
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
-                    fs
+                    fs.file
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
                         res.send(cartoonForm.replaceAll("$1" , element))
                     })
