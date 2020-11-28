@@ -10,6 +10,8 @@ let temp = fs.readFile(path + "/public/html/cartoonForm.html", function (err, da
     cartoonForm = data;
 });
 
+console.log(cartoonForm);
+
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
@@ -39,7 +41,7 @@ function init(){
                         imageCount = fileL;
                     });
 
-                    console.log(cartoonForm);
+                    
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
                         res.send(cartoonForm.replace("$1" , imageCount).replace("$2" , fold).replace("$3" , element.replace("화" , "")))
                     });
