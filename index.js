@@ -37,7 +37,7 @@ function init(){
                     
                     let imageCount = 0;
                     fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL) => {
-                        imageCount = fileL.length;
+                        imageCount = fileL;
                     });
 
                     app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
