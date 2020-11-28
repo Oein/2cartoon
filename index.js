@@ -4,17 +4,11 @@ let app = express();
 
 let path = __dirname;
 
-let cartoonForm = "";
-fs.readFile(path + "/public/html/cartoonForm.html", function (err, data) {
-    cartoonForm = data;
-    console.log(data);
-});
-
-console.log(cartoonForm);
-
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
+
+
 
 function init(){
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
@@ -35,16 +29,6 @@ function init(){
                     console.log(path + '/public/cartoons/' + folda + "/" + element + "\t\t at " + '/cartoon/' + folda + "/" + element + "\n\n");
     
                     subCartoons = subCartoons + `<p><h1><div><a href="` + '/cartoon/' + fold + "/" + element + `/main.html">` + decodeURI(element) + "</a></div></h1></p>"
-                    
-                    let imageCount = 0;
-                    fs.readdir(path + '/public/cartoons/' + folda + "/" + element , (err , fileL) => {
-                        imageCount = fileL;
-                    });
-
-                    
-                    app.get('/cartoon/' + fold + "/" + element + `/main.html"` , (req , res) => {
-                        res.send(cartoonForm.replace("$1" , imageCount).replace("$2" , fold).replace("$3" , element.replace("화" , "")))
-                    });
                 };
     
                 app.get('/cartoon/' + fold + "/subCartoons.html" , function(req , res) {
