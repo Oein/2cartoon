@@ -4,7 +4,7 @@ let app = express();
 
 let path = __dirname;
 
-var data = fs.readFile('./package.json', 'utf8', function (err, data) {
+var cartoonForm = fs.readFile('./package.json', 'utf8', function (err, data) {
     //파일 다 읽었을 대 호출 됨
     console.log(data);
 });
