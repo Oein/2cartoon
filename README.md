@@ -105,3 +105,19 @@
 ## ㅤ
 ## ㅤ
 ## ㅤ
+# Site Pages
+```html
+┌────────────────────────────┐
+├─ /                         │
+├─ /reload                   │
+├─ /ctI                      │
+│     └─ ThumbNails          │
+├─ /ads                      │
+│     └─ Ad Images           │
+├─ /cartoon                  │
+│     └─ /Cartoon Name       │
+│          └─ /X화           │
+│              ├─ main.html  │
+│              └─ images     │
+└────────────────────────────┘
+```
