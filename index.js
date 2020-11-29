@@ -29,8 +29,6 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
             console.log('File Renamed!');
         });
     })
-
-    fs.read
 });
 
 app.get('/upload' , (req , res) => {
