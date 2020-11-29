@@ -4,13 +4,15 @@ let app = express();
 const multer = require('multer');
 const patha = require('path');
 
+let e;
+
 const upload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().valueOf() + " _ " + patha.extname(file.originalname));
+      cb(null, new Date().valueOf() + " _ " + e + patha.extname(file.originalname));
     }
   }),
 });
