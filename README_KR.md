@@ -1,5 +1,5 @@
 # 2cartoon
-## `Oein` 의
+## `Oein` 의 만화 서버 생성기
 ## ㅤ
 ## ㅤ
 # How to add ads?
