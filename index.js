@@ -19,6 +19,7 @@ let path = __dirname;
 
 app.post('/up', upload.single('profile_img'), (req, res) => {
     console.log(req.file);
+    console.log(req.file.filename);
     res.send("asd");
 });
 
