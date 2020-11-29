@@ -8,6 +8,11 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
+var data = fs.readFile('./package.json', 'utf8', function (err, data) {
+    //파일 다 읽었을 대 호출 됨
+    console.log(data);
+});
+
 function init(){
     app.use('/ads' , express.static(path + '/public/ads')); //ads
 
@@ -33,7 +38,7 @@ function init(){
                     subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                 
                     app.get(main_html_path , function(req , res){
-                        
+
                     });
                 };
     
