@@ -70,6 +70,7 @@
 # How to add X화?
 ## Make folder in /public/cartoons/`CartoonName`/`X화`
 ## And Put images in `/public/cartoons/` ```CartoonName``` / ```X화```
+
 ## ㅤ
 ## ㅤ
 ## ㅤ
