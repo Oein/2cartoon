@@ -1,7 +1,7 @@
 let c = document.createElement("div");
 let s = document.createElement("style");
 
-s.innerHTML = 
+s.innerHTML = `iframe {w} `
 
 let a = [
     222101664751 , 
