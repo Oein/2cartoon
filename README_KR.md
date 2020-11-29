@@ -39,16 +39,16 @@
         <tr>
             <img id="ad" src="" />
         </tr>
-        새로운  : <tr>
-        New :     <td>
-        New :         <div class="cart">
-        New :             <a class="name" >
-        New :                 <img src="/ctI/Thumbnail Name" />
-        New :                 New cartoon name
-        New :             </a>
-        New :         </div>
-        New :     </td>
-        New : </tr>
+        새로운 줄 : <tr>
+        새로운 줄 :     <td>
+        새로운 줄 :         <div class="cart">
+        새로운 줄 :             <a class="name" >
+        새로운 줄 :                 <img src="/ctI/Thumbnail Name" />
+        새로운 줄 :                 New cartoon name
+        새로운 줄 :             </a>
+        새로운 줄 :         </div>
+        새로운 줄 :     </td>
+        새로운 줄 : </tr>
     </table>
     
 
