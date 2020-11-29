@@ -10,7 +10,7 @@ const upload = multer({
       cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().valueOf() + patha.extname(req.params["cn"] + " / " + req.params["wha"] + " / " + file.originalname));
+      cb(null, new Date().valueOf() + patha.extname(file.originalname));
     }
   }),
 });
@@ -19,7 +19,7 @@ let path = __dirname;
 
 app.post('/up', upload.single('profile_img'), (req, res) => {
     console.log(req.file);
-    console.log(req.file);
+    console.log(req.file.filename);
     res.send("asd");
 });
 
