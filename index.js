@@ -48,7 +48,7 @@ function init(){
                                 cartoonForm = cartoonForm.replace("$3" , element);
                                 cartoonForm = cartoonForm.replace("$4" , decodeURI(element));
                                 res.send(cartoonForm);
-                            });
+                            }));
                         });
                     };
         
