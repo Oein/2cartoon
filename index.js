@@ -13,7 +13,7 @@ function file_len(FolderPath){
     });
 }
 
-app.post('/account', upload.single('profile_img'), function (req, res, next) {
+app.post('/account', upload.multer('profile_img'), function (req, res, next) {
     console.log(req.body);
     console.log(req.file);
     console.log(req.file.filename);
