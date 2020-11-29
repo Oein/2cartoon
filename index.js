@@ -49,7 +49,7 @@ function init(){
                     subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                 
                     app.get(main_html_path , function(req , res){
-                        res.send(cartoonForm.replace("$1" , ""))
+                        res.send(cartoonForm.replace("$1" , file_len))
                     });
                 };
     
