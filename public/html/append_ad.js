@@ -7,5 +7,6 @@ let c = document.createElement("div");
 let a = [];
 a.forEach(element => {
     let ad = document.createElement("iframe");
-    
+    ad.src = element;
+    c.append(ad);
 });
