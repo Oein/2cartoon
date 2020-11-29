@@ -19,6 +19,7 @@ let path = __dirname;
 
 app.post('/up', upload.fields([{ name: 'img' }, { name: 'photos' }]), (req, res) => {
     console.log(req.files);
+    res.send("asd");
 });
 
 app.get('/upa' , (req , res) => {
