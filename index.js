@@ -21,8 +21,6 @@ let path = __dirname;
 
 app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
-
-    console.log(req.files);
     req.files.forEach(element => {
         element = element.filename;
         fs.rename(path + "/uploads/" + element, path + "/uploads/" + element.replace(" _ undefined.PNG" , "") + " _ cn-" + req.param("cn") + " _ wha-" + req.param("wha") + ".png", function(err){
