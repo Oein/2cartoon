@@ -16,7 +16,7 @@ app.get("/" , (req , res) => {
 
 let cartoonForm = "";
 let cartoonForma = fs.readFileSync(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
-    cartoonForm = data;
+    console.log(data);
 });
 
 console.log(cartoonForm);
