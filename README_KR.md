@@ -70,7 +70,7 @@
 ## ㅤ
 ## ㅤ
 # X화를 만드는법
-## `/public/cartoons/CartoonName/X화`
+## 폴더를 여기에 만들고`/public/cartoons/CartoonName`
 ## And Put images in `/public/cartoons/` ```CartoonName``` / ```X화```
 ### ( images size 1920 x 1080 )
 ## ㅤ
