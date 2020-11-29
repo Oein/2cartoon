@@ -61,12 +61,13 @@ function init(){
                         subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                     
                         app.get(main_html_path , (req , res) => {
+                            let temp = cartoonForm;
                             fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
-                                cartoonForm = cartoonForm.replace("$1" , a.length);
-                                cartoonForm = cartoonForm.replace("$2" , folda);
-                                cartoonForm = cartoonForm.replace("$3" , element);
-                                cartoonForm = cartoonForm.replace("$4" , decodeURI(element));
-                                res.send(cartoonForm);
+                                temp = temp.replace("$1" , a.length);
+                                temp = temp.replace("$2" , folda);
+                                temp = temp.replace("$3" , element);
+                                temp = temp.replace("$4" , decodeURI(element));
+                                res.send(temp);
                             });
                         });
                     };
