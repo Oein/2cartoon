@@ -1,4 +1,6 @@
-<form action = "http://localhost:8280/up" accept-charset="utf-8" name = "img" method = "post"> 
-    <input type="file" name="img" />
-    <button type="submit" >Submit</button>
+<form name='accountFrm' action='/up' encType='multipart/form-data'>
+    <input type='text' name='email' />
+    <input type='text' name='pwd' />
+    <input type='file' name='profile_img' accept='image/jpg, image/png, image/jpeg' />
+    <input type='submit' value='회원가입' />
 </form>
