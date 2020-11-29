@@ -42,7 +42,7 @@ function init(){
                     
                         app.get(main_html_path , function(req , res){
                             fs.readdirSync((path + `/public/cartoons/` + folda + "/" + element, function(error, filelisteee){
-                                cartoonForm = cartoonForm.replace("$1" , file_len(path + `/public/cartoons/` + folda + "/" + element));
+                                cartoonForm = cartoonForm.replace("$1" , filelisteee.length);
                                 console.log(file_len(path + `/public/cartoons/` + folda + "/" + element));
                                 cartoonForm = cartoonForm.replace("$2" , folda);
                                 cartoonForm = cartoonForm.replace("$3" , element);
