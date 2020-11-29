@@ -42,7 +42,7 @@ function init(){
                     
                         app.get(main_html_path , function(req , res){
                             cartoonForm = cartoonForm.replace("$1" , file_len(path + `/public/cartoons/` + folda + "/" + element));
-                            console.log()
+                            console.log(file_len(path + `/public/cartoons/` + folda + "/" + element));
                             cartoonForm = cartoonForm.replace("$2" , folda);
                             cartoonForm = cartoonForm.replace("$3" , element);
                             cartoonForm = cartoonForm.replace("$4" , decodeURI(element));
