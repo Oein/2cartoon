@@ -15,10 +15,10 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
 
     console.log(req.files);
     req.files.forEach(element => {
-        fs.rename(path + "/uploads/" + element, path + "/uploads/element _ cn-" + req.param("cn") + " _ wha-" + req.param("wha") + ".png", function(err){
-            if( err ) throw err;
-            console.log('File Renamed!');
-        });
+    fs.rename(path + "/uploads/" + element, path + "/uploads/element _ cn-" + req.param("cn") + " _ wha-" + req.param("wha") + ".png", function(err){
+        if( err ) throw err;
+        console.log('File Renamed!');
+    });
     })
 
 });
