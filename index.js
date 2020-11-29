@@ -17,13 +17,6 @@ const upload = multer({
 
 let path = __dirname;
 
-function file_len(FolderPath){
-    fs.readdirSync(FolderPath, function(error, filelist){
-        console.log(filelist.length);
-        return Number(filelist.length);
-    });
-}
-
 app.post('/up', upload.fields([{ name: 'img' }, { name: 'photos' }]), (req, res) => {
     console.log(req.files);
 });
