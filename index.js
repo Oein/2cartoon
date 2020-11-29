@@ -14,7 +14,7 @@ let cartoonForm = fs.readFile('./package.json', 'utf8', function (err, data) {
 });
 
 function init(){
-    cartoonForm = fs.readFile('./package.json', 'utf8', function (err, data) {
+    cartoonForm = fs.readFileSync('./package.json', 'utf8', function (err, data) { //cartoonForm
         cartoonForm = data;
     });
 
