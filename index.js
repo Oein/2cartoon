@@ -1,6 +1,8 @@
 let express = require("express");
 let fs = require("fs");
 let app = express();
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 
 let path = __dirname;
 
