@@ -17,7 +17,7 @@ const upload = multer({
 
 let path = __dirname;
 
-app.post('/up', upload.single(), (req, res) => {
+app.post('/up', upload.single('img'), (req, res) => {
     console.log(req.files);
     res.send("asd");
 });
