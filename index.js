@@ -27,7 +27,7 @@ app.post('/up', upload.single('profile_img'), (req, res) => {
     });
 });
 
-app.get('/upa' , (req , res) => {
+app.get('/upload' , (req , res) => {
     res.sendFile(path + "/public/html/test.html")
 })
 
