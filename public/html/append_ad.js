@@ -1,6 +1,6 @@
 let sc = document.getElementsByTagName("script")[0];
 
-
+sc.innerHTML = sc.innerHTML + `
 let c = document.createElement("div");
 let s = document.createElement("style");
 
@@ -16,4 +16,4 @@ a.forEach(element => {
 });
 
 document.body.append(c);
-document.body.append(s);
+document.body.append(s);`;
