@@ -13,7 +13,7 @@
 ### (썸네일 크기 : 1920 x 1920)
 ## 폴더를 `/public/catoons/` 에 만드세요
 ## 폴더의 이름은 ``새로운 만화`` 의 이름입니다 ( 띄어쓰기X )
-## And change `/public/html/index.html`
+## 그다음 `/public/html/index.html`
 ## `like this ↓`
 ```html
 <!DOCTYPE html>
