@@ -41,7 +41,7 @@ function init(){
                         subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                     
                         app.get(main_html_path , function(req , res){
-                            cartoonForm = cartoonForm.replace("$1")
+                            cartoonForm = cartoonForm.replace("$1" , "")
                             cartoonForm = cartoonForm.replace("$2" , folda);
                             cartoonForm = cartoonForm.replace("$3" , element);
                             cartoonForm = cartoonForm.replace("$4" , fold);
