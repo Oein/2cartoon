@@ -62,7 +62,7 @@
 ### td 는 tr에 새로운 만화열결버튼을 만들떄 씁니다.
 ###### ㅤ
 ## `Thumbnail Name` 과 `New cartoon name` 를 바꿔야 합니다.
-## If Accessor click This `<td>` and webbrowser goes to 
+## 방문자가 `<td>`를 클릭하면 
 ## `/cartoon/<New Cartoon Name>/subCartoons.html`
 ### (You have to don't make `subCartoons.html` , program will make it)
 
