@@ -9,12 +9,6 @@
 ## Than type `node index.js`
 ## ㅤ
 ## ㅤ
-##
-# How to add ads?
-## Put ads image to ``/public/ads/XXXX.png``
-## And plus 1 `max_ad_number` in ``/public/html/index.html``
-## ㅤ
-## ㅤ
 ## ㅤ
 # How to make `new cartoon`
 ## Add Thumbnail at `/public/cartoons/images/`
@@ -89,6 +83,7 @@
 ┌────────────────────────────┐
 ├─ /                         │
 ├─ /reload                   │
+├─ /upload                   │
 ├─ /ctI                      │
 │     └─ ThumbNails          │
 ├─ /ads                      │

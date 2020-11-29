@@ -8,12 +8,6 @@
 ## 그다음 cmd.exe 로 다운받은 폴더 까지 이동한 후 ```node index.js``` 입력
 ## ㅤ
 ## ㅤ
-##
-# 광고를 넣는법
-## 광고 사진을 ``/public/ads`` 에 ``숫자.png`` 로넣고
-## ``/public/html/index.html``에 있는 `max_ad_number` 를 1 늘린다
-## ㅤ
-## ㅤ
 ## ㅤ
 # 새로운 만화를 만드는법
 ## 썸네일을 `/public/cartoons/images/` 에 넣으세요
@@ -90,6 +84,7 @@
 ┌────────────────────────────┐
 ├─ /                         │
 ├─ /reload                   │
+├─ /upload                   │
 ├─ /ctI                      │
 │     └─ ThumbNails          │
 ├─ /ads                      │
