@@ -2,6 +2,8 @@
 ## `Oein` 의 만화 서버 생성기
 ## ㅤ
 ## ㅤ
+# 서버를 키는법
+##
 # 광고를 넣는법
 ## 광고 사진을 ``/public/ads`` 에 ``숫자.png`` 로넣고
 ## ``/public/html/index.html``에 있는 `max_ad_number` 를 1 늘린다
