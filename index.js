@@ -15,11 +15,11 @@ app.get("/" , (req , res) => {
 });
 
 let cartoonForm = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
-    console.log(data);
+    cartoonForm = data;
 });
 
 function init(){
-    cartoonForm = fs.readFileSync('./package.json', 'utf8', function (err, data) { //cartoonForm
+    cartoonForm = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
         cartoonForm = data;
     });
 
