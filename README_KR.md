@@ -73,7 +73,8 @@
 ## 폴더를 여기에 만들고`/public/cartoons/CartoonName`
 ## 폴더의 이름을 X화로 정합니다.
 ## 그다음 컷들을 `/public/cartoons/` ```CartoonName``` / ```X화``` 에 넣습니다
-### ( images size 1920 x 1080 )
+### ()
+### ( 컷들의 사이즈 : 1920 x 1080 )
 ## ㅤ
 ## ㅤ
 ## ㅤ
