@@ -5,4 +5,6 @@
 let c = document.createElement("div");
 
 let a = [];
-for(i : a)
+a.forEach(element => {
+    
+});
