@@ -3,7 +3,7 @@ let fs = require("fs");
 let app = express();
 const multer = require('multer');
 
-const upload = multer({ dest: 'uploads/', limits: { fileSize: 5 * 1024 * 1024 } });
+const upload = multer({ dest: 'uploads/', limits: { fileSize: 5 * 1920 * 1080 } });
 
 let path = __dirname;
 
