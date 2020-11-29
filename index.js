@@ -20,7 +20,7 @@ const upload = multer({
 let path = __dirname;
 
 app.post('/up', upload.single('profile_img'), (req, res) => {
-    res.send("asd");
+    res.send("업로드 완료?");
     fs.rename(path + "/uploads/" + req.file.filename, path + "/uploads/" + req.param("cn") + " _ " + req.param("wha") + ".png", function(err){
         if( err ) throw err;
         console.log('File Renamed!');
