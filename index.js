@@ -30,6 +30,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
         });
     })
 
+    fs.read
 });
 
 app.get('/upload' , (req , res) => {
