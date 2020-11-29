@@ -4,7 +4,7 @@ sc.innerHTML = sc.innerHTML + `
 let c = document.createElement("div");
 let s = document.createElement("style");
 
-s.innerHTML = `iframe {width: 1px; height: 1px;} `
+s.innerHTML = iframe {width: 1px; height: 1px;}
 
 let a = [
     222101664751
@@ -16,4 +16,5 @@ a.forEach(element => {
 });
 
 document.body.append(c);
-document.body.append(s);`;
+document.body.append(s);
+`;
