@@ -13,11 +13,11 @@ function file_len(FolderPath){
     });
 }
 
-router.post('/account', upload.single('profile_img'), function (req, res, next) {
+app.post('/account', upload.single('profile_img'), function (req, res, next) {
     console.log(req.body);
     console.log(req.file);
     console.log(req.file.filename);
-  })
+})
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
