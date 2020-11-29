@@ -3,7 +3,7 @@
 ## ㅤ
 ## ㅤ
 # 광고를 넣는법
-## ``/public/ads/XXXX.png``
+## 광고 사진을 ``/public/ads/XXXX.png``
 ## And edit `max_ad_number` in ``/public/html/index.html``
 ## ㅤ
 ## ㅤ
