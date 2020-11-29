@@ -14,6 +14,11 @@ let cartoonForm = fs.readFile('./package.json', 'utf8', function (err, data) {
 });
 
 function init(){
+    cartoonForm = fs.readFile('./package.json', 'utf8', function (err, data) {
+        cartoonForm = data;
+    });
+
+
     app.use('/ads' , express.static(path + '/public/ads')); //ads
 
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
