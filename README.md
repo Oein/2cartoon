@@ -93,5 +93,5 @@
 └────────────────────────────┘
 ```
 
-## Your server's path is `localhost:8280` ( ⚠ Other Computers can join here )
-## If you do something like Port forwarding
+## Your server's path is `localhost:8280` ( ⚠ Other Computers can't join here )
+## If you do something like Port forwarding Other Computers can join here
