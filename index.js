@@ -17,8 +17,8 @@ function init(){
         for(let i = 0;i < filelista.length;i++){ //loop cartoons counts
             let folda = filelista[i]; //unencoded cartoon name
             let fold = encodeURI(folda); // encoded cartoon name
-            app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold)); //express server opens /cartoon/<CartoonName>
-            fs.readdir(path + '/public/cartoons/' + folda , function(error , list){
+            app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold)); //express server opens /cartoon/<EncodedCartoonName>
+            fs.readdir(path + '/public/cartoons/' + folda , function(error , list){ 
                 let subCartoons = `<style>* {font-size: 1.3em;}</style>`;
     
                 for(let i = 0;i < list.length;i++){
