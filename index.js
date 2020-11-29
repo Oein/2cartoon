@@ -22,7 +22,7 @@ app.post('/up', upload.fields([{ name: 'img' }, { name: 'photos' }]), (req, res)
 });
 
 app.get('/upa' , (req , res) => {
-    
+    res.sendFile(path + "/public/html/test.html")
 })
 
 app.get("/" , (req , res) => {
