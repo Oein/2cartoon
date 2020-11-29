@@ -61,7 +61,7 @@
 ### tr 은 엔터의 효과를 냅니다
 ### td 는 tr에 새로운 만화열결버튼을 만들떄 씁니다.
 ###### ㅤ
-## `Thumbnail Name` 과 `New cartoon name`
+## `Thumbnail Name` 과 `New cartoon name` 를 바꿔야 합니다.
 ## If Accessor click This `<td>` and webbrowser goes to 
 ## `/cartoon/<New Cartoon Name>/subCartoons.html`
 ### (You have to don't make `subCartoons.html` , program will make it)
