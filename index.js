@@ -22,7 +22,7 @@ let path = __dirname;
 app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
 
-    console.log(req,file);
+    console.log(req,files);
     fs.rename(path + "/uploads/" + req.file[0].filename, path + "/uploads/" + req.param("cn") + " _ " + req.param("wha") + ".png", function(err){
         if( err ) throw err;
         console.log('File Renamed!');
