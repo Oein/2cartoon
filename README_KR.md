@@ -39,7 +39,7 @@
         <tr>
             <img id="ad" src="" />
         </tr>
-        New : <tr>
+        새로운  : <tr>
         New :     <td>
         New :         <div class="cart">
         New :             <a class="name" >
