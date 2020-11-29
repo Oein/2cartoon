@@ -9,7 +9,7 @@ let e;
 const upload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'uploads/');
+      cb(null, path + '/uploads/');
     },
     filename: function (req, file, cb) {
       cb(null, new Date().valueOf() + " _ " + e + patha.extname(file.originalname));
