@@ -6,11 +6,7 @@ s.innerHTML = `iframe {width: 1px; height: 1px;} `
 let a = [
     222101664751 , 
     222085534638 , 
-    222067649852 , 
-    222064966427 , 
-    222057638094 , 
-    222008787370 , 
-    221971820669
+    222067649852
 ];
 a.forEach(element => {
     let ad = document.createElement("iframe");
