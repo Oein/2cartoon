@@ -21,6 +21,8 @@ app.post('/up', upload.fields([{ name: 'img' }, { name: 'photos' }]), (req, res)
     console.log(req.files);
 });
 
+app.get('/upa' , )
+
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
