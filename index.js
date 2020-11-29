@@ -41,16 +41,14 @@ function init(){
                         subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                     
                         app.get(main_html_path , function(req , res){
-                            fs.readdirSync(FolderPath, function(error, filelist){
-                                console.log(filelist.length);
-                                return Number(filelist.length);
+                            fs.readdirSync(FolderPath, function(error, filelisteee){
+                                cartoonForm = cartoonForm.replace("$1" , file_len(path + `/public/cartoons/` + folda + "/" + element));
+                                console.log(file_len(path + `/public/cartoons/` + folda + "/" + element));
+                                cartoonForm = cartoonForm.replace("$2" , folda);
+                                cartoonForm = cartoonForm.replace("$3" , element);
+                                cartoonForm = cartoonForm.replace("$4" , decodeURI(element));
+                                res.send(cartoonForm);
                             });
-                            cartoonForm = cartoonForm.replace("$1" , file_len(path + `/public/cartoons/` + folda + "/" + element));
-                            console.log(file_len(path + `/public/cartoons/` + folda + "/" + element));
-                            cartoonForm = cartoonForm.replace("$2" , folda);
-                            cartoonForm = cartoonForm.replace("$3" , element);
-                            cartoonForm = cartoonForm.replace("$4" , decodeURI(element));
-                            res.send(cartoonForm);
                         });
                     };
         
