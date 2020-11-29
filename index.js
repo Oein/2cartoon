@@ -14,7 +14,7 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-let cartoonForm = fs.readFile(path + "/public", 'utf8', function (err, data) {
+let cartoonForm = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
     console.log(data);
 });
 
