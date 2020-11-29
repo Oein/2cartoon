@@ -2,7 +2,7 @@ let express = require("express");
 let fs = require("fs");
 let app = express();
 const multer = require('multer');
-const path = require('path');
+const patha = require('path');
 
 const upload = multer({
   storage: multer.diskStorage({
@@ -10,7 +10,7 @@ const upload = multer({
       cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().valueOf() + path.extname(file.originalname));
+      cb(null, new Date().valueOf() + patha.extname(file.originalname));
     }
   }),
 });
