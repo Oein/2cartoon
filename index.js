@@ -19,7 +19,7 @@ function init(){
             let fold = encodeURI(folda); // encoded cartoon name
             app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold)); //express server opens /cartoon/<EncodedCartoonName>
             fs.readdir(path + '/public/cartoons/' + folda , function(error , list){  //loop 화's count
-                
+                // Make subcartoons page
             
                 let subCartoons = `<style>* {font-size: 1.3em;}</style>`;
     
