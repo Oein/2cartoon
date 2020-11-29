@@ -41,8 +41,8 @@ function init(){
                         subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                     
                         app.get(main_html_path , (req , res) => {
-                            fs.read(path + `/public/cartoons/` + folda + "/" + element, (error, filelisteee) => {
-                                cartoonForm = cartoonForm.replace("$1" , filelisteee.length);
+                            fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
+                                cartoonForm = cartoonForm.replace("$1" , a.length);
                                 console.log(file_len(path + `/public/cartoons/` + folda + "/" + element));
                                 cartoonForm = cartoonForm.replace("$2" , folda);
                                 cartoonForm = cartoonForm.replace("$3" , element);
