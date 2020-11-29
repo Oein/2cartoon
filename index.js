@@ -32,7 +32,9 @@ function init(){
                     let main_html_path = `/cartoon/` + fold + "/" + element + `/main.html`;
                     subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                 
-                    
+                    app.get(main_html_path , function(req , res){
+                        
+                    });
                 };
     
                 app.get('/cartoon/' + fold + "/subCartoons.html" , function(req , res) {
