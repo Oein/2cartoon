@@ -9,13 +9,15 @@ app.get("/" , (req , res) => {
 });
 
 function init(){
+    app.use('/ads' , express.static(path + '/public/ads'));
+    
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
         console.log("cartoons : " + filelista); // Print cartoons
     
         for(let i = 0;i < filelista.length;i++){ //loop cartoons counts
             let folda = filelista[i]; //unencoded cartoon name
             let fold = encodeURI(folda); // encoded cartoon name
-            app.use('/ads' , express.static(path + '/public/ads'))
+            
             app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold));
             fs.readdir(path + '/public/cartoons/' + folda , function(error , list){
                 let subCartoons = `<style>* {font-size: 1.3em;}</style>`;
