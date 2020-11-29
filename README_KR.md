@@ -8,7 +8,7 @@
 ## ㅤ
 ## ㅤ
 ## ㅤ
-# How to make `new cartoon`
+# 새로운 만화를 만드는법
 ## Add Thumbnail at `/public/cartoons/images/`
 ### (Thumbnail Size : 1920 x 1920)
 ## Make folder at `/public/catoons/` 
