@@ -1,5 +1,7 @@
 let c = document.createElement("div");
-let s = document.createElement("")
+let s = document.createElement("style");
+
+s.innerHTML = 
 
 let a = [
     222101664751 , 
