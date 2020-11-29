@@ -45,7 +45,7 @@ function init(){
                             cartoonForm = cartoonForm.replace("$2" , folda);
                             cartoonForm = cartoonForm.replace("$3" , element);
                             cartoonForm = cartoonForm.replace("$4" , fold);
-                            res.send(cartoonForm.replace("$1" , file_len(path + '/public/cartoons/' + folda + "/" + element)).replace("$2" , folda).replace("$3" , element));
+                            res.send(cartoonForm);
                         });
                     };
         
