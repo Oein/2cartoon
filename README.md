@@ -57,6 +57,7 @@
 </body>
 </html>
 ```
+## tr is make new line
 ##
 ## You have to change `Thumbnail Name` and `New cartoon name`
 ## If Accessor click This `<td>` and webbrowser goes to 
