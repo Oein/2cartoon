@@ -21,7 +21,7 @@ let path = __dirname;
 
 app.post('/up', upload.single('profile_img'), (req, res) => {
     res.send("asd");
-    fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function(err){
+    fs.rename(path + "/uploads", 'myrenamedfile.txt', function(err){
         if( err ) throw err;
         console.log('File Renamed!');
     });
