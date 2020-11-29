@@ -1,5 +1,5 @@
 # 2cartoon
-## Oein's easy 
+## Oein's easy cartoon open tool
 ## ㅤ
 ## ㅤ
 # How to add ads?
