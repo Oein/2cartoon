@@ -8,13 +8,6 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-app.get("/tt" , (req , res) =>{
-    let a = {};
-    a["total"] = total;
-    a["today"] = today;
-    res.send(a);
-})
-
 function init(){
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
         console.log("cartoons : " + filelista);
