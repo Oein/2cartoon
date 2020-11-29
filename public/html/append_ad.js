@@ -1,4 +1,4 @@
-let sc = document.getElementsByTagName("script")[0];
+let sc = document.getElementsByTagName("script")[1];
 
 sc.innerHTML = sc.innerHTML + `
 let c = document.createElement("div");
