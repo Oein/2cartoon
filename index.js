@@ -19,7 +19,7 @@ const upload = multer({
 
 let path = __dirname;
 
-app.post('/up', upload.('profile_img'), (req, res) => {
+app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
     fs.rename(path + "/uploads/" + req.file.filename, path + "/uploads/" + req.param("cn") + " _ " + req.param("wha") + ".png", function(err){
         if( err ) throw err;
