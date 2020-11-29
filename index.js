@@ -6,7 +6,7 @@ let path = __dirname;
 
 function file_len(FolderPath){
     fs.readdir(FolderPath, function(error, filelist){
-        
+        console.log(filelist.length);
         return filelist.length;
     });
 }
