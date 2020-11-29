@@ -3,7 +3,7 @@
 ## ㅤ
 ## ㅤ
 # 서버를 키는법
-## 
+## [durl](https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi)
 ##
 # 광고를 넣는법
 ## 광고 사진을 ``/public/ads`` 에 ``숫자.png`` 로넣고
