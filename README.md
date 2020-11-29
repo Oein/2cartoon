@@ -4,7 +4,7 @@
 ## ㅤ
 # How to add ads?
 ## Put ads image to ``/public/ads/XXXX.png``
-## And edit `max_ad_number` in ``/public/html/index.html``
+## And plus 1 `max_ad_number` in ``/public/html/index.html``
 ## ㅤ
 ## ㅤ
 ## ㅤ
