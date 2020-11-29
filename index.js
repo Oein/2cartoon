@@ -3,7 +3,17 @@ let fs = require("fs");
 let app = express();
 const multer = require('multer');
 
-const upload = multer({ dest: 'uploads/', limits: { fileSize: 5 * 1920 * 1080 } });
+const path = require('path');
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads/');
+    },
+    filename: function (req, file, cb) {
+      cb(null, new Date().valueOf() + path.extname(file.originalname));
+    }
+  }),
+});
 
 let path = __dirname;
 
