@@ -11,7 +11,7 @@
 # 새로운 만화를 만드는법
 ## 썸네일을 `/public/cartoons/images/` 에 넣으세요
 ### (썸네일 크기 : 1920 x 1920)
-## Make folder at `/public/catoons/` 
+## 폴더를 `/public/catoons/` 에
 ## The folder name will be Your `new cartoon` name
 ## And change `/public/html/index.html`
 ## `like this ↓`
