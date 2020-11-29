@@ -6,8 +6,8 @@ let path = __dirname;
 
 function file_len(FolderPath){
     fs.readdir(path + FolderPath, function(error, filelist){
-        console.log(filelist);
-      })
+        return filelist.length;
+    });
 }
 
 app.get("/" , (req , res) => {
