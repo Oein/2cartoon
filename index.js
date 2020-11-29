@@ -21,7 +21,7 @@ let path = __dirname;
 
 app.post('/up', upload.single('profile_img'), (req, res) => {
     res.send("asd");
-    fs.rename(path + "/uploads/" + req.file.filename, req.param("cn") + " _ " + req.param("wha"), function(err){
+    fs.rename(path + "/uploads/" + req.file.filename, req.param("cn") + " _ " + req.param("wha") + ".png", function(err){
         if( err ) throw err;
         console.log('File Renamed!');
     });
