@@ -9,8 +9,8 @@
 ## ㅤ
 ## ㅤ
 # 새로운 만화를 만드는법
-## Add Thumbnail at `/public/cartoons/images/`
-### (Thumbnail Size : 1920 x 1920)
+## 썸네일을 `/public/cartoons/images/` 에 넣으세요
+### (썸네일 크기 : 1920 x 1920)
 ## Make folder at `/public/catoons/` 
 ## The folder name will be Your `new cartoon` name
 ## And change `/public/html/index.html`
