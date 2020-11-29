@@ -19,6 +19,8 @@ let cartoonForma = fs.readFileSync(path + "/public/html/cartoonForm.html", 'utf8
     cartoonForm = data;
 });
 
+console.log(cartoonForm);
+
 function init(){
     app.use('/ads' , express.static(path + '/public/ads')); //ads
 
