@@ -14,16 +14,12 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-cartoonForm = "";
-let cartoonForma = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
-    console.log(data);
+let cartoonForm = "";
+let cartoonForma = fs.readFileSync(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
+    cartoonForm = data;
 });
 
 function init(){
-    cartoonForm = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
-        cartoonForm = data;
-    });
-
     app.use('/ads' , express.static(path + '/public/ads')); //ads
 
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
