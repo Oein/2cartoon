@@ -10,7 +10,7 @@ app.get("/" , (req , res) => {
 
 function init(){
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
-        console.log("cartoons : " + filelista);
+        console.log("cartoons : " + filelista); // Print cartoons
     
         for(let i = 0;i < filelista.length;i++){
             let folda = filelista[i];
