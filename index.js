@@ -35,7 +35,9 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-app.get("/adSc")
+app.get("/adSc" , (req , res) => {
+    
+})
 
 function init(){
     fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) {
