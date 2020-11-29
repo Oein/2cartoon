@@ -36,7 +36,7 @@ app.get("/" , (req , res) => {
 });
 
 app.get("/adSc" , (req , res) => {
-    
+    res.sendFile(path + "/public/html/append_ad.js")
 })
 
 function init(){
