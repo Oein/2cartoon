@@ -1,3 +1,6 @@
+let sc = document.getElementsByTagName("script")[0];
+
+
 let c = document.createElement("div");
 let s = document.createElement("style");
 
