@@ -1,4 +1,5 @@
 let c = document.createElement("div");
+let s = document.createElement("")
 
 let a = [
     222101664751 , 
