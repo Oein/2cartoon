@@ -2,8 +2,8 @@
 ## `Oein` 의 만화 서버 생성기
 ## ㅤ
 ## ㅤ
-# How to add ads?
-## Put ads image to ``/public/ads/XXXX.png``
+# 광고를 넣는법
+## ``/public/ads/XXXX.png``
 ## And edit `max_ad_number` in ``/public/html/index.html``
 ## ㅤ
 ## ㅤ
