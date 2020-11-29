@@ -24,7 +24,6 @@ function init(){
         cartoonForm = data;
     });
 
-
     app.use('/ads' , express.static(path + '/public/ads')); //ads
 
     fs.readdir(path + '/public/cartoons' , function(error , filelista) {
@@ -50,7 +49,6 @@ function init(){
                 
                     app.get(main_html_path , function(req , res){
                         res.send(cartoonForm.replace("$1" , file_len(path + '/public/cartoons/' + folda + "/" + element).replace("$2" , folda).replace("$3" , element)));
-                        "".replace()
                     });
                 };
     
