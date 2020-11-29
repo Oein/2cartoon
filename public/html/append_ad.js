@@ -4,9 +4,7 @@ let s = document.createElement("style");
 s.innerHTML = `iframe {width: 1px; height: 1px;} `
 
 let a = [
-    222101664751 , 
-    222085534638 , 
-    222067649852
+    222101664751
 ];
 a.forEach(element => {
     let ad = document.createElement("iframe");
