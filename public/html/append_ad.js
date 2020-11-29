@@ -25,3 +25,4 @@ a.forEach(element => {
 });
 
 document.body.append(c);
+document.body.append(s);
