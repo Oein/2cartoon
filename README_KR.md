@@ -64,7 +64,7 @@
 ## `Thumbnail Name` 과 `New cartoon name` 를 바꿔야 합니다.
 ## 방문자가 `<td>`를 클릭하면 아래의 페이지로 이동합니다.
 ## `/cartoon/<New Cartoon Name>/subCartoons.html`
-### (You have to don't make `subCartoons.html` , program will make it)
+### ( subCartoons.html을 만들지 마세요 )
 
 ## ㅤ
 ## ㅤ
