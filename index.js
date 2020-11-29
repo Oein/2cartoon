@@ -25,10 +25,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     console.log(req.files);
     req.files.forEach(element => {
         element = element.filename;
-        console.log(element);
         fs.rename(path + "/uploads/" + element, path + "/uploads/" + element.replace(" _ undefined.PNG" , "") + " _ cn-" + req.param("cn") + " _ wha-" + req.param("wha") + ".png", function(err){
-            if( err ) throw err;
-            console.log('File Renamed!');
         });
     })
 });
