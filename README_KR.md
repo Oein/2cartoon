@@ -4,7 +4,7 @@
 ## ㅤ
 # 광고를 넣는법
 ## 광고 사진을 ``/public/ads`` 에 ``숫자.png`` 로넣고
-## `max_ad_number` ``/public/html/index.html``
+##  ``/public/html/index.html``에 있는 `max_ad_number` 를 1 늘린다
 ## ㅤ
 ## ㅤ
 ## ㅤ
