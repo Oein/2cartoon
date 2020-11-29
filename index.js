@@ -14,7 +14,7 @@ function file_len(FolderPath){
     });
 }
 
-app.post('/up', upload.single('img'), (req, res) => {
+app.post('/up', upload.array('img'), (req, res) => {
     console.log(req.file); 
 });
 
