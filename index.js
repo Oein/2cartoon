@@ -10,7 +10,7 @@ const upload = multer({
       cb(null, 'uploads/');
     },
     filename: function (req, file, cb) {
-      cb(null, req.parm("cn") + " _ " + patha.extname(file.originalname));
+      cb(null, req.parm + " _ " + patha.extname(file.originalname));
     }
   }),
 });
