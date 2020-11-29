@@ -5,7 +5,8 @@ let app = express();
 let path = __dirname;
 
 function file_len(FolderPath){
-    fs.readdir(path + FolderPath + "/", function(error, filelist){
+    fs.readdir(path + FolderPath, function(error, filelist){
+        console.log(path + FolderPath)
         console.log(filelist);
         return filelist;
     });
