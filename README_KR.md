@@ -58,7 +58,7 @@
 </body>
 </html>
 ```
-### tr make new line
+### tr 은 
 ### td make new cartoon in tr line
 ###### ㅤ
 ## You have to change `Thumbnail Name` and `New cartoon name`
