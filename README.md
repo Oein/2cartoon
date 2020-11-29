@@ -2,6 +2,12 @@
 ## Oein's easy webtoon server tool
 ## ㅤ
 ## ㅤ
+# How to open Server?
+## [여기](https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi) 에서 다운 받은 파일을 생행 시킨후 설치
+## 그다음 cmd.exe 로 다운받은 폴더 까지 이동한 후 ```node index.js``` 입력
+## ㅤ
+## ㅤ
+##
 # How to add ads?
 ## Put ads image to ``/public/ads/XXXX.png``
 ## And plus 1 `max_ad_number` in ``/public/html/index.html``
