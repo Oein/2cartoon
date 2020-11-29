@@ -15,8 +15,8 @@ app.get("/" , (req , res) => {
 });
 
 let cartoonForm = "";
-let cartoonForma = fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, data) {
-    console.log(data);
+fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) {
+    
 });
 
 console.log(cartoonForm);
