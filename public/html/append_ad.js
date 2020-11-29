@@ -4,5 +4,5 @@
 
 let c = document.createElement("div");
 
-a
+let a = [];
 for(i : a)
