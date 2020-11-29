@@ -1,5 +1,5 @@
 # 2cartoon
-## Oein's easy webtoon server tool
+## `Oein` 의
 ## ㅤ
 ## ㅤ
 # How to add ads?
