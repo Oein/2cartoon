@@ -93,4 +93,4 @@
 └────────────────────────────┘
 ```
 
-## Your server's path is ``
+## Your server's path is `localhost:8280`
