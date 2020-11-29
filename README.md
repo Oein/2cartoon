@@ -3,7 +3,7 @@
 ## ㅤ
 ## ㅤ
 # How to open Server?
-## [여기](https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi) 에서 다운 받은 파일을 생행 시킨후 설치
+## [here](https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi)
 ## 그다음 cmd.exe 로 다운받은 폴더 까지 이동한 후 ```node index.js``` 입력
 ## ㅤ
 ## ㅤ
