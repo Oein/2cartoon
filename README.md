@@ -4,7 +4,7 @@
 ## ㅤ
 # How to open Server?
 ## Download install file at [here](https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi) and install that program
-## 그다음 cmd.exe 로 다운받은 폴더 까지 이동한 후 ```node index.js``` 입력
+## Open cmd.exe and type cd `<Download Dir>`
 ## ㅤ
 ## ㅤ
 ##
