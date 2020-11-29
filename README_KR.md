@@ -59,7 +59,7 @@
 </html>
 ```
 ### tr 은 엔터의 효과를 냅니다
-### td make new cartoon in tr line
+### td 는 tr에 새로운 만화열결
 ###### ㅤ
 ## You have to change `Thumbnail Name` and `New cartoon name`
 ## If Accessor click This `<td>` and webbrowser goes to 
