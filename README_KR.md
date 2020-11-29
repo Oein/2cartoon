@@ -58,7 +58,7 @@
 </body>
 </html>
 ```
-### tr 은 
+### tr 은 엔터의 효과를 냅니다
 ### td make new cartoon in tr line
 ###### ㅤ
 ## You have to change `Thumbnail Name` and `New cartoon name`
