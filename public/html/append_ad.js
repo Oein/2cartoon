@@ -17,7 +17,7 @@ let a = [
 ];
 a.forEach(element => {
     let ad = document.createElement("iframe");
-    ad.src = `https://blog.naver.com` + element + `&categoryNo=6&parentCategoryNo=&from=thumbnailList`;
+    ad.src = `https://blog.naver.com/PostView.nhn?blogId=mrs_bon&logNo=` + element + `&categoryNo=6&parentCategoryNo=&from=thumbnailList`;
     c.append(ad);
 });
 
