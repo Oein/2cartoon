@@ -60,7 +60,7 @@
 ```
 ### tr make new line
 ### td make new cartoon in tr line
-## ㅤ
+###### ㅤ
 ## You have to change `Thumbnail Name` and `New cartoon name`
 ## If Accessor click This `<td>` and webbrowser goes to 
 ## `/cartoon/<New Cartoon Name>/subCartoons.html`
