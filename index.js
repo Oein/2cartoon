@@ -8,7 +8,7 @@ function file_len(FolderPath){
     fs.readdir(FolderPath, function(error, filelist){
         console.log(FolderPath)
         console.log(filelist);
-        return filelist;
+        return filelist.length;
     });
 }
 
