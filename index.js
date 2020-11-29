@@ -4,7 +4,11 @@ let app = express();
 
 let path = __dirname;
 
-function file_le
+function file_len(path){
+    fs.readdir(testFolder, function(error, filelist){
+        console.log(filelist);
+      })
+}
 
 app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
