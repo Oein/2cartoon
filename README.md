@@ -4,7 +4,7 @@
 ## ㅤ
 # How to open Server?
 ## Download install file at [here](https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi) and install that program 
-### ( If you early installed `node.js`)
+### ( If you early installed `node.js` skip that step )
 ## Open cmd.exe and type cd `<Downloaded Dir>`
 ## Than type `node index.js`
 ## ㅤ
