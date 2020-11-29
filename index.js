@@ -14,7 +14,7 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-let cartoonForm = fs.readFile('./package.json', 'utf8', function (err, data) {
+let cartoonForm = fs.readFile(path + "/public", 'utf8', function (err, data) {
     console.log(data);
 });
 
