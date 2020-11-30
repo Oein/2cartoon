@@ -55,12 +55,10 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
 
 app.get('/upload' , (req , res) => {
     var data = fs.readFileSync('./package.json', 'utf8', function (err, data) {
-        
+        if(req.param("id") == id[0]){
+            
+        }
     });
-    if(req.param("id") == id[0]){
-
-    }
-    res.sendFile(path + "/public/html/test.html")
 })
 
 app.get("/" , (req , res) => {
