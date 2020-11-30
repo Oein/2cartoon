@@ -28,7 +28,9 @@ app.get("/login" , (req , res) => {
 let ids = ["Teddy1128" , "banana120813"];
 
 app.post("loginCheek" , (req , res) => {
-    req.param("wha")
+    ids.forEach(id => {
+        
+    });
 })
 
 app.post('/up', upload.array('profile_img'), (req, res) => {
