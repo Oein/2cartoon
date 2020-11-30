@@ -55,8 +55,8 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
 
 app.get('/upload' , (req , res) => {
     var data = fs.readFileSync('./package.json', 'utf8', function (err, data) {
-        if(req.param("id") == id[0]){
-            res.send(data.replace("$1" , ""))
+        for(let i = 0;i < ids.length;i++){
+            
         }
     });
 })
