@@ -30,10 +30,16 @@
         input[type="file"]{
             border-radius: 0;
         }
+
+        form{
+            margin: 35%;
+            margin-top: 15%;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
-    <forma name='accountFrm' action='/up' enctype='multipart/form-data' method="POST">
+    <form name='accountFrm' action='/up' enctype='multipart/form-data' method="POST">
         <select name="Opt">
             $1
         </select>
@@ -43,6 +49,6 @@
         <input type='file' name='profile_img' accept='image/png' enctype="multipart/form-data" multiple="multiple" />
         <p></p>
         <input type='submit' value='Upload!' />
-    </forma>
+    </form>
 </body>
 </html>
