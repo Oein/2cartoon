@@ -6,15 +6,13 @@ let multer = require('multer');
 let patha = require('path');
 const shell = require('shelljs')
 
-let e;
-
 let upload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path + '/uploads/');
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().valueOf() + " _ " + e + file.originalname.replace("undefined" , ""));
+      cb(null, file.originalname.replace("undefined" , ""));
     }
   }),
 });
@@ -50,7 +48,19 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
     req.files.forEach(element => {
         element = element.filename;
-        fs.rename(path + "/uploads/" + element, (path + "/uploads/" + element.replace(" _ undefined.PNG" , "") + " _ opt-" + req.param("Opt") + " _ wha-" + req.param("wha") + ".png").replace("undefined" , ""), function(err){
+        fs.rename(
+            path + 
+            "/uploads/" + 
+            element, 
+            path + 
+            "/public/cartoons/" + 
+            req.param("Opt") + 
+            "/" + 
+            req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + 
+            "%ED%99%94" + "/" + 
+            element.replace(".png" , "").replace(".PNG" , "") + 
+            ".png", 
+            function(err){
         });
     });
 
