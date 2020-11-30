@@ -30,7 +30,7 @@ let ids = ["Teddy1128" , "banana120813"];
 app.post("loginCheek" , (req , res) => {
     ids.forEach(id => {
         if(req.param("wha") == id){
-            res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + ``"</script>`)
+            res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + id + `"</script>`);
         }
     });
 })
