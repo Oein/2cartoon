@@ -50,7 +50,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
         element = element.filename;
 
         if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94")){
-            fs.mkdirSync(dir);
+            fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94");
         }
         fs.rename(
             path + 
