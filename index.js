@@ -49,9 +49,14 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     req.files.forEach(element => {
         element = element.filename;
         fs.rename(
-            path + "/uploads/" + element, 
-            path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha")
-            .replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94" + "/" + element.replace(".png" , "").replace(".PNG" , "") + ".png", function(err){
+            path + 
+            "/uploads/" + 
+            element, 
+            path + 
+            "/public/cartoons/" + 
+            req.param("Opt") + 
+            "/" + 
+            req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94" + "/" + element.replace(".png" , "").replace(".PNG" , "") + ".png", function(err){
         });
     });
 
