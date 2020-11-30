@@ -65,6 +65,8 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     });
 
     shell.exec(`cd ` + path);
+    shell.exec(`git fetch`);
+    shell.exec(`git pull`);
     shell.exec(`git add *`);
     shell.exec(`git commit -a -m "Uploaded!"`);
     shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`);
