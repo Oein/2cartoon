@@ -25,7 +25,7 @@ app.get("/login" , (req , res) => {
     res.sendFile(path + "/public/html/input_upload_id.html");
 })
 
-
+let ids = []
 
 app.post("loginCheek" , (req , res) => {
     req.param("wha")
