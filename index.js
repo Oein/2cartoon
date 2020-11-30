@@ -57,7 +57,7 @@ app.get('/upload' , (req , res) => {
     var data = fs.readFileSync('./package.json', 'utf8', function (err, data) {
         for(let i = 0;i < ids.length;i++){
             if(ids[i] == req.param("id")){
-                
+                res.send(data.replace("$1" , ))
             }
         }
     });
