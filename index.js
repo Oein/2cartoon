@@ -48,6 +48,8 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
     req.files.forEach(element => {
         element = element.filename;
+
+        
         fs.rename(
             path + 
             "/uploads/" + 
