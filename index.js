@@ -30,8 +30,9 @@ let ids = [
     "banana120813"
 ];
 
-
-
+let options = [
+    
+];
 
 app.get("/loginCheek" , (req , res) => {
     console.log(req.params);
