@@ -1,12 +1,13 @@
 let express = require("express");
 let fs = require("fs");
 let app = express();
-const multer = require('multer');
-const patha = require('path');
+let multer = require('multer');
+let patha = require('path');
+const shell = require('shelljs')
 
 let e;
 
-const upload = multer({
+let upload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path + '/uploads/');
@@ -25,7 +26,9 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
         element = element.filename;
         fs.rename(path + "/uploads/" + element, path + "/uploads/" + element.replace(" _ undefined.PNG" , "") + " _ cn-" + req.param("cn") + " _ wha-" + req.param("wha") + ".png", function(err){
         });
-    })
+    });
+
+    shell.exec(`git commit -a -m "Uploaded!"`);
 });
 
 app.get('/upload' , (req , res) => {
