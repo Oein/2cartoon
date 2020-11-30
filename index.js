@@ -62,7 +62,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
 });
 
 app.get('/upload' , (req , res) => {
-    fs.readFile(path + "/public/html/", 'utf8', function (err, data) {
+    fs.readFile(path + "/public/html/upload.html", 'utf8', function (err, data) {
         for(let i = 0;i < ids.length;i++){
             if(ids[i] == req.param("id")){
                 res.send(data.replace("$1" , options[i]));
