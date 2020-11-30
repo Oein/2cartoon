@@ -25,6 +25,10 @@ app.get("/login" , (req , res) => {
     res.sendFile(path + "/public/html/input_upload_id.html");
 })
 
+app.post("loginCheek" , (req , res) => {
+    
+})
+
 app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
     req.files.forEach(element => {
