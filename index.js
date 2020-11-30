@@ -30,6 +30,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
 
     shell.exec(`git commit -a -m "Uploaded!"`);
     shell.exec(`git push`);
+    console.log(`Uploaded!`);
 });
 
 app.get('/upload' , (req , res) => {
