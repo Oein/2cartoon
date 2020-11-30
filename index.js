@@ -50,7 +50,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
     req.files.forEach(element => {
         element = element.filename;
-        fs.rename(path + "/uploads/" + element, path + "/uploads/" + element.replace(" _ undefined.PNG" , "") + " _ opt-" + req.param("Opt") + " _ wha-" + req.param("wha") + ".png", function(err){
+        fs.rename(path + "/uploads/" + element, (path + "/uploads/" + element.replace(" _ undefined.PNG" , "") + " _ opt-" + req.param("Opt") + " _ wha-" + req.param("wha") + ".png").replace("undefined" , ""), function(err){
         });
     });
 
