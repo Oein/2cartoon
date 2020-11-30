@@ -25,7 +25,13 @@ app.get("/login" , (req , res) => {
     res.sendFile(path + "/public/html/input_upload_id.html");
 })
 
-let ids = ["Teddy1128" , "banana120813"];
+let ids = [
+    "Teddy1128" , 
+    "banana120813"
+];
+
+
+
 
 app.get("/loginCheek" , (req , res) => {
     console.log(req.params);
@@ -57,7 +63,7 @@ app.get('/upload' , (req , res) => {
     var data = fs.readFileSync('./package.json', 'utf8', function (err, data) {
         for(let i = 0;i < ids.length;i++){
             if(ids[i] == req.param("id")){
-                res.send(data.replace("$1" , ))
+                res.send(data.replace("$1" , options[i]));
             }
         }
     });
