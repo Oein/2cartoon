@@ -27,7 +27,7 @@ app.get("/login" , (req , res) => {
 
 app.post("/loginCheek" , (req , res) => {
     let ids = ["Teddy1128" , "banana120813"];
-    console.log(req.param("wha"))
+    console.log(req.params("wha"))
     ids.forEach(id => {
         if(req.param("wha") == id){
             res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + id + `"</script>`);
