@@ -29,7 +29,9 @@ let ids = ["Teddy1128" , "banana120813"];
 
 app.post("loginCheek" , (req , res) => {
     ids.forEach(id => {
-        
+        if(req.param("wha") == id){
+            
+        }
     });
 })
 
