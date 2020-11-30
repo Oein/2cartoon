@@ -26,7 +26,7 @@ app.get("/login" , (req , res) => {
 })
 
 app.post("loginCheek" , (req , res) => {
-    
+    req.param("wha")
 })
 
 app.post('/up', upload.array('profile_img'), (req, res) => {
