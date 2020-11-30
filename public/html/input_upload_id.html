@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>업로드 로그인</title>
+    <title>업로드</title>
+    <style>
+        body{
+            align-items: center;
+            align-content: center;
+            align-self: center;
+            background-color: #14d35d;
+        }
+
+        input{
+            width: 80%;
+            text-align: center;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            font-size: large;
+            border: none;
+            border-radius: 100px;
+        }
+
+        input[type="submit"]{
+            background-color: #03a6cf;
+            color: white;
+        }
+
+        input[type="file"]{
+            border-radius: 0;
+        }
+
+        forma{
+            margin: 35%;
+            margin-top: 15%;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <form action="/login">
-        <input type="text" name="id" placeholder="Id입력" />
-    </form>
+    <forma name='accountFrm' action='/up' enctype='multipart/form-data' method="POST">
+        <select name="Opt">
+            $1
+        </select>
+        <p></p>
+        <input type="text" name="wha" placeholder="X화(숫자만)" />
+        <p></p>
+        <input type='file' name='profile_img' accept='image/png' enctype="multipart/form-data" multiple="multiple" />
+        <p></p>
+        <input type='submit' value='Upload!' />
+    </forma>
 </body>
 </html>
