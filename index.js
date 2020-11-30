@@ -53,6 +53,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
 });
 
 app.get('/upload' , (req , res) => {
+    if(req.param("id") == )
     res.sendFile(path + "/public/html/test.html")
 })
 
