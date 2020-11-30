@@ -14,7 +14,7 @@ let upload = multer({
       cb(null, path + '/uploads/');
     },
     filename: function (req, file, cb) {
-      cb(null, new Date().valueOf() + " _ " + e + patha.extname(file.originalname));
+      cb(null, new Date().valueOf() + " _ " + e + file.originalname);
     }
   }),
 });
