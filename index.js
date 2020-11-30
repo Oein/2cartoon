@@ -6,15 +6,13 @@ let multer = require('multer');
 let patha = require('path');
 const shell = require('shelljs')
 
-let e;
-
 let upload = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path + '/uploads/');
     },
     filename: function (req, file, cb) {
-      cb(null, e + file.originalname.replace("undefined" , ""));
+      cb(null, file.originalname.replace("undefined" , ""));
     }
   }),
 });
