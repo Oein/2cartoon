@@ -22,7 +22,7 @@ let upload = multer({
 let path = __dirname;
 
 app.get("/login" , (req , res) => {
-    
+    res.sendFile(path + "/public/html/input_upload_id.html");
 })
 
 app.post('/up', upload.array('profile_img'), (req, res) => {
