@@ -60,10 +60,6 @@ app.get("/" , (req , res) => {
     res.sendFile(path + "/public/html/index.html");
 });
 
-app.get("/adSc" , (req , res) => {
-    res.sendFile(path + "/public/html/append_ad.js")
-})
-
 function init(){
     fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) {
         app.use('/ads' , express.static(path + '/public/ads')); //ads
