@@ -49,7 +49,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     req.files.forEach(element => {
         element = element.filename;
 
-        if(fs.ex)
+        if(fs.exists())
         fs.rename(
             path + 
             "/uploads/" + 
