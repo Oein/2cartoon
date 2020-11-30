@@ -31,7 +31,8 @@ let ids = [
 ];
 
 let options = [
-    "<option>두환이와포커츄의세계여행</option><option>"
+    "<option>두환이와포커츄의세계여행</option><option>대출금리는너굴은행</option>",
+    "<option>괴물과"
 ];
 
 app.get("/loginCheek" , (req , res) => {
