@@ -48,7 +48,7 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
     req.files.forEach(element => {
         element = element.filename;
-        fs.rename(path + "/uploads/" + element, path + "/public/cartoons/" + , function(err){
+        fs.rename(path + "/uploads/" + element, path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha") + "", function(err){
         });
     });
 
