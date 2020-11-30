@@ -39,7 +39,7 @@ app.get("/loginCheek" , (req , res) => {
     console.log(req.params);
     ids.forEach(id => {
         if(req.param("a") == id){
-            res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + id + `"</script>`);
+            res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + req.param("a") + `"</script>`);
         }
     });
 
