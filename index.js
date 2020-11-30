@@ -33,7 +33,7 @@ app.post("/loginCheek" , (req , res) => {
             res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + id + `"</script>`);
         }
     });
-})
+});
 
 app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
