@@ -21,6 +21,8 @@ let upload = multer({
 
 let path = __dirname;
 
+
+
 app.post('/up', upload.array('profile_img'), (req, res) => {
     res.send("업로드 완료?");
     req.files.forEach(element => {
