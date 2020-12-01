@@ -163,10 +163,10 @@ function init(){ //app.get 같은거 하는곳
         app.use('/ctI', express.static(path + '/public/cartoons/image')); //썸네일
     });
 
-    console.log("Reloaded!");
+    console.log("Reloaded!"); //say Reload Complete
 }
 
-init();
+init(); //Init
 
 app.listen(8280 , function() {
     console.log(`Erpress server started on 8280 port`);
