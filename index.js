@@ -139,7 +139,7 @@ function init(){ //app.get 같은거 하는곳
                         let main_html_path = `/cartoon/` + fold + "/" + element + `/main.html`;
                         subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                     
-                        app.get(main_html_path , (req , res) => { //
+                        app.get(main_html_path , (req , res) => { //Make main page
                             let temp = cartoonForm;
                             fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
                                 let imgs = "";
@@ -153,8 +153,8 @@ function init(){ //app.get 같은거 하는곳
                         });
                     };
         
-                    app.get('/cartoon/' + fold + "/subCartoons.html" , function(req , res) {
-                        res.send(subCartoons)
+                    app.get('/cartoon/' + fold + "/subCartoons.html" , function(req , res) { //make subcartoons.html
+                        res.send(subCartoons); //send
                     })
                 })
             };
