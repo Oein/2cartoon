@@ -168,6 +168,6 @@ function init(){ //app.get 같은거 하는곳
 
 init(); //Init
 
-app.listen(8280 , function() {
-    console.log(`Erpress server started on 8280 port`);
+app.listen(8280 , function() { //Open Server
+    console.log(`Erpress server started on 8280 port`); //Log
 });
