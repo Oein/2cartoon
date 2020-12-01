@@ -128,9 +128,9 @@ function init(){ //app.get 같은거 하는곳
                 fs.readdir(path + '/public/cartoons/' + folda , function(error , list){  //loop 화's count
                     // Make subcartoons page
                 
-                    let subCartoons = `<style>* {font-size: 1.3em;}</style>`;
+                    let subCartoons = `<style>* {font-size: 1.3em;}</style>`; //subcartoon style
         
-                    for(let i = 0;i < list.length;i++){
+                    for(let i = 0;i < list.length;i++){ //
                         let element = list[i];
         
                         app.use('/cartoon/' + fold + "/" + element, express.static(path + '/public/cartoons/' + folda + "/" + element));
