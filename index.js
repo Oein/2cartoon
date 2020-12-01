@@ -101,6 +101,12 @@ function init(){
         res.sendFile(path + "/public/html/index.html");
     });
 
+    app.get("/reload" , (req , res) => {
+        init();
+        res.send("Reload Completed!");
+        console.log("\n\n -- Someone come into /reload --\n\n")
+    });
+
     fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) {
         app.use('/ads' , express.static(path + '/public/ads')); //ads
     
@@ -151,12 +157,6 @@ function init(){
 }
 
 init();
-
-app.get("/reload" , (req , res) => {
-    init();
-    res.send("Reload Completed!");
-    console.log("\n\n -- Someone come into /reload --\n\n")
-});
 
 app.listen(8280 , function() {
     console.log(`Erpress server started on 8280 port`);
