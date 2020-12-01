@@ -51,10 +51,10 @@ app.post('/up', upload.array('profile_img'), (req, res) => {
     req.files.forEach(element => {
         element = element.filename;
 
-        if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94")){
-            fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94");
+        if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt"))){
+            fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt"));
         }
-        
+
         if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94")){
             fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94");
         }
