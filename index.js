@@ -98,7 +98,8 @@ app.get("/" , (req , res) => {
 });
 
 function init(){
-    a
+    app.
+    app = undefined;
     fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) {
         app.use('/ads' , express.static(path + '/public/ads')); //ads
     
