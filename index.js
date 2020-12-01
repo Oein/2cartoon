@@ -30,13 +30,13 @@ function init(){ //app.get 같은거 하는곳
         res.sendFile(path + "/public/html/input_upload_id.html"); //파일 보내기
     })
     
-    let ids = [
+    let ids = [ //작가들 id
         "Teddy1128" , 
         "banana120813",
         "Oein219",
     ];
     
-    let options = [
+    let options = [ //id에 맞는 만화리스트
         "e두환이와포커츄의세계여행/oe대출금리는너굴은행/o",
         "e괴물과귀신이울고있다/o",
         "eTEST/o",
