@@ -143,6 +143,8 @@ function init(){
         
         app.use('/ctI', express.static(path + '/public/cartoons/image'));
     });
+
+    console.log("Yeah")
 }
 
 init();
