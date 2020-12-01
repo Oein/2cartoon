@@ -125,13 +125,13 @@ function init(){ //app.get 같은거 하는곳
                 let folda = filelista[i]; //unencoded cartoon name
                 let fold = encodeURI(folda); // encoded cartoon name
                 app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold)); //express server opens /cartoon/<EncodedCartoonName>
-                fs.readdir(path + '/public/cartoons/' + folda , function(error , list){  //read 
+                fs.readdir(path + '/public/cartoons/' + folda , function(error , list){  //read folda dir
                     // Make subcartoons page
                 
                     let subCartoons = `<style>* {font-size: 1.3em;}</style>`; //subcartoon style
         
                     for(let i = 0;i < list.length;i++){ //loop 화's count
-                        let element = list[i];
+                        let element = list[i]; //element
         
                         app.use('/cartoon/' + fold + "/" + element, express.static(path + '/public/cartoons/' + folda + "/" + element));
                         console.log(path + '/public/cartoons/' + folda + "/" + element + "\t\t at " + '/cartoon/' + folda + "/" + element + "\n\n");
@@ -139,7 +139,7 @@ function init(){ //app.get 같은거 하는곳
                         let main_html_path = `/cartoon/` + fold + "/" + element + `/main.html`;
                         subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
                     
-                        app.get(main_html_path , (req , res) => {
+                        app.get(main_html_path , (req , res) => { //
                             let temp = cartoonForm;
                             fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
                                 let imgs = "";
