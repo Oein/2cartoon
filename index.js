@@ -18,90 +18,89 @@ let upload = multer({
 
 let path = __dirname;
 
-app.get("/login" , (req , res) => {
-    res.sendFile(path + "/public/html/input_upload_id.html");
-})
-
-let ids = [
-    "Teddy1128" , 
-    "banana120813",
-    "Oein219",
-];
-
-let options = [
-    "e두환이와포커츄의세계여행/oe대출금리는너굴은행/o",
-    "e괴물과귀신이울고있다/o",
-    "eTEST/o",
-];
-
-app.get("/loginCheek" , (req , res) => {
-    console.log(req.params);
-    ids.forEach(id => {
-        if(req.param("a") == id){
-            res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + req.param("a") + `"</script>`);
-        }
-    });
-
-    res.send("a");
-});
-
-app.post('/up', upload.array('profile_img'), (req, res) => {
-    res.send("업로드 완료?");
-    req.files.forEach(element => {
-        element = element.filename;
-
-        if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt"))){
-            fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt"));
-        }
-
-        if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94")){
-            fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94");
-        }
-        fs.rename(
-            path + 
-            "/uploads/" + 
-            element, 
-            path + 
-            "/public/cartoons/" + 
-            req.param("Opt") + 
-            "/" + 
-            req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + 
-            "%ED%99%94" + "/" + 
-            element.replace(".png" , "").replace(".PNG" , "") + 
-            ".png", 
-            function(err){
-        });
-    });
-
-    shell.exec(`cd ` + path);
-    shell.exec(`git fetch`);
-    shell.exec(`git pull`);
-    shell.exec(`git add *`);
-    shell.exec(`git commit -a -m "Uploaded!"`);
-    shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`);
-    console.log(`Uploaded!`);
-    init();
-});
-
-app.get('/upload' , (req , res) => {
-    fs.readFile(path + "/public/html/upload.html", 'utf8', function (err, data) {
-        for(let i = 0;i < ids.length;i++){
-            if(ids[i] == req.param("id")){
-                res.send(data.replace("$1" , options[i].replace("/o" , "</option>").replace("e" , "<option>")));
-            }
-        }
-    });
-})
-
-app.get("/" , (req , res) => {
-    res.sendFile(path + "/public/html/index.html");
-});
-
 function init(){
     app = undefined;
     app = express();
 
+    app.get("/login" , (req , res) => {
+        res.sendFile(path + "/public/html/input_upload_id.html");
+    })
     
+    let ids = [
+        "Teddy1128" , 
+        "banana120813",
+        "Oein219",
+    ];
+    
+    let options = [
+        "e두환이와포커츄의세계여행/oe대출금리는너굴은행/o",
+        "e괴물과귀신이울고있다/o",
+        "eTEST/o",
+    ];
+    
+    app.get("/loginCheek" , (req , res) => {
+        console.log(req.params);
+        ids.forEach(id => {
+            if(req.param("a") == id){
+                res.send(`<script>location.href = location.href.split("/")[0] + "//" + location.href.split("/")[2] + "/upload?id=` + req.param("a") + `"</script>`);
+            }
+        });
+    
+        res.send("a");
+    });
+    
+    app.post('/up', upload.array('profile_img'), (req, res) => {
+        res.send("업로드 완료?");
+        req.files.forEach(element => {
+            element = element.filename;
+    
+            if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt"))){
+                fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt"));
+            }
+    
+            if (!fs.existsSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94")){
+                fs.mkdirSync(path + "/public/cartoons/" + req.param("Opt") + "/" + req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + "%ED%99%94");
+            }
+            fs.rename(
+                path + 
+                "/uploads/" + 
+                element, 
+                path + 
+                "/public/cartoons/" + 
+                req.param("Opt") + 
+                "/" + 
+                req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + 
+                "%ED%99%94" + "/" + 
+                element.replace(".png" , "").replace(".PNG" , "") + 
+                ".png", 
+                function(err){
+            });
+        });
+    
+        shell.exec(`cd ` + path);
+        shell.exec(`git fetch`);
+        shell.exec(`git pull`);
+        shell.exec(`git add *`);
+        shell.exec(`git commit -a -m "Uploaded!"`);
+        shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`);
+        console.log(`Uploaded!`);
+        init();
+    });
+    
+    app.get('/upload' , (req , res) => {
+        fs.readFile(path + "/public/html/upload.html", 'utf8', function (err, data) {
+            for(let i = 0;i < ids.length;i++){
+                if(ids[i] == req.param("id")){
+                    res.send(data.replace("$1" , options[i].replace("/o" , "</option>").replace("e" , "<option>")));
+                }
+            }
+        });
+    })
+    
+    app.get("/" , (req , res) => {
+        res.sendFile(path + "/public/html/index.html");
+    });
+
     fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) {
         app.use('/ads' , express.static(path + '/public/ads')); //ads
     
