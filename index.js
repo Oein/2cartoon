@@ -20,7 +20,7 @@ function make_img(url){ //만화만들때 img 태그 string 생성 function
     return `<img src="` + url + `" />`
 }
 
-let path = __dirname;
+let path = __dirname; //현재 디렉토리
 
 function init(){
     app = undefined;
