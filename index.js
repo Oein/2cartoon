@@ -42,7 +42,7 @@ function init(){ //app.get 같은거 하는곳
         "eTEST/o",
     ];
     
-    app.get("/loginCheek" , (req , res) => {
+    app.get("/loginCheek" , (req , res) => { //로그인 부분
         console.log(req.params);
         ids.forEach(id => {
             if(req.param("a") == id){
