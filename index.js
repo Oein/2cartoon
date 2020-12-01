@@ -27,7 +27,7 @@ function init(){ //app.get 같은거 하는곳
     app = express(); //router open
 
     app.get("/login" , (req , res) => { //로그인 패이지
-        res.sendFile(path + "/public/html/input_upload_id.html");
+        res.sendFile(path + "/public/html/input_upload_id.html"); //파일 보내기
     })
     
     let ids = [
