@@ -17,7 +17,7 @@ let upload = multer({
 });
 
 function make_img(url){
-    
+    return `<img src="` + url + `" />`
 }
 
 let path = __dirname;
