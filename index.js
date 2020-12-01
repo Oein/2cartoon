@@ -8,7 +8,7 @@ let total = 0;
 
 app.use(function (req, res, next) {
     total++;
-    console.log();
+    console.log(`total : ` + total);
     next();
   });
 
