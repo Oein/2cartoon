@@ -125,12 +125,12 @@ function init(){ //app.get 같은거 하는곳
                 let folda = filelista[i]; //unencoded cartoon name
                 let fold = encodeURI(folda); // encoded cartoon name
                 app.use('/cartoon/' + fold, express.static(path + '/public/cartoons/' + fold)); //express server opens /cartoon/<EncodedCartoonName>
-                fs.readdir(path + '/public/cartoons/' + folda , function(error , list){  //loop 화's count
+                fs.readdir(path + '/public/cartoons/' + folda , function(error , list){  //read 
                     // Make subcartoons page
                 
                     let subCartoons = `<style>* {font-size: 1.3em;}</style>`; //subcartoon style
         
-                    for(let i = 0;i < list.length;i++){ //
+                    for(let i = 0;i < list.length;i++){ //loop 화's count
                         let element = list[i];
         
                         app.use('/cartoon/' + fold + "/" + element, express.static(path + '/public/cartoons/' + folda + "/" + element));
