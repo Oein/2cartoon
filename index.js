@@ -115,7 +115,7 @@ function init(){ //app.get 같은거 하는곳
         console.log("\n\n -- Someone come into /reload --\n\n")
     });
 
-    fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) { //마노하 페이지 sub~~ 생성 부분
+    fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) { //만화 페이지 sub~~ 생성 부분
         app.use('/ads' , express.static(path + '/public/ads')); //ads
     
         fs.readdir(path + '/public/cartoons' , function(error , filelista) {
@@ -160,7 +160,7 @@ function init(){ //app.get 같은거 하는곳
             };
         })
         
-        app.use('/ctI', express.static(path + '/public/cartoons/image'));
+        app.use('/ctI', express.static(path + '/public/cartoons/image')); //썸네일
     });
 
     console.log("Reloaded!");
