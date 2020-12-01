@@ -139,7 +139,9 @@ function init(){
                             let temp = cartoonForm;
                             fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
                                 let imgs = "";
-                                
+                                a.forEach(elemena => {
+                                    imgs = 
+                                })
                                 temp = temp.replace("$1" , decodeURI(element));
                                 temp = temp.replace("$2" , imgs);
                                 res.send(temp);
