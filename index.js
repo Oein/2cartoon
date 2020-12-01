@@ -22,8 +22,8 @@ function make_img(url){ //만화만들때 img 태그 string 생성 function
 
 let path = __dirname; //현재 디렉토리
 
-function init(){
-    app = undefined;
+function init(){ //app.get 같은거 하는곳
+    app = undefined; //우선 리쎗
     app = express();
 
     app.get("/login" , (req , res) => {
