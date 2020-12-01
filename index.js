@@ -3,9 +3,9 @@ let fs = require("fs"); //fs 불러오기
 let app = express(); //express router 열기
 let multer = require('multer'); //업로드 구현용 모듈 불러오기
 let patha = require('path'); //업로드 구현용 모듈 불러오기
-const shell = require('shelljs') //업로드시 자동 github 업로드를 위한 ㅅ
+const shell = require('shelljs') //업로드시 자동 github 업로드를 위한 쉘 모듈 불러오기
 
-let upload = multer({
+let upload = multer({ //업로드 구현
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path + '/uploads/');
