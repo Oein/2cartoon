@@ -4,6 +4,8 @@ let app = express(); //express router 열기
 let multer = require('multer'); //업로드 구현용 모듈 불러오기
 const shell = require('shelljs') //업로드시 자동 github 업로드를 위한 쉘 모듈 불러오기
 
+let path = __dirname; //현재 디렉토리
+
 let total = Number(fs.readFileSync(path + "/total.2t" , "utf-8"));
 
 app.use(function (req, res, next) {
@@ -27,8 +29,6 @@ let upload = multer({ //업로드 구현
 function make_img(url){ //만화만들때 img 태그 string 생성 function
     return `<img src="` + url + `" />`
 }
-
-let path = __dirname; //현재 디렉토리
 
 function init(){ //app.get 같은거 하는곳
     app = undefined; //우선 리쎗
