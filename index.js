@@ -9,6 +9,7 @@ let total = fs.readFileSync(path + "/total.2t" , "utf-8");
 app.use(function (req, res, next) {
     total++;
     console.log(`total : ` + total);
+    fs.writeFileSync(path + "/total.2t", total, 'utf8');
     next();
 });
 
