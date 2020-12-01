@@ -118,7 +118,7 @@ function init(){ //app.get 같은거 하는곳
     fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) { //만화 페이지 sub~~ 생성 부분
         app.use('/ads' , express.static(path + '/public/ads')); //ads
     
-        fs.readdir(path + '/public/cartoons' , function(error , filelista) {
+        fs.readdir(path + '/public/cartoons' , function(error , filelista) { //cartoons
             console.log("cartoons : " + filelista); // Print cartoons
         
             for(let i = 0;i < filelista.length;i++){ //loop cartoons counts
