@@ -140,7 +140,7 @@ function init(){
                             fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
                                 let imgs = "";
                                 a.forEach(elemena => {
-                                    imgs = imgs + make_img(`/cartoon/` + foldaelement)
+                                    imgs = imgs + make_img(`/cartoon/` + folda + "/" + element)
                                 })
                                 temp = temp.replace("$1" , decodeURI(element));
                                 temp = temp.replace("$2" , imgs);
