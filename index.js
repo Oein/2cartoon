@@ -105,6 +105,10 @@ function init(){
         res.sendFile(path + "/public/html/index.html");
     });
 
+    app.get("/admin" , (req , res) => {
+        res.sendFile(path + "/public/html/admin.html");
+    });
+
     app.get("/reload" , (req , res) => {
         init();
         res.send("Reload Completed!");
