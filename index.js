@@ -25,12 +25,14 @@ app.get("/login" , (req , res) => {
 
 let ids = [
     "Teddy1128" , 
-    "banana120813"
+    "banana120813",
+    "Oein219",
 ];
 
 let options = [
-    "<option>두환이와포커츄의세계여행</option><option>대출금리는너굴은행</option>",
-    "<option>괴물과귀신이울고있다</option>"
+    "e두환이와포커츄의세계여행/oe대출금리는너굴은행/o",
+    "e괴물과귀신이울고있다/o",
+    "eTEST/o",
 ];
 
 app.get("/loginCheek" , (req , res) => {
@@ -82,7 +84,7 @@ app.get('/upload' , (req , res) => {
     fs.readFile(path + "/public/html/upload.html", 'utf8', function (err, data) {
         for(let i = 0;i < ids.length;i++){
             if(ids[i] == req.param("id")){
-                res.send(data.replace("$1" , options[i]));
+                res.send(data.replace("$1" , options[i].replace("/o" , "</option>").replace("e" , "<option>")));
             }
         }
     });
