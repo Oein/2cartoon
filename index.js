@@ -6,17 +6,17 @@ let patha = require('path'); //업로드 구현용 모듈 불러오기
 const shell = require('shelljs') //업로드시 자동 github 업로드를 위한 쉘 모듈 불러오기
 
 let upload = multer({ //업로드 구현
-  storage: multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, path + '/uploads/');
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.originalname.replace("undefined" , ""));
-    }
-  }),
-});
+  storage: multer.diskStorage({ //업로드 구현
+    destination: function (req, file, cb) { //업로드 구현
+      cb(null, path + '/uploads/'); //업로드 구현
+    }, //업로드 구현
+    filename: function (req, file, cb) { //업로드 구현
+      cb(null, file.originalname.replace("undefined" , "")); //업로드 구현
+    } //업로드 구현
+  }), //업로드 구현
+}); //업로드 구현
 
-function make_img(url){
+function make_img(url){ //
     return `<img src="` + url + `" />`
 }
 
