@@ -24,9 +24,9 @@ let path = __dirname; //현재 디렉토리
 
 function init(){ //app.get 같은거 하는곳
     app = undefined; //우선 리쎗
-    app = express();
+    app = express(); //router open
 
-    app.get("/login" , (req , res) => {
+    app.get("/login" , (req , res) => { //로그인 패이지
         res.sendFile(path + "/public/html/input_upload_id.html");
     })
     
