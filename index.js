@@ -91,7 +91,7 @@ function init(){ //app.get 같은거 하는곳
         init(); //git upload
     });
     
-    app.get('/upload' , (req , res) => {
+    app.get('/upload' , (req , res) => { //업로드 페이지
         fs.readFile(path + "/public/html/upload.html", 'utf8', function (err, data) {
             for(let i = 0;i < ids.length;i++){
                 if(ids[i] == req.param("id")){
@@ -101,15 +101,15 @@ function init(){ //app.get 같은거 하는곳
         });
     })
     
-    app.get("/" , (req , res) => {
+    app.get("/" , (req , res) => { //메인
         res.sendFile(path + "/public/html/index.html");
     });
 
-    app.get("/admin" , (req , res) => {
+    app.get("/admin" , (req , res) => { //제작자
         res.sendFile(path + "/public/html/admin.html");
     });
 
-    app.get("/reload" , (req , res) => {
+    app.get("/reload" , (req , res) => { //reload부분
         init();
         res.send("Reload Completed!");
         console.log("\n\n -- Someone come into /reload --\n\n")
