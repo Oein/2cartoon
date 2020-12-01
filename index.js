@@ -81,14 +81,14 @@ function init(){ //app.get 같은거 하는곳
             });
         });
     
-        shell.exec(`cd ` + path);
-        shell.exec(`git fetch`);
-        shell.exec(`git pull`);
-        shell.exec(`git add *`);
-        shell.exec(`git commit -a -m "Uploaded!"`);
-        shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`);
-        console.log(`Uploaded!`);
-        init();
+        shell.exec(`cd ` + path); //git upload
+        shell.exec(`git fetch`); //git upload
+        shell.exec(`git pull`); //git upload
+        shell.exec(`git add *`); //git upload
+        shell.exec(`git commit -a -m "Uploaded!"`); //git upload
+        shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`); //git upload
+        console.log(`Uploaded!`); //git upload
+        init(); //git upload
     });
     
     app.get('/upload' , (req , res) => {
