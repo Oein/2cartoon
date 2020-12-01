@@ -1,8 +1,8 @@
-let express = require("express");
-let fs = require("fs");
-let app = express();
-let multer = require('multer');
-let patha = require('path');
+let express = require("express"); //express 불러오기
+let fs = require("fs"); //fs 불러오기
+let app = express(); //express router 열기
+let multer = require('multer'); //업로드 구현용 모듈 불러오기
+let patha = require('path'); //
 const shell = require('shelljs')
 
 let upload = multer({
