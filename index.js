@@ -16,7 +16,7 @@ let upload = multer({ //업로드 구현
   }), //업로드 구현
 }); //업로드 구현
 
-function make_img(url){ //
+function make_img(url){ //만화만들때 img 태그 string 생성 fun
     return `<img src="` + url + `" />`
 }
 
