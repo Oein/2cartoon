@@ -139,7 +139,7 @@ function init(){
                             let temp = cartoonForm;
                             fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
                                 temp = temp.replace("$1" , decodeURI(element));
-                                
+                                temp = temp.replace("$2" , imgs);
                                 res.send(temp);
                             });
                         });
