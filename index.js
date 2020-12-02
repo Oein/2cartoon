@@ -103,7 +103,7 @@ function init(){ //app.get 같은거 하는곳
         fs.readFile(path + "/public/html/upload.html", 'utf8', function (err, data) {
             for(let i = 0;i < ids.length;i++){
                 if(ids[i] == req.param("id")){
-                    res.send(data.replace("$1" , options[i].replace("/o" , "</option>").replace("e" , "<option>")));
+                    res.send(data.replace("$1" , options[i].replaceAll("/o" , "</option>").replaceAll("e" , "<option>")));
                 }
             }
         });
