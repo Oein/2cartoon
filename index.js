@@ -12,10 +12,7 @@ let total = Number(fs.readFileSync(path + "/total.2t" , "utf-8"));
 function totalup(){
     total++;
     console.log(("\n\n\t\tTotal : " + total + "\n\n").bgBlue.black);
-    fs.writeFileSync(path + "/total.2t" , total)
-    shell.exec(`git add *`); //git upload
-    shell.exec(`git commit -a -m "Uploaded!"`); //git upload
-    shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`); //git upload
+    fs.writeFileSync(path + "/total.2t" , total);
 }
 
 totalup();
