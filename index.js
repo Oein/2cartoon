@@ -150,12 +150,10 @@ function init(){ //app.get 같은거 하는곳
                         app.get(main_html_path , (req , res) => { //Make main page
                             let temp = cartoonForm;
                             fs.readdir(path + `/public/cartoons/` + folda + "/" + element, (error, a) => {
-                                let imgs = "";
-                                a.forEach(elemena => {
-                                    imgs = imgs + make_img(`/cartoon/` + folda + "/" + element + "/" + elemena) + `<p></p>`;
-                                })
-                                temp = temp.replace("$1" , decodeURI(element));
-                                temp = temp.replace("$2" , imgs);
+                                temp = temp.replace("$1" , a.length);
+                                temp = temp.replace("$2" , folda);
+                                temp = temp.replace("$3" , element);
+                                temp = temp.replace("$4" , decodeURI(element));
                                 res.send(temp);
                             });
                         });
