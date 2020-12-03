@@ -189,7 +189,8 @@ function init(){ //app.get 같은거 하는곳
 }
 
 function today_init(){
-    if New
+    let today = new Date();  
+    if()
 }
 
 init(); //Init
