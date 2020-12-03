@@ -193,8 +193,11 @@ function today_init(){
     if(now.getHours() == 0 && now.getMinutes() == 0 && now.getSeconds() == 0){
         today = 0;
     }
+
+    setTimeout(today_init , 1)
 }
 
+today_init();
 init(); //Init
 
 app.listen(8280 , function() { //Open Server
