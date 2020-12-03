@@ -190,7 +190,7 @@ function init(){ //app.get 같은거 하는곳
 
 function today_init(){
     let today = new Date();  
-    if()
+    if(today.getHours() == 0 && today.getM)
 }
 
 init(); //Init
