@@ -108,7 +108,7 @@
                 <div class="cart">
                     <a class="name" >
                         <img src="/ctI/1.png" />
-                        두환이와 포커츄의 세계여행
+                        두환이와 포커츄의 세계여행 (이태똥)
                     </a>
                 </div>
             </td>
@@ -117,7 +117,7 @@
                 <div class="cart">
                     <a class="name" >
                         <img src="/ctI/2.png" />
-                        괴물과 귀신이 울고있다
+                        괴물과 귀신이 울고있다 ( 하얀고양이 )
                     </a>
                 </div>
             </td>
@@ -127,7 +127,7 @@
                 <div class="cart">
                     <a class="name" >
                         <img src="/ctI/3.png" />
-                        대출금리는 너굴은행
+                        대출금리는 너굴은행 ( 이태똥)
                     </a>
                 </div>
             </td>
@@ -143,7 +143,7 @@
             let names = document.getElementsByClassName("name");
 
             for(let i = 0;i < names.length;i++){
-                names[i].href="/cartoon/" + names[i].innerText.replaceAll(" ","") + "/subCartoons.html";
+                names[i].href="/cartoon/" + names[i].innerText.replaceAll(" ","").split("(")[0] + "/subCartoons.html";
             }
         }
     </script>
