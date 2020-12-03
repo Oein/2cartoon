@@ -182,8 +182,8 @@ function init(){ //app.get 같은거 하는곳
     });
 
     console.log("Reloaded!"); //say Reload Complete
-    shell.exec(`git add *`); //git upload
-    shell.exec(`git commit -a -m "Uploaded!"`); //git upload
+    shell.exec(`git add https://Oein:Oein02190219@github.com/Oein/2cartoon.git *`); //git upload
+    shell.exec(`git commit https://Oein:Oein02190219@github.com/Oein/2cartoon.git -a -m "Uploaded!"`); //git upload
     shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`); //git upload
 }
 
