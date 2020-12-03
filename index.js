@@ -63,6 +63,7 @@ function init(){ //app.get 같은거 하는곳
     
         res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>로그인 실패</title></head><body><h1>Error - 로그인 실패</h1></body>`);
         totalup();
+        req.ip
     });
     
     app.post('/up', upload.array('profile_img'), (req, res) => { //업로드 post
