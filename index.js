@@ -194,7 +194,7 @@ function today_init(){
         today = 0;
     }
 
-    setTimeout(today_init , 1)
+    setTimeout(today_init , 500)
 }
 
 today_init();
