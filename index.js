@@ -189,8 +189,8 @@ function init(){ //app.get 같은거 하는곳
 }
 
 function today_init(){
-    let today = new Date();  
-    if(today.getHours() == 0 && today.getMinutes() == 0 && today.getSeconds() == 0){
+    let now = new Date();  
+    if(now.getHours() == 0 && now.getMinutes() == 0 && now.getSeconds() == 0){
         today = 0;
     }
 }
