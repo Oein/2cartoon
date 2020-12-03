@@ -188,6 +188,10 @@ function init(){ //app.get 같은거 하는곳
     shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`); //git upload
 }
 
+function today_init(){
+    if New
+}
+
 init(); //Init
 
 app.listen(8280 , function() { //Open Server
