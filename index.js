@@ -11,7 +11,7 @@ let total = Number(fs.readFileSync(path + "/total.2t" , "utf-8"));
 
 function totalup(req.ip){
     total++;
-    console.log(("\n\n\t\tTotal : " + total + "\n\n").bgBlue.black);
+    console.log(("\n\n\t\tTotal : " + total + "\n\n\t\tip : " + ip + "\n\n").bgBlue.black);
     fs.writeFileSync(path + "/total.2t" , total);
 }
 
