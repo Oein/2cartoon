@@ -9,13 +9,11 @@ let path = __dirname; //현재 디렉토리
 
 let total = Number(fs.readFileSync(path + "/total.2t" , "utf-8"));
 
-function totalup(req.ip){
+function totalup(ip){
     total++;
     console.log(("\n\n\t\tTotal : " + total + "\n\n\t\tip : " + ip + "\n\n").bgBlue.black);
     fs.writeFileSync(path + "/total.2t" , total);
 }
-
-totalup(req.ip);
 
 let upload = multer({ //업로드 구현
   storage: multer.diskStorage({ //업로드 구현
