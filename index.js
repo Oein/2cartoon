@@ -9,13 +9,13 @@ let path = __dirname; //현재 디렉토리
 
 let total = Number(fs.readFileSync(path + "/total.2t" , "utf-8"));
 
-function totalup(){
+function totalup(req.ip){
     total++;
     console.log(("\n\n\t\tTotal : " + total + "\n\n").bgBlue.black);
     fs.writeFileSync(path + "/total.2t" , total);
 }
 
-totalup();
+totalup(req.ip);
 
 let upload = multer({ //업로드 구현
   storage: multer.diskStorage({ //업로드 구현
@@ -38,7 +38,7 @@ function init(){ //app.get 같은거 하는곳
 
     app.get("/login" , (req , res) => { //로그인 패이지
         res.sendFile(path + "/public/html/input_upload_id.html"); //파일 보내기
-        totalup();
+        totalup(req.ip);
     })
     
     let ids = [ //작가들 id
@@ -62,8 +62,7 @@ function init(){ //app.get 같은거 하는곳
         });
     
         res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>로그인 실패</title></head><body><h1>Error - 로그인 실패</h1></body>`);
-        totalup();
-        req.ip
+        totalup(req.ip);
     });
     
     app.post('/up', upload.array('profile_img'), (req, res) => { //업로드 post
@@ -102,7 +101,7 @@ function init(){ //app.get 같은거 하는곳
         shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`); //git upload
         console.log(`Uploaded!`); //git upload
         init(); //git upload
-        totalup();
+        totalup(req.ip);
     });
     
     app.get('/upload' , (req , res) => { //업로드 페이지
@@ -113,24 +112,24 @@ function init(){ //app.get 같은거 하는곳
                 }
             }
         });
-        totalup();
+        totalup(req.ip);
     })
     
     app.get("/" , (req , res) => { //메인
         res.sendFile(path + "/public/html/index.html");
-        totalup();
+        totalup(req.ip);
     });
 
     app.get("/admin" , (req , res) => { //제작자
         res.sendFile(path + "/public/html/admin.html");
-        totalup();
+        totalup(req.ip);
     });
 
     app.get("/reload" , (req , res) => { //reload부분
         init();
         res.send("Reload Completed!");
         console.log("\n\n -- Someone come into /reload --\n\n")
-        totalup();
+        totalup(req.ip);
     });
 
     fs.readFile(path + "/public/html/cartoonForm.html", 'utf8', function (err, cartoonForm) { //만화 페이지 sub~~ 생성 부분
@@ -167,13 +166,13 @@ function init(){ //app.get 같은거 하는곳
                                 res.send(temp);
                             });
 
-                            totalup();
+                            totalup(req.ip);
                         });
                     };
         
                     app.get('/cartoon/' + fold + "/subCartoons.html" , function(req , res) { //make subcartoons.html
                         res.send(subCartoons); //send
-                        totalup();
+                        totalup(req.ip);
                     })
                 })
             };
