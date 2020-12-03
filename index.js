@@ -10,10 +10,10 @@ let path = __dirname; //현재 디렉토리
 let total = Number(fs.readFileSync(path + "/total.2t" , "utf-8"));
 let today = Number(fs.readFileSync(path + "/today.2t" , "utf-8"));
 
-function totalup(){
+function totalup(ip){
     total++;
     today++;
-    console.log(("\n\n\t\tTotal : " + total + "\n\t\tToday : " + today + "\n\n").bgBlue.black);
+    console.log(("\n\n\t\tTotal : " + total + "\n\t\tToday : " + today + "\n\t\tIP : " + ip + "\n\n").bgBlue.black);
     fs.writeFileSync(path + "/total.2t" , total);
     fs.writeFileSync(path + "/today.2t" , total);
 }
