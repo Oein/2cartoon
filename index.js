@@ -8,6 +8,7 @@ const colors = require('colors');
 let path = __dirname; //현재 디렉토리
 
 let total = Number(fs.readFileSync(path + "/total.2t" , "utf-8"));
+let today = Number(fs.readFileSync(path + "/today.2t" , "utf-8"));
 
 function totalup(){
     total++;
