@@ -15,6 +15,7 @@ function totalup(){
     today++;
     console.log(("\n\n\t\tTotal : " + total + "\n\t\tToday" + today + "\n\n").bgBlue.black);
     fs.writeFileSync(path + "/total.2t" , total);
+    fs.writeFileSync(path + "/today.2t" , total);
 }
 
 let upload = multer({ //업로드 구현
