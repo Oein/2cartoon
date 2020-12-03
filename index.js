@@ -12,6 +12,7 @@ let today = Number(fs.readFileSync(path + "/today.2t" , "utf-8"));
 
 function totalup(){
     total++;
+    today++;
     console.log(("\n\n\t\tTotal : " + total + "\n\n").bgBlue.black);
     fs.writeFileSync(path + "/total.2t" , total);
 }
