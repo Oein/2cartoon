@@ -104,7 +104,7 @@ function init(){ //app.get 같은거 하는곳
         console.log(`Uploaded!`); //git upload
         totalup(req.ip);
         server.close();
-        const subprocess = spawn(process.argv[1], process.argv.slice(2), {detached: true, stdio: ['ignore', out, err]});
+        let subprocess = spawn(process.argv[1], process.argv.slice(2), {detached: true, stdio: ['ignore', out, err]});
     
         subprocess.unref();
     });
