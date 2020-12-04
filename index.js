@@ -150,6 +150,7 @@ function init(){ //app.get 같은거 하는곳
                 
                     let subCartoons = `<style>* {font-size: 1.3em;}</style>`; //subcartoon style
         
+                    
                     for(let i = 0;i < list.length;i++){ //loop 화's count
                         let element = list[i]; //element
         
