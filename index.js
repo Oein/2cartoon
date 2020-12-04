@@ -104,6 +104,8 @@ function init(){ //app.get 같은거 하는곳
         console.log(`Uploaded!`); //git upload
         totalup(req.ip);
         server.close();
+
+        
     });
     
     app.get('/upload' , (req , res) => { //업로드 페이지
