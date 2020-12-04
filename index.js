@@ -104,7 +104,7 @@ function init(){ //app.get 같은거 하는곳
         console.log(`Uploaded!`); //git upload
         totalup(req.ip);
         
-        fs.writeFileSync(path + "/index,js" , fs.readFileSync(path + "/index.js" , "utf-8") + "//");
+        fs.writeFileSync(path + "/index.js" , fs.readFileSync(path + "/index.js" , "utf-8") + "//");
     });
     
     app.get('/upload' , (req , res) => { //업로드 페이지
