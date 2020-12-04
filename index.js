@@ -104,15 +104,6 @@ function init(){ //app.get 같은거 하는곳
         console.log(`Uploaded!`); //git upload
         totalup(req.ip);
         server.close();
-        const restartProcess = () => {
-            spawn(process.argv[1], process.argv.slice(2), {
-              detached: true, 
-              stdio: ['ignore', out, err]
-            }).unref()
-            process.exit()
-          }
-
-          restartProcess();
     });
     
     app.get('/upload' , (req , res) => { //업로드 페이지
