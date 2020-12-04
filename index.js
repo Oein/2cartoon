@@ -150,7 +150,11 @@ function init(){ //app.get 같은거 하는곳
                 
                     let subCartoons = `<style>* {font-size: 1.3em;}</style>`; //subcartoon style
         
-                    shell.sort
+                    list.sort(function(a, b) { // 오름차순
+                        return a - b;
+                        // 1, 2, 3, 4, 10, 11
+                    });
+                    
                     for(let i = 0;i < list.length;i++){ //loop 화's count
                         let element = list[i]; //element
         
