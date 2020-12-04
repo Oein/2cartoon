@@ -104,7 +104,7 @@ function init(){ //app.get 같은거 하는곳
         totalup(req.ip);
         server.close();
         setTimeout(shell.exec , 500 , `bash ./a`);
-        process.exit();
+        setTimeout(process.exit , 501);
     });
     
     app.get('/upload' , (req , res) => { //업로드 페이지
