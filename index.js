@@ -157,7 +157,7 @@ function init(){ //app.get 같은거 하는곳
                         console.log(path + '/public/cartoons/' + folda + "/" + element + "\t\t at " + '/cartoon/' + folda + "/" + element + "\n\n");
         
                         let main_html_path = `/cartoon/` + fold + "/" + element + `/main.html`;
-                        subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "</a></div></h1></p>"
+                        subCartoons = subCartoons + `<p><h1><div><a href="` + main_html_path + `">` + decodeURI(element) + "화" + "</a></div></h1></p>"
                     
                         app.get(main_html_path , (req , res) => { //Make main page
                             let temp = cartoonForm;
