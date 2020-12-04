@@ -103,7 +103,7 @@ function init(){ //app.get 같은거 하는곳
         console.log(`Uploaded!`); //git upload
         totalup(req.ip);
         server.close();
-        shell.exec(`bash ./a`);
+        set`bash ./a`);
         process.exit();
     });
     
