@@ -4,7 +4,7 @@ let app = express(); //express router 열기
 let multer = require('multer'); //업로드 구현용 모듈 불러오기
 let shell = require('shelljs') //업로드시 자동 github 업로드를 위한 쉘 모듈 불러오기
 const colors = require('colors');
-let spawn = req
+let spawn = require("child_process");
 
 let path = __dirname; //현재 디렉토리
 
