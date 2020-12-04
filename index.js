@@ -104,8 +104,9 @@ function init(){ //app.get 같은거 하는곳
         console.log(`Uploaded!`); //git upload
         totalup(req.ip);
         server.close();
-        setTimeout(shell.exec , 500 , `bash ./a`);
-        process.restar
+        const subprocess = spawn(process.argv[1], process.argv.slice(2), {detached: true, stdio: ['ignore', out, err]});
+    
+        subprocess.unref();
     });
     
     app.get('/upload' , (req , res) => { //업로드 페이지
