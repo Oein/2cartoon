@@ -101,8 +101,9 @@ function init(){ //app.get 같은거 하는곳
         shell.exec(`git commit -a -m "Uploaded!"`); //git upload
         shell.exec(`git push https://Oein:Oein02190219@github.com/Oein/2cartoon.git --all`); //git upload
         console.log(`Uploaded!`); //git upload
-        init(); //git upload
         totalup(req.ip);
+        shell.exec(`node index.js`);
+        process.exit();
     });
     
     app.get('/upload' , (req , res) => { //업로드 페이지
