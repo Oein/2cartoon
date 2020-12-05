@@ -87,7 +87,7 @@ function init(){ //app.get 같은거 하는곳
                 req.param("Opt") + 
                 "/" + 
                 req.param("wha").replace("화" , "").replace("%ED%99%94" , "") + 
-                "%ED%99%94" + "/" + 
+                "/" + 
                 element.replace(".png" , "").replace(".PNG" , "") + 
                 ".png", 
                 function(err){
