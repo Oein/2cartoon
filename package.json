@@ -4,7 +4,6 @@
   "description": "```html <!DOCTYPE html> <html lang=\"en\"> <head>     <meta charset=\"UTF-8\">     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">     <title>2cartoon 매인 페이지</title>",
   "main": "index.js",
   "dependencies": {
-    "child_process": "^1.0.2",
     "colors": "^1.4.0",
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
