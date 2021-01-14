@@ -1,29 +1,25 @@
 {
   "name": "2cartoon",
   "version": "1.0.0",
-  "description": "```html <!DOCTYPE html> <html lang=\"en\"> <head>     <meta charset=\"UTF-8\">     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">     <title>2cartoon 매인 페이지</title>",
-  "main": "index.js",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "cookie-session": "^1.4.0",
-    "express": "^4.17.1",
-    "http": "^0.0.1-security",
-    "https": "^1.0.0",
-    "multer": "^1.4.2",
-    "shelljs": "^0.8.4"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oein/2cartoon.git"
+    "url": "git+https://github.com/Oein/2cartoon.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oein/2cartoon/issues"
+    "url": "https://github.com/Oein/2cartoon/issues"
   },
-  "homepage": "https://github.com/oein/2cartoon#readme"
+  "homepage": "https://github.com/Oein/2cartoon#readme",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
 }
