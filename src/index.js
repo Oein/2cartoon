@@ -62,33 +62,40 @@ fs.readdir(__dirname + "/../cartoons", function(error, cartoon_names){
 
           `
           
-          fs.readdir(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa , function(error , files){
-            app.use('/' + encodeURI(rS(nows_cartoon_name)) + "/" + nows_cartoon_name, express.static(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa));
-             files.forEach(haw_file => {
-              if(path.extname(haw_file) == ".mp4"){
-                //영상
-                cartoon_page_html += `
-                <video controls loop preload="auto">
-                  <source src="/`;
-                cartoon_page_html += rS(nows_cartoon_name);
-                cartoon_page_html += "/";
-                cartoon_page_html += nows_cartoons_hwa;
-                cartoon_page_html += `/`;
-                cartoon_page_html += haw_file;
-                cartoon_page_html += `">
-                </video><p></p>
-                `;
-              }else{
-                //나머지
-                cartoon_page_html += `<img src="/`;
-                cartoon_page_html += rS(nows_cartoon_name);
-                cartoon_page_html += "/";
-                cartoon_page_html += nows_cartoons_hwa;
-                cartoon_page_html += `/`;
-                cartoon_page_html += haw_file;
-                cartoon_page_html += `" /><p></p>`;
-              }
-             });
+          files = fs.readdirSync(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa)
+
+
+          files.sort((a , b) => {
+            let aa = Number(rS(a).split(".")[0]);
+            let bb = Number(rS(b).split(".")[0]);
+
+            return aa > bb ? 1 : aa == bb ? 0 : -1;
+          })
+             
+          files.forEach(haw_file => {
+          if(path.extname(haw_file) == ".mp4"){
+            //영상
+            cartoon_page_html += `
+            <video controls loop preload="auto">
+              <source src="/`;
+            cartoon_page_html += rS(nows_cartoon_name);
+            cartoon_page_html += "/";
+            cartoon_page_html += nows_cartoons_hwa;
+            cartoon_page_html += `/`;
+            cartoon_page_html += haw_file;
+            cartoon_page_html += `">
+            </video><p></p>
+            `;
+          }else{
+            //나머지
+            cartoon_page_html += `<img src="/`;
+            cartoon_page_html += rS(nows_cartoon_name);
+            cartoon_page_html += "/";
+            cartoon_page_html += nows_cartoons_hwa;
+            cartoon_page_html += `/`;
+            cartoon_page_html += haw_file;
+            cartoon_page_html += `" /><p></p>`;
+          }
           });
 
           cartoon_page_html += "</body></html>";
@@ -112,49 +119,48 @@ fs.readdir(__dirname + "/../cartoons", function(error, cartoon_names){
 
 //*********** web/ ************ */
 
+let root_dir = fs.readdirSync(__dirname + "/../cartoons");
+let html = `
+<html>
+<head>
+<style>
+img {
+  width : 100%;
+  border-radius : 10px;
+}
+
+div[class="name"]{
+  text-align: center;
+  width : 100%
+}
+
+* { font-size: large; }
+a { text-decoration:none; color: #EEEDED; }
+body{ background-color:#0075C9 }
+</style>
+</head>
+<body>
+<table>
+<tr>
+`;
+
+for(let i = 0;i < root_dir.length - 1;i++){
+  if(i % 3 == 0) html += `</tr><tr>`;
+  html += "<td>";
+  html += `<div class="cartoon"><a href="/`;
+  html += rS(root_dir[i]);
+  html += `/sub">`;
+  html += `<img src="/`;
+  html += rS(root_dir[i]);
+  html += `/thumb.png"><div class="name">`;
+  html += root_dir[i];
+  html += `</div></a></div></td>`;
+}
+
+html += "</tr></table></body></html>";
+
 app.get("/" , (req , res) => {
-  fs.readdir(__dirname + "/../cartoons" , function(error , files){
-    let html = `
-    <html>
-    <head>
-    <style>
-    img {
-      width : 100%;
-      border-radius : 10px;
-    }
-
-    div[class="name"]{
-      text-align: center;
-      width : 100%
-    }
-
-    * { font-size: large; }
-    a { text-decoration:none; color: #EEEDED; }
-    body{ background-color:#0075C9 }
-    </style>
-    </head>
-    <body>
-    <table>
-    <tr>
-    `;
-
-    for(let i = 0;i < files.length - 1;i++){
-      if(i % 3 == 0) html += `</tr><tr>`;
-      html += "<td>";
-      html += `<div class="cartoon"><a href="/`;
-      html += rS(files[i]);
-      html += `/sub">`;
-      html += `<img src="/`;
-      html += rS(files[i]);
-      html += `/thumb.png"><div class="name">`;
-      html += files[i];
-      html += `</div></a></div></td>`;
-    }
-
-    html += "</tr></table></body></html>";
-
-    res.send(html);
-  });
+  res.send(html);
 });
 
 app.listen(8280);
