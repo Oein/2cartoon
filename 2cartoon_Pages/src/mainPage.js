@@ -28,7 +28,7 @@ exports.ae = (app) => {
     <tr>
     `;
 
-    for(let i = 0;i < root_dir.length - 1;i++){
+    for(let i = 0;i < root_dir.length;i++){
     if(i % 3 == 0) html += `</tr><tr>`;
     html += "<td>";
     html += `<div class="cartoon"><a href="/`;

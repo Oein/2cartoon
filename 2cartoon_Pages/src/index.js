@@ -1,7 +1,7 @@
 let express = require("express");
 let app = express();
-let cv = require("./cartoonViewer");
 let mv = require("./mainPage");
+let cv = require("./cartoonViewer");
 
 cv.ae(app);
 mv.ae(app);
