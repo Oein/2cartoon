@@ -21,9 +21,30 @@ exports.ae = (app) => {
     * { font-size: large; }
     a { text-decoration:none; color: #EEEDED; }
     body{ background-color:#0075C9 }
+
+    .asd{
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        width: 15%;
+        height: 3.1%;
+        font-size: 1.05em;
+        background-color:#0075C9;
+        border-radius: 10px;
+        color: #EEEDED;
+        text-align: center;
+        border: black 2px solid;
+    }
+
+
     </style>
     </head>
     <body>
+    <div class="asd">
+    <a class="asd" href="/rule">
+    만화업로드
+    </a>
+    </div>
     <table>
     <tr>
     `;
