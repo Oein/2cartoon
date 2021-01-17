@@ -35,26 +35,26 @@ exports.ae = (app) => {
                         // web/만화이름/화/main
                         // <p><h1><a href="web/만화이름/화/main">{화}화</a></h1></p>
 
-                        let cartoon_page_html = `
-                <html>
-                <head>
-                <style>
-                img , video {
-                  margin: 5%;
-                  margin-top:1%;
-                  width: 90%;
-                  border: 2px black solid;
-                }
-      
-                body{ background-color:#0075C9 }
-                </style>
-                <title>` + nows_cartoon_name + " / " + nows_cartoons_hwa + "화" + `</title>
-                </head>
-                <body>
-      
-                `
+                        files = fs.readdirSync(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa);
 
-                        files = fs.readdirSync(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa)
+                        let cartoon_page_html = `
+                        <html>
+                        <head>
+                        <style>
+                        img , video {
+                          margin: 5%;
+                          margin-top:1%;
+                          width: 90%;
+                          border: 2px black solid;
+                        }
+              
+                        body{ background-color:#0075C9 }
+                        </style>
+                        <title>` + nows_cartoon_name + " / " + nows_cartoons_hwa + "화" + " / " + files.length + "개의 파일 있음" + `</title>
+                        </head>
+                        <body>
+              
+                        `
 
 
                         files.sort((a, b) => {
