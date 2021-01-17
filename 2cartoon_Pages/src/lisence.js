@@ -5,7 +5,7 @@ String.prototype.replaceAll = function(org, dest) {
 }
 
 let txt_files = fs.readdirSync(__dirname + "/../../lisences");
-let html = "";
+let html = "<html><head><title>2cartoon lisence</title></head><body>";
 
 txt_files.forEach(name => {
     console.log(name);
@@ -17,6 +17,8 @@ txt_files.forEach(name => {
     html += "</h3><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
     console.log(name + " complete!\n\n");
 });
+
+html += "</body></html>";
 
 exports.ae = (app) => {
     app.get("/lisence" ,(req , res) => {

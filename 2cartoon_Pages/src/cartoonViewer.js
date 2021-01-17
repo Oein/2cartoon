@@ -8,7 +8,9 @@ exports.ae = (app) => {
         cartoon_names.forEach(nows_cartoon_name => {
             let isNamePrinted = true;
             app.use('/' + encodeURI(rS.rS(nows_cartoon_name)), express.static(__dirname + "/../cartoons/" + nows_cartoon_name));
-            let subcartoons_html = "<html><head><style>* {font-size: 1.3em;}  a { text-decoration:none; color: #EEEDED; margin-left: 10px; } body{ background-color:#0075C9 } </style></head><body>\n\n";
+            let subcartoons_html = "<html><head><title>";
+            subcartoons_html += nows_cartoon_name + "</title>";
+            subcartoons_html += "<style>* {font-size: 1.3em;}  a { text-decoration:none; color: #EEEDED; margin-left: 10px; } body{ background-color:#0075C9 } </style></head><body>\n\n";
 
             fs.readdir(__dirname + "/../cartoons/" + nows_cartoon_name, function(error, nows_cartoons_hwas) {
                 if (nows_cartoons_hwas.length == 1) {
@@ -46,10 +48,13 @@ exports.ae = (app) => {
       
                 body{ background-color:#0075C9 }
                 </style>
+                <title>$1</title>
                 </head>
                 <body>
       
                 `
+
+                cartoon_page_html.replace("$1" , nows_cartoon_name + " / " + nows_cartoons_hwa + "화");
 
                         files = fs.readdirSync(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa)
 

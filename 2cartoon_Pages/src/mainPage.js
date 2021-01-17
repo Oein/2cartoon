@@ -51,6 +51,7 @@ exports.ae = (app) => {
     }
 
     </style>
+    <title>2cartoon</title>
     </head>
     <body>
     <div class="asd">
