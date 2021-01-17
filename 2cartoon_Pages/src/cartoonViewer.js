@@ -48,13 +48,11 @@ exports.ae = (app) => {
       
                 body{ background-color:#0075C9 }
                 </style>
-                <title>$1</title>
+                <title>` + nows_cartoon_name + " / " + nows_cartoons_hwa + "화" + `</title>
                 </head>
                 <body>
       
                 `
-
-                cartoon_page_html.replace("$1" , nows_cartoon_name + " / " + nows_cartoons_hwa + "화");
 
                         files = fs.readdirSync(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa)
 
