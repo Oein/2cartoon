@@ -36,6 +36,19 @@ exports.ae = (app) => {
         border: black 2px solid;
     }
 
+    .asdf{
+        position: fixed;
+        left: 17%;
+        bottom: 10px;
+        width: 13%;
+        height: 3.1%;
+        font-size: 1.05em;
+        background-color:#0075C9;
+        border-radius: 10px;
+        color: #EEEDED;
+        text-align: center;
+        border: black 2px solid;
+    }
 
     </style>
     </head>
@@ -43,6 +56,11 @@ exports.ae = (app) => {
     <div class="asd">
     <a class="asd" href="/rule">
     만화업로드
+    </a>
+    </div>
+    <div class="asdf">
+    <a class="asdf" href="/lisence">
+    라이센스
     </a>
     </div>
     <table>
@@ -62,7 +80,7 @@ exports.ae = (app) => {
     html += `</div></a></div></td>`;
     }
 
-    html += "</tr></table></body></html>";
+    html += "</tr></table><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p></body></html>";
 
     app.get("/" , (req , res) => {
     res.send(html);
