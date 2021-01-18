@@ -1,13 +1,13 @@
-let express = require("express");
-let app = express();
-let main = require("./mainPage");
-let view = require("./cartoonViewer");
-let rule = require("./rule");
-let lisence = require("./lisence");
+let express = require("express");       // express (서버 open용) 를 로드
+let app = express();                    // express 서버를 실행
+let main = require("./mainPage");       // 메인 페이지 생성 소스 로드
+let view = require("./cartoonViewer");  // 만화 뷰어 페이지 생성 소스 로드
+let rule = require("./rule");           // 만화 업로드 주의사항 페이지 생성 소스 로드
+let lisence = require("./lisence");     // 라이센스 페이지 생성 코드 로드
 
-view.ae(app);
-main.ae(app);
-rule.ae(app);
-lisence.ae(app);
+view.ae(app);                           // 만화 뷰어 페이지 생성
+main.ae(app);                           // 메인 페이지 생성
+rule.ae(app);                           // 만화 업로드 주의사항 페이지 생성
+lisence.ae(app);                        // 라이센스 페이지 생성
 
-app.listen(8280);
+app.listen(8280);                       // 8280번 포트에서 실행

@@ -1,6 +1,8 @@
-exports.ae = (app) => {
-    app.get("/rule" , (req , res) => {
-        res.send(`<!DOCTYPE html>
+exports.ae = (app) => {                                                                                                    // 이 모듈.ae(app) 을 입력하면 아래 소스를 실행
+    app.get("/rule" , (req , res) => {                                                                                     // /rule에 접속하면 아래 소스를 실행
+        
+        res.send(`<!DOCTYPE html>`+                                                                                        // 아래 html코드를 전송
+        `
         <html lang="en">
         <head>
             <meta charset="UTF-8">

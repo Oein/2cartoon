@@ -4,8 +4,8 @@
   "description": "",
   "main": "2cartoon_Pages/src/index.js",
   "scripts": {
-    "s": "node ./2cartoon_Pages/src/index.js",
-    "start": "npm run s"
+    "test": "node ./2cartoon_Pages/test_src/index.js",
+    "start": "node ./2cartoon_Pages/src/index.js"
   },
   "repository": {
     "type": "git",
