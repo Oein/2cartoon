@@ -65,10 +65,16 @@ exports.ae = (app) => {
         border: black 2px solid;
     }
 
+    img[id="Gif"]{
+        top:0px;
+        width:100%
+    }
+
     </style>
     <title>2cartoon</title>
     </head>
     <body>
+    <img id="Gif" src="/MainGIf.gif" alt="2cartoon">
     <div class="asd">
     <a class="asd" href="/rule">
     만화업로드
