@@ -20,6 +20,7 @@ exports.ae = (app) => {
                 html = html.replace("$1" , jsonProfile["nickname"]);
                 html = html.replace("$2" , jsonProfile["rank"]);
                 html = html.replace("$3" , jsonProfile["date"]);
+                html = html.replace("$4" , jsonProfile["image_src"]);
 
                 res.send(html);
             })
