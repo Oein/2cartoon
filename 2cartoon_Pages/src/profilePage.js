@@ -2,10 +2,10 @@ let fs = require('fs');                                                  // fs�
 let rS = require("./rS");                                                // 스페이스바 재거 모듈 로드
 let express = require("express");
 
-let main = fs.readFileSync(__dirname + "/../Profiles/profile.html").toString();
+let main = fs.readFileSync(__dirname + "/../html/profile.html").toString();
 
 exports.ae = (app) => {
-    app.use("/profiles/imgs", express.static(__dirname + "/../Profiles/imgs"));
+    app.use("/profiles/imgs", express.static(__dirname + "/../imgs"));
 
     let profile_list = fs.readdirSync(__dirname + "/../Profiles");
 

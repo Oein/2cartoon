@@ -1,5 +1,6 @@
 let fs = require('fs');                                                  // fs모듈(폴더 읽기용) 로드
 let rS = require("./rS");                                                // 스페이스바 재거 모듈 로드
+let express = require("express");
 
 exports.ae = (app) => {
     let root_dir = fs.readdirSync(__dirname + "/../cartoons");           // 만화 리스트를 root_dir에 저장
@@ -106,4 +107,8 @@ exports.ae = (app) => {
     app.get("/" , (req , res) => {                                                                              // /에 접속하면 아래 코드 실행
     res.send(html);                                                                                             // html 전송
     });
+
+    //favicon
+    app.use("/", express.static(__dirname + "/../favicon"));
+    app.use("/", express.static(__dirname + "/../imgs"));
 }
