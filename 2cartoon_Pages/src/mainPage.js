@@ -50,6 +50,20 @@ exports.ae = (app) => {
         border: black 2px solid;
     }
 
+    .asdfg{
+        position: fixed;
+        left: 31%;
+        bottom: 10px;
+        width: 13%;
+        height: 3.1%;
+        font-size: 1.05em;
+        background-color:#0075C9;
+        border-radius: 10px;
+        color: #EEEDED;
+        text-align: center;
+        border: black 2px solid;
+    }
+
     </style>
     <title>2cartoon</title>
     </head>
@@ -62,6 +76,11 @@ exports.ae = (app) => {
     <div class="asdf">
     <a class="asdf" href="/lisence">
     라이센스
+    </a>
+    </div>
+    <div class="asdfg">
+    <a class="asdfg" href="https://discord.gg/BMWufknvvY">
+    디스코드
     </a>
     </div>
     <table>
@@ -78,7 +97,7 @@ exports.ae = (app) => {
     html += `<img src="/`;                                                                                      // html 코드 추가
     html += rS.rS(root_dir[i]);                                                                                 // html 코드 추가
     html += `/thumb.png"><div class="name">`;                                                                   // html 코드 추가
-    html += root_dir[i];                                                                                        // html 코드 추가
+    html += root_dir[i].split("_")[0];                                                                          // html 코드 추가
     html += `</div></a></div></td>`;                                                                            // html 코드 추가
     }
 
