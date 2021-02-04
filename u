@@ -1,3 +1,1 @@
-git add *
-git commit -a -m "No message!"
-git push
+git add *; git commit -m "No msg"; git push
