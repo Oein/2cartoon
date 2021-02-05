@@ -99,10 +99,10 @@ exports.ae = (app) => {
     html += "<td>";                                                                                             // html 코드 추가
     html += `<div class="cartoon"><a href="/`;                                                                  // html 코드 추가
     
-    html += rS.rS(root_dir[i].split("_")[0]);                                                                                 // html 코드 추가
+    html += rS.rS(root_dir[i]);                                                                                 // html 코드 추가
     html += `/sub">`;                                                                                           // html 코드 추가
     html += `<img src="/`;                                                                                      // html 코드 추가
-    html += rS.rS(root_dir[i].split("_")[0]);                                                                                 // html 코드 추가
+    html += rS.rS(root_dir[i]);                                                                                 // html 코드 추가
     html += `/thumb.png"><div class="name">`;                                                                   // html 코드 추가
     html += root_dir[i].split("_")[0];                                                                          // html 코드 추가
     html += `</div></a></div></td>`;                                                                            // html 코드 추가

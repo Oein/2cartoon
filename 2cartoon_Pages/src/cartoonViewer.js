@@ -110,7 +110,7 @@ exports.ae = (app) => {                                                         
                 console.log("\n");
             })
 
-            app.get('/' + encodeURI(rS.rS(nows_cartoon_name.split("_")[0])) + "/sub", function(req, res) {
+            app.get('/' + encodeURI(rS.rS(nows_cartoon_name)) + "/sub", function(req, res) {
                 res.send(subcartoons_html);
             });
         });
