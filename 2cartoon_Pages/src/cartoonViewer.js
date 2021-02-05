@@ -10,7 +10,7 @@ exports.ae = (app) => {                                                         
             app.use('/' + encodeURI(rS.rS(nows_cartoon_name)), express.static(__dirname + "/../cartoons/" + nows_cartoon_name));                                                                            // 썸네일을 인터넷에 업로드
             let subcartoons_html = "<html><head><title>";                                                                                                                                                   // 만화 선택창 html
             subcartoons_html += nows_cartoon_name.split("_")[0] + "</title>";                                                                                                                                             // 만화 이름을 title로 사용
-            subcartoons_html += "<style>* {font-size: 1.3em;}  a { text-decoration:none; color: #EEEDED; margin-left: 10px; } body{ background-color:#0075C9 } </style></head><body>\n\n";                  // style을 html에 추가
+            subcartoons_html += "<style>* {font-size: 1.3em;}  a { text-decoration:none; color: #EEEDED; margin-left: 10px; } body{ background-color:#36393F } </style></head><body>\n\n";                  // style을 html에 추가
 
             fs.readdir(__dirname + "/../cartoons/" + nows_cartoon_name, function(error, nows_cartoons_hwas) {                                                                                               // 작업중인 만화폴더에서 화들을 읽기
                 subcartoons_html += "<p><h1><a href=\"/profiles/" + nows_cartoon_name.split("_")[1] + "\">제작자 : " + nows_cartoon_name.split("_")[1] + "</a></h1></p>";
@@ -48,9 +48,10 @@ exports.ae = (app) => {                                                         
                           margin-top:1%;
                           width: 90%;
                           border: 2px black solid;
+                          border-radius: 10px;
                         }
               
-                        body{ background-color:#0075C9 }
+                        body{ background-color:#36393F }
                         </style>
                         <title>` + nows_cartoon_name.split("_")[0] + " / " + nows_cartoons_hwa + "화" + " / " + files.length + "개의 파일 있음" + `</title>
                         </head>

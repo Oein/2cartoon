@@ -21,7 +21,7 @@ exports.ae = (app) => {
 
     * { font-size: large; }
     a { text-decoration:none; color: #EEEDED; }
-    body{ background-color:#0075C9 }
+    body{ background-color:#36393F }
 
     .asd{
         position: fixed;
@@ -30,7 +30,7 @@ exports.ae = (app) => {
         width: 15%;
         height: 3.1%;
         font-size: 1.05em;
-        background-color:#0075C9;
+        background-color:#36393F;
         border-radius: 10px;
         color: #EEEDED;
         text-align: center;
@@ -44,7 +44,7 @@ exports.ae = (app) => {
         width: 13%;
         height: 3.1%;
         font-size: 1.05em;
-        background-color:#0075C9;
+        background-color:#36393F;
         border-radius: 10px;
         color: #EEEDED;
         text-align: center;
@@ -58,7 +58,7 @@ exports.ae = (app) => {
         width: 13%;
         height: 3.1%;
         font-size: 1.05em;
-        background-color:#0075C9;
+        background-color:#36393F;
         border-radius: 10px;
         color: #EEEDED;
         text-align: center;
