@@ -1,6 +1,7 @@
 let fs = require('fs');                                                  // fs모듈(폴더 읽기용) 로드
 let rS = require("./rS");                                                // 스페이스바 재거 모듈 로드
 let express = require("express");
+const { profile } = require('console');
 
 let main = fs.readFileSync(__dirname + "/../html/profile.html").toString();
 
@@ -13,8 +14,8 @@ exports.ae = (app) => {
         if(profile == "imgs"){
 
         }else{
-            app.get("/profiles/" + encodeURI(profile.replace(".json" , "")) , (req , res) => {
-                let jsonProfile = require("./../Profiles/" + profile);
+            console.log("Load profile named " + profile.replace(".json" , ""));
+            let jsonProfile = require("./../Profiles/" + profile);
                 let html = main;
                 html = html.replace("$1" , jsonProfile["nickname"]);
                 html = html.replace("$1" , jsonProfile["nickname"]);
@@ -22,8 +23,11 @@ exports.ae = (app) => {
                 html = html.replace("$3" , jsonProfile["date"]);
                 html = html.replace("$4" , jsonProfile["image_src"]);
 
+            app.get("/profiles/" + encodeURI(profile.replace(".json" , "")) , (req , res) => {
                 res.send(html);
             })
+
+            console.log("Complete Load profile named " + profile.replace(".json" , ""))
         }
     });
 }
