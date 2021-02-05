@@ -74,7 +74,7 @@ exports.ae = (app) => {
     <title>2cartoon</title>
     </head>
     <body>
-    <img id="Gif" src="/MainGIf.gif" alt="2cartoon">
+    <a href="/"><img id="Gif" src="/MainGIf.gif" alt="2cartoon"></a>
     <div class="asd">
     <a class="asd" href="/rule">
     만화업로드
