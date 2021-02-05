@@ -10,7 +10,7 @@ exports.ae = (app) => {                                                         
             <title>만화업로드 주의사항</title>
             <style>
                 body{
-                    background-color: #4d4de7;
+                    background-color: #36393F;
                     color: #7DE8D4;
                 }
             </style>
