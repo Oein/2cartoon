@@ -15,12 +15,12 @@ exports.ae = (app) => {                                                         
             fs.readdir(__dirname + "/../cartoons/" + nows_cartoon_name, function(error, nows_cartoons_hwas) {    
                 let name_of_thi = nows_cartoon_name.split("_")[1] == "" ? "아직 설정되지 않았어요" :  nows_cartoon_name.split("_")[1]
                 subcartoons_html += "<p><h1><a href=\"/profiles/" + nows_cartoon_name.split("_")[1] + "\">제작자 : " + name_of_thi + "</a></h1></p>";
-                if (nows_cartoons_hwas.length == 1) {                                                                                                                                                       // 썸네일만 있으면 아무것도 없나보내요를 html에 추가
+                if (nows_cartoons_hwas.length == 2) {                                                                                                                                                       // 썸네일만 있으면 아무것도 없나보내요를 html에 추가
                     subcartoons_html += "<p><h1><a>아직 아무것도 없나보네요</a></h1></p>";
                 }
 
                 nows_cartoons_hwas.forEach(nows_cartoons_hwa => {                                                                                                                                           // 읽어진 화들을 읽으면서 반복
-                    if (nows_cartoons_hwa != "thumb.png" && nows_cartoons_hwas.length != 1) {                                                                                                               // 썸네일만 있지 않다면 아래 코드 실행
+                    if (nows_cartoons_hwa != ".DS_Store" && nows_cartoons_hwa != "thumb.png" && nows_cartoons_hwas.length != 1) {                                                                                                               // 썸네일만 있지 않다면 아래 코드 실행
                         if (isNamePrinted) {                                                                                                                                                                // 이만화의 이름전 전에 출력되지 않았다면 아래 코드 실행
                             console.log("cartoon_name : ", nows_cartoon_name);                                                                                                                              // 이만화의 이름 출력
                             isNamePrinted = false;                                                                                                                                                          // 이 만화의 이름이 전에 출력됬다고 저장
@@ -69,29 +69,31 @@ exports.ae = (app) => {                                                         
                         })
 
                         files.forEach(haw_file => {
-                            let extn = path.extname(haw_file);
-                            if (extn == ".mp4") {
-                                //영상
-                                cartoon_page_html += `
-                    <video controls loop preload="auto">
-                      <source src="/`;
-                                cartoon_page_html += rS.rS(nows_cartoon_name);
-                                cartoon_page_html += "/";
-                                cartoon_page_html += nows_cartoons_hwa;
-                                cartoon_page_html += `/`;
-                                cartoon_page_html += haw_file;
-                                cartoon_page_html += `">
-                    </video><p></p>
-                    `;
-                            } else if (extn == ".png" || extn == ".jpg" || extn == ".bmp") {
-                                //나머지
-                                cartoon_page_html += `<img src="/`;
-                                cartoon_page_html += rS.rS(nows_cartoon_name);
-                                cartoon_page_html += "/";
-                                cartoon_page_html += nows_cartoons_hwa;
-                                cartoon_page_html += `/`;
-                                cartoon_page_html += haw_file;
-                                cartoon_page_html += `" /><p></p>`;
+                            if(haw_file != ".DS_Store"){
+                                let extn = path.extname(haw_file);
+                                if (extn == ".mp4") {
+                                    //영상
+                                    cartoon_page_html += `
+                        <video controls loop preload="auto">
+                          <source src="/`;
+                                    cartoon_page_html += rS.rS(nows_cartoon_name);
+                                    cartoon_page_html += "/";
+                                    cartoon_page_html += nows_cartoons_hwa;
+                                    cartoon_page_html += `/`;
+                                    cartoon_page_html += haw_file;
+                                    cartoon_page_html += `">
+                        </video><p></p>
+                        `;
+                                } else if (extn == ".png" || extn == ".jpg" || extn == ".bmp") {
+                                    //나머지
+                                    cartoon_page_html += `<img src="/`;
+                                    cartoon_page_html += rS.rS(nows_cartoon_name);
+                                    cartoon_page_html += "/";
+                                    cartoon_page_html += nows_cartoons_hwa;
+                                    cartoon_page_html += `/`;
+                                    cartoon_page_html += haw_file;
+                                    cartoon_page_html += `" /><p></p>`;
+                                }
                             }
                         });
 
