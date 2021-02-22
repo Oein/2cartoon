@@ -3,7 +3,7 @@ let fs = require('fs');                                                         
 let rS = require("./rS");                                                                                                                                                                                   // 스페이스바 제거 모듈
 let express = require("express");                                                                                                                                                                           // 폴더를 그대로 어떤 주소에 올리기 위해서 express 모듈 로드
 
-exports.ae = (app) => {                                                                                                                                                                                     // 이 모듈.ae(app)을 입력하면 아래 코드 실행
+exports.ae = (app) => {                                                                                                                                                                                  // 이 모듈.ae(app)을 입력하면 아래 코드 실행
     fs.readdir(__dirname + "/../cartoons", function(error, cartoon_names) {                                                                                                                                 // 만화들이 들어있는 폴더를 읽은뒤 아래 코드 실행
         cartoon_names.forEach(nows_cartoon_name => {                                                                                                                                                        // 만화들 리스트에서 한 만화씩 읽으면서 반복
             let isNamePrinted = true;                                                                                                                                                                       // 지금 이 만화가 전에 출력이 안되었다고 저장
