@@ -28,6 +28,11 @@ let main = `<!DOCTYPE html>
                 border-spacing: 0 0px;
             }
 
+            n { color:#71368a; }
+            v { color:#d1ac17; }
+            m { color:#478cbc; }
+            o { color:#2eb368; }
+
             body{ background-color:#36393F }
             * { color : white; }
         </style>
@@ -56,44 +61,52 @@ exports.add = (nameOfperson , many) => {
     if(require("./d").d) console.log(nameOfperson , "   " , cartoons[nameOfperson])
 };
 
-function getRank(name){
+function getRank(name , t , s){
     let c = cartoons[name]; //count
     if(require("./d").d) console.log(name , "   " , c);
 
     if(name == "Oein"){
-        return "Operator++";
+        if(t == 0) return "o";
+        if(t == 1) return "<o style=\"" + s + "\">Operator++</o>";
     }
 
     if(c <= 5){
-        return "아직 만화의 화 수가 5개 이상 없어서 랭크가 없습니다";
+        if(t == 1) return "아직 만화의 화 수가 5개 이상 없어서 랭크가 없습니다";
     }
 
     if(c <= 15){
-        return "Nomal";
+        if(t == 0) return "n";
+        if(t == 1) return "<n style=\"" + s + "\">Nomal</n>";
     }
 
     if(c <= 25){
-        return "Vip";
+        if(t == 0) return "v";
+        if(t == 1) return "<v style=\"" + s + "\">Vip</v>";
     }
 
     if(c <= 40){
-        return "VIP+";
+        if(t == 0) return "v";
+        if(t == 1) return "<v style=\"" + s + "\">VIP+</v>";
     }
 
     if(c <= 60){
-        return "VIP++";
+        if(t == 0) return "v";
+        if(t == 1) return "<v style=\"" + s + "\">VIP++</v>";
     }
 
     if(c <= 150){
-        return "MVP";
+        if(t == 0) return "m";
+        if(t == 1) return "<m style=\"" + s + "\">MVP</m>";
     }
 
     if(c <= 210){
-        return "MVP+";
+        if(t == 0) return "m";
+        if(t == 1) return "<m style=\"" + s + "\">MVP+</m>";
     }
 
     if(c > 210){
-        return "MVP++";
+        if(t == 0) return "m";
+        if(t == 1) return "<m style=\"" + s + "\">MVP++</m>";
     }
 
     return "NONE";
@@ -111,9 +124,10 @@ exports.ae = (app) => {
             console.log("Load profile named " + profile.replace(".json" , ""));
             let jsonProfile = require("./../Profiles/" + profile);
                 let html = main;
+                let f =  getRank(jsonProfile["nickname"] , 0 , jsonProfile["style"]);
                 html = html.replace("$1" , jsonProfile["nickname"]);
-                html = html.replace("$1" , jsonProfile["nickname"]);
-                html = html.replace("$2" , getRank(jsonProfile["nickname"]));
+                html = html.replace("$1" , "<" + f + " style=\"" + jsonProfile["style"] +  "\"" + ">" + jsonProfile["nickname"] + "</" + f + ">");
+                html = html.replace("$2" , getRank(jsonProfile["nickname"] , 1 , jsonProfile["style"]));
                 html = html.replace("$3" , jsonProfile["date"]);
                 html = html.replace("$4" , jsonProfile["image_src"]);
 
