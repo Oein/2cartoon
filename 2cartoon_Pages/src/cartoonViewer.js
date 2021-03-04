@@ -15,7 +15,7 @@ exports.ae = (app) => {                                                         
             fs.readdir(__dirname + "/../cartoons/" + nows_cartoon_name, function(error, nows_cartoons_hwas) {    
                 let name_of_thi = nows_cartoon_name.split("_")[1] == "" ? "아직 설정되지 않았어요" :  nows_cartoon_name.split("_")[1]
                 subcartoons_html += "<p><h1><a href=\"/profiles/" + nows_cartoon_name.split("_")[1] + "\">제작자 : " + name_of_thi + "</a></h1></p>";
-                if (nows_cartoons_hwas.length == 2) {                                                                                                                                                       // 썸네일만 있으면 아무것도 없나보내요를 html에 추가
+                if (nows_cartoons_hwas.length == 1) {                                                                                                                                                       // 썸네일만 있으면 아무것도 없나보내요를 html에 추가
                     subcartoons_html += "<p><h1><a>아직 아무것도 없나보네요</a></h1></p>";
                 }
 
