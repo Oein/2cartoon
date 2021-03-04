@@ -6,13 +6,14 @@ let rule = require("./rule");           // 만화 업로드 주의사항 페이�
 let lisence = require("./lisence");     // 라이센스 페이지 생성 코드 로드
 let profile = require("./profilePage");
 let commer = require("./commer");
+let rank = require("./rank");
 
 view.ae(app);                           // 만화 뷰어 페이지 생성
 main.ae(app);                           // 메인 페이지 생성
 rule.ae(app);                           // 만화 업로드 주의사항 페이지 생성
 lisence.ae(app);                        // 라이센스 페이지 생성
-profile.ae(app);
+setTimeout(profile.ae , 3000 , app);
 commer.ae(app);
-
+rank.ae(app);
 
 app.listen(8280);                       // 8280번 포트에서 실행

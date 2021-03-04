@@ -23,47 +23,8 @@ exports.ae = (app) => {
     a { text-decoration:none; color: #EEEDED; }
     body{ background-color:#36393F }
 
-    .asd{
-        position: fixed;
-        left: 10px;
-        bottom: 10px;
-        width: 15%;
-        height: 3.1%;
-        font-size: 1.05em;
-        background-color:#36393F;
-        border-radius: 10px;
-        color: #EEEDED;
-        text-align: center;
-        border: black 2px solid;
-    }
-
-    .asdf{
-        position: fixed;
-        left: 17%;
-        bottom: 10px;
-        width: 13%;
-        height: 3.1%;
-        font-size: 1.05em;
-        background-color:#36393F;
-        border-radius: 10px;
-        color: #EEEDED;
-        text-align: center;
-        border: black 2px solid;
-    }
-
-    .asdfg{
-        position: fixed;
-        left: 31%;
-        bottom: 10px;
-        width: 13%;
-        height: 3.1%;
-        font-size: 1.05em;
-        background-color:#36393F;
-        border-radius: 10px;
-        color: #EEEDED;
-        text-align: center;
-        border: black 2px solid;
-    }
+    .r { padding-right:5%; }
+    .f { padding-left:5%; }
 
     img[id="Gif"]{
         top:0px;
@@ -75,19 +36,19 @@ exports.ae = (app) => {
     </head>
     <body>
     <a href="/"><img id="Gif" src="/MainGIf.gif" alt="2cartoon"></a>
-    <div class="asd">
-    <a class="asd" href="/rule">
+    
+    <div class="upper">
+    <a class="rule r f" href="/rule">
     만화업로드
     </a>
-    </div>
-    <div class="asdf">
-    <a class="asdf" href="/lisence">
+    <a class="lisence r" href="/lisence">
     라이센스
     </a>
-    </div>
-    <div class="asdfg">
-    <a class="asdfg" href="https://discord.gg/BMWufknvvY">
+    <a class="discord r" href="https://discord.gg/BMWufknvvY">
     디스코드
+    </a>
+    <a class="rank r" href="/rank">
+    랭크
     </a>
     </div>
     <table>
