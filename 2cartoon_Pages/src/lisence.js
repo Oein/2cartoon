@@ -1,7 +1,7 @@
 let fs = require("fs");                                                                 // fs 모듈 (파일 읽기 , 폴더 읽기 용 모듈) 로드
 
 let txt_files = fs.readdirSync(__dirname + "/../../lisences");                          // fs 모듈도 라이센스 파일들이 들어있는 파일들 리스트를 txt_files에 저장
-let html = "<html><head><title>2cartoon lisence</title></head><body>";                  // 라이센스 페이지 html 생성
+let html = fs.readFileSync(__dirname + "/html/lisence1.html" , "utf-8");                // 라이센스 페이지 html 생성
 
 txt_files.forEach(name => {                                                             // txt_files에 있는 항목들을 돌면서 반복
     console.log(name);                                                                  // 현재 작업중인 파일 출력
