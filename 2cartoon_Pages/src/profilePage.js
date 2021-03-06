@@ -71,6 +71,7 @@ function getRank(name , t , s){
     }
 
     if(c <= 5){
+        if(t == 0) return "ne";
         if(t == 1) return "아직 만화의 화 수가 5개 이상 없어서 랭크가 없습니다";
     }
 
