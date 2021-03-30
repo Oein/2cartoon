@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/Oein/2cartoon#readme",
   "dependencies": {
+    "child_process": "^1.0.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
-    "tinify": "^1.6.0-beta.2"
+    "tinify": "^1.6.0-beta.2",
+    "tinypng-cli": "0.0.7"
   }
 }
