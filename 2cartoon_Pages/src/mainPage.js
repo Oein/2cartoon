@@ -6,6 +6,7 @@ exports.ae = (app) => {
     let root_dir = fs.readdirSync(__dirname + "/../cartoons");           // 만화 리스트를 root_dir에 저장
     let html = fs.readFileSync(__dirname + "/html/mainPage1.html" , "utf-8");
     root_dir.splice(root_dir.indexOf(".DS_Store") , 1);
+    root_dir.splice(root_dir.indexOf("Test_test") , 1);
 
     for(let i = 0;i < root_dir.length;i++){                                                     // 만화리스트에서 만화를 하나씩 읽으며 반복
     if(i % 3 == 0) html += `</tr><tr>`;                                                                         // html에 만화가 3의 배수개많큼 있으면 다음 줄로 이동

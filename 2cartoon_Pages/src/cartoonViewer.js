@@ -20,15 +20,13 @@ exports.ae = (app) => {                                                         
                     subcartoons_html += "<p><h1><a>아직 아무것도 없나보네요</a></h1></p>";
                 }
 
-                require("./profilePage").add(nows_cartoon_name.split("_")[1] , nows_cartoons_hwas.length - 1);
-
                 nows_cartoons_hwas.forEach(nows_cartoons_hwa => {                                                                                                                                           // 읽어진 화들을 읽으면서 반복
                     if (nows_cartoons_hwa != ".DS_Store" && nows_cartoons_hwa != "thumb.png" && nows_cartoons_hwas.length != 1) {                                                                                                               // 썸네일만 있지 않다면 아래 코드 실행
                         if (isNamePrinted) {                                                                                                                                                                // 이만화의 이름전 전에 출력되지 않았다면 아래 코드 실행
                             console.log("cartoon_name : ", nows_cartoon_name);                                                                                                                              // 이만화의 이름 출력
                             isNamePrinted = false;                                                                                                                                                          // 이 만화의 이름이 전에 출력됬다고 저장
                         }
-                        console.log("nows_cartoons_hwa : ", nows_cartoons_hwa);
+                        console.log("nows_cartoons_hwa : ", Number(nows_cartoons_hwa));
 
                         subcartoons_html += `<p><h1><a href="/`;
                         subcartoons_html += rS.rS(nows_cartoon_name);
@@ -42,6 +40,8 @@ exports.ae = (app) => {                                                         
                         // <p><h1><a href="web/만화이름/화/main">{화}화</a></h1></p>
 
                         files = fs.readdirSync(__dirname + "/../cartoons/" + nows_cartoon_name + "/" + nows_cartoons_hwa);
+                        if(require("./d").d == true) console.log(Number(files.length - 1) , "   " + nows_cartoon_name.split("_")[1] + "   " + "Added");
+                        require("./profilePage").add(nows_cartoon_name.split("_")[1] , files.length - 1);
 
                         let cartoon_page_html = `
                         <html>

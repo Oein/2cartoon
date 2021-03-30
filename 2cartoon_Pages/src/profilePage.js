@@ -61,53 +61,66 @@ exports.add = (nameOfperson , many) => {
     if(require("./d").d) console.log(nameOfperson , "   " , cartoons[nameOfperson])
 };
 
+let rankCount = [
+    {"Over":20,"Name":"아직 만화의 화 수가 5개 이상 없어서 랭크가 없습니다","Tag":"ne","Output":"없음"},
+    {"Over":40,"Name":"Nomal","Tag":"n","Output":"Nomal"},
+    {"Over":60,"Name":"Vip","Tag":"v","Output":"Vip"},
+    {"Over":80,"Name":"Vip+","Tag":"v","Output":"Vip+"},
+    {"Over":100,"Name":"Vip++","Tag":"v","Output":"Vip++"},
+    {"Over":120,"Name":"MVP","Tag":"m","Output":"MVP"},
+    {"Over":140,"Name":"MVP+","Tag":"m","Output":"MVP+"},
+    {"Over":160,"Name":"MVP++","Tag":"m","Output":"MVP++ (색상 변경 가능)"},
+    {"Over":180,"Name":"Super","Tag":"sr","Output":"Super (색상 변경 가능)"},
+    {"Over":200,"Name":"Super+","Tag":"sr","Output":"Super+ (색상 변경 가능)"},
+    {"Over":220,"Name":"Super++","Tag":"sr","Output":"Super++ (색상 변경 가능)"},
+    {"Over":240,"Name":"Amazing","Tag":"ar","Output":"Amazing (색상 변경 가능)"},
+    {"Over":260,"Name":"Amazing+","Tag":"ar","Output":"Amazing+ (색상 변경 가능)"},
+    {"Over":240,"Name":"Amazing","Tag":"ar","Output":"Amazing++ (색상 변경 가능)"},
+]
+
+exports.rc = rankCount;
+
+let Operators = [{"Name":"Oein","Plus":"++"}];
+
+/**
+ * 
+ * @param {String} name //닉네임
+ * @param {Number} t   // 모드
+ * @param {String} s  // 스타일
+ */
 function getRank(name , t , s){
     let c = cartoons[name]; //count
+
+    if(cartoons[name] == undefined){
+        c = 0;
+    }
+
     if(require("./d").d) console.log(name , "   " , c);
 
-    if(name == "Oein"){
-        if(t == 0) return "o";
-        if(t == 1) return "<o style=\"" + s + "\">Operator++</o>";
-    }
+    Operators.forEach(OpElement => {
+        if(OpElement["Name"] == name){
+            if(t == 0) return "o";
+            if(t == 1) return "<o style=\"" + s + "\">Operator" + OpElement["Plus"] + "</o>";
+        }
+    });
 
-    if(c <= 5){
-        if(t == 0) return "ne";
-        if(t == 1) return "아직 만화의 화 수가 5개 이상 없어서 랭크가 없습니다";
-    }
-
-    if(c <= 15){
-        if(t == 0) return "n";
-        if(t == 1) return "<n style=\"" + s + "\">Nomal</n>";
-    }
-
-    if(c <= 25){
-        if(t == 0) return "v";
-        if(t == 1) return "<v style=\"" + s + "\">Vip</v>";
-    }
-
-    if(c <= 40){
-        if(t == 0) return "v";
-        if(t == 1) return "<v style=\"" + s + "\">VIP+</v>";
-    }
-
-    if(c <= 60){
-        if(t == 0) return "v";
-        if(t == 1) return "<v style=\"" + s + "\">VIP++</v>";
-    }
-
-    if(c <= 150){
-        if(t == 0) return "m";
-        if(t == 1) return "<m style=\"" + s + "\">MVP</m>";
-    }
-
-    if(c <= 210){
-        if(t == 0) return "m";
-        if(t == 1) return "<m style=\"" + s + "\">MVP+</m>";
-    }
-
-    if(c > 210){
-        if(t == 0) return "m";
-        if(t == 1) return "<m style=\"" + s + "\">MVP++</m>";
+    //Non Op
+    for(let i = 0;i < rankCount.length;i++){
+        if(i == rankCount.length - 1){
+            if(c > Number(rankCount[i]["Over"])){
+                //마지막 단계
+                if(t == 0) return rankCount[i]["Tag"];
+                else if(t == 1) return "<" + rankCount[i]["Tag"] + " style=\"" + s + "\">" + rankCount[i]["Name"] + "</" + rankCount[i]["Tag"] + ">";
+            }else{
+                if(t == 0) return rankCount[i-1]["Tag"];
+                else if(t == 1) return "<" + rankCount[i-1]["Tag"] + " style=\"" + s + "\">" + rankCount[i-1]["Name"] + "</" + rankCount[i-1]["Tag"] + ">";
+            }
+        }else{
+            if(c <= Number(rankCount[i]["Over"])){
+                if(t == 0) return rankCount[i]["Tag"];
+                else if(t == 1) return "<" + rankCount[i]["Tag"] + " style=\"" + s + "\">" + rankCount[i]["Name"] + "</" + rankCount[i]["Tag"] + ">";
+            }
+        }
     }
 
     return "NONE";
