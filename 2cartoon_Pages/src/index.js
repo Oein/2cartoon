@@ -1,6 +1,6 @@
 let express = require("express");       // express (서버 open용) 를 로드
 let app = express();                    // express 서버를 생성
-let compresser = require("./compress");
+
 let main = require("./mainPage");       // 메인 페이지 생성 소스 로드
 let view = require("./cartoonViewer");  // 만화 뷰어 페이지 생성 소스 로드
 let rule = require("./rule");           // 만화 업로드 주의사항 페이지 생성 소스 로드
@@ -10,7 +10,6 @@ let commer = require("./commer");
 let rank = require("./rank");
 let changeLog = require("./cl");
 
-compresser.ae();
 view.ae(app);                           // 만화 뷰어 페이지 생성
 main.ae(app);                           // 메인 페이지 생성
 rule.ae(app);                           // 만화 업로드 주의사항 페이지 생성
