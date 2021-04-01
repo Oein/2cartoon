@@ -69,6 +69,8 @@ let Rank = [
     {"Count":170,"Color":"#478cbc","Rank":"MVP++"},
 ];
 
+let Oprs = ["Oein"];
+
 exports.Rank = Rank;
 
 let People = {};
@@ -136,6 +138,22 @@ exports.ae = (app) => {
          HTML = HTML.replace("$3" , date);
          HTML = HTML.replace("$4" , image_src);
          HTML = HTML.replace("$5" , People[name]);
+
+         if(Oprs.indexOf(name) != -1){
+             HTML = HTML.replace(nameHTML.split("color:")[1].split("\"")[0] , "#2fcc71");
+             HTML = HTML.replace(nameHTML.split("color:")[1].split("\"")[0] , "#2fcc71");
+             HTML = HTML.replace(nameHTML.split("color:")[1].split("\"")[0] , "#2fcc71");
+             HTML = HTML.replace(nameHTML.split("color:")[1].split("\"")[0] , "#2fcc71");
+             HTML = HTML.replace(nameHTML.split("color:")[1].split("\"")[0] , "#2fcc71");
+             HTML = HTML.replace(nameHTML.split("color:")[1].split("\"")[0] , "#2fcc71");
+             HTML = HTML.replace(rank.Rank , "Operator");
+             HTML = HTML.replace(rank.Rank , "Operator");
+             HTML = HTML.replace(rank.Rank , "Operator");
+             HTML = HTML.replace(rank.Rank , "Operator");
+             HTML = HTML.replace(rank.Rank , "Operator");
+             HTML = HTML.replace(rank.Rank , "Operator");
+             HTML = HTML.replace(rank.Rank , "Operator");
+         }
 
          app.get("/profiles/" + encodeURI(name) , (req , res) => {
             res.send(HTML);
