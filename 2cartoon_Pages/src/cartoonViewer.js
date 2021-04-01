@@ -20,8 +20,6 @@ exports.ae = (app) => {                                                         
                     subcartoons_html += "<p><h1><a>아직 아무것도 없나보네요</a></h1></p>";
                 }
 
-                require("./profilePage").add(nows_cartoon_name.split("_")[1] , nows_cartoons_hwas.length - 1);
-
                 nows_cartoons_hwas.forEach(nows_cartoons_hwa => {                                                                                                                                           // 읽어진 화들을 읽으면서 반복
                     if (nows_cartoons_hwa != ".DS_Store" && nows_cartoons_hwa != "thumb.png" && nows_cartoons_hwas.length != 1) {                                                                                                               // 썸네일만 있지 않다면 아래 코드 실행
                         if (isNamePrinted) {                                                                                                                                                                // 이만화의 이름전 전에 출력되지 않았다면 아래 코드 실행

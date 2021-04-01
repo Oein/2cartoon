@@ -13,9 +13,9 @@ view.ae(app);                           // 만화 뷰어 페이지 생성
 main.ae(app);                           // 메인 페이지 생성
 rule.ae(app);                           // 만화 업로드 주의사항 페이지 생성
 lisence.ae(app);                        // 라이센스 페이지 생성
-setTimeout(profile.ae , 3000 , app);
 commer.ae(app);
 rank.ae(app);
 changeLog.ae(app);
+profile.ae(app);
 
 app.listen(8280);                       // 8280번 포트에서 실행

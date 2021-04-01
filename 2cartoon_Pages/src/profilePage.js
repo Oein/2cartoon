@@ -1,6 +1,9 @@
 let fs = require('fs');                                                  // fs모듈(폴더 읽기용) 로드
 let express = require("express");
 
+let sort = "장";
+exports.sort = sort;
+
 let main = `<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,11 +31,6 @@ let main = `<!DOCTYPE html>
                 border-spacing: 0 0px;
             }
 
-            n { color:#71368a; }
-            v { color:#d1ac17; }
-            m { color:#478cbc; }
-            o { color:#2eb368; }
-
             body{ background-color:#36393F }
             * { color : white; }
         </style>
@@ -44,6 +42,8 @@ let main = `<!DOCTYPE html>
                 등급 : $2
                 <p></p>
                 가입일 : $3
+                <p></p>
+                만화` + sort + `수 : $5
             </h1>
         </div>
         <div><div></div></div>
@@ -51,142 +51,94 @@ let main = `<!DOCTYPE html>
 </html>
 `;
 
-let cartoons = {};
 
-exports.add = (nameOfperson , many) => {
-    if(cartoons[nameOfperson] == undefined){
-        cartoons[nameOfperson] = 0;
-    }
-    cartoons[nameOfperson] += many;
-    if(require("./d").d) console.log(nameOfperson , "   " , cartoons[nameOfperson])
-};
+// n { color:#71368a; }
+// v { color:#d1ac17; }
+// m { color:#478cbc; }
+// o { color:#2eb368; }
 
-function getRank(name , t , s){
-    let c = cartoons[name]; //count
-    if(require("./d").d) console.log(name , "   " , c);
+let OprColor = "#2eb368";
 
-    if(name == "Oein"){
-        if(t == 0) return "o";
-        if(t == 1) return "<o style=\"" + s + "\">Operator++</o>";
-    }
+let Rank = [
+    {"Count":20,"Color":"#71368a","Rank":"None"},
+    {"Count":50,"Color":"#d1ac17","Rank":"VIP"},
+    {"Count":80,"Color":"#d1ac17","Rank":"VIP+"},
+    {"Count":100,"Color":"#d1ac17","Rank":"VIP++"},
+    {"Count":120,"Color":"#478cbc","Rank":"MVP"},
+    {"Count":150,"Color":"#478cbc","Rank":"MVP+"},
+    {"Count":170,"Color":"#478cbc","Rank":"MVP++"},
+];
 
-    if(c <= 5){
-        if(t == 0) return "ne";
-        if(t == 1) return "아직 만화의 화 수가 5개 이상 없어서 랭크가 없습니다";
-    }
+exports.Rank = Rank;
 
-    if(c <= 15){
-        if(t == 0) return "n";
-        if(t == 1) return "<n style=\"" + s + "\">Nomal</n>";
-    }
-
-    if(c <= 25){
-        if(t == 0) return "v";
-        if(t == 1) return "<v style=\"" + s + "\">Vip</v>";
-    }
-
-    if(c <= 40){
-        if(t == 0) return "v";
-        if(t == 1) return "<v style=\"" + s + "\">VIP+</v>";
-    }
-
-    if(c <= 60){
-        if(t == 0) return "v";
-        if(t == 1) return "<v style=\"" + s + "\">VIP++</v>";
-    }
-
-    if(c <= 150){
-        if(t == 0) return "m";
-        if(t == 1) return "<m style=\"" + s + "\">MVP</m>";
-    }
-
-    if(c <= 210){
-        if(t == 0) return "m";
-        if(t == 1) return "<m style=\"" + s + "\">MVP+</m>";
-    }
-
-    if(c > 210){
-        if(t == 0) return "m";
-        if(t == 1) return "<m style=\"" + s + "\">MVP++</m>";
-    }
-
-    return "NONE";
-}
+let People = {};
 
 exports.ae = (app) => {
-    app.use("/profiles/imgs", express.static(__dirname + "/../imgs"));
+    app.use('/profiles/imgs/', express.static(__dirname + "/../imgs"));
 
-    let profile_list = fs.readdirSync(__dirname + "/../Profiles");
+    let cartoon_dir = __dirname + "/../cartoons";
+    let Cartoons = fs.readdirSync(cartoon_dir , "utf-8");
+    for(let i = 0;i < Cartoons.length;i++){
+        if(Cartoons[i] == ".DS_Store") continue;
+        let cartoon_s_dir = cartoon_dir + "/" + Cartoons[i];
 
-    profile_list.forEach(profile => {
-        if(profile == "imgs"){
+        let This_cartoons_haws = fs.readdirSync(cartoon_s_dir , "utf-8");
+        
+        for(let ii = 0;ii < This_cartoons_haws.length;ii++){
+            if(This_cartoons_haws[ii] == ".DS_Store") continue;
+            if(This_cartoons_haws[ii] == "thumb.png") continue;
 
-        }else{
-            console.log("Load profile named " + profile.replace(".json" , ""));
-            let jsonProfile = require("./../Profiles/" + profile);
-                let html = main;
-                let f =  getRank(jsonProfile["nickname"] , 0 , jsonProfile["style"]);
-                html = html.replace("$1" , jsonProfile["nickname"]);
-                html = html.replace("$1" , "<" + f + " style=\"" + jsonProfile["style"] +  "\"" + ">" + jsonProfile["nickname"] + "</" + f + ">");
-                html = html.replace("$2" , getRank(jsonProfile["nickname"] , 1 , jsonProfile["style"]));
-                html = html.replace("$3" , jsonProfile["date"]);
-                html = html.replace("$4" , jsonProfile["image_src"]);
 
-            app.get("/profiles/" + encodeURI(profile.replace(".json" , "")) , (req , res) => {
-                res.send(html);
-            })
+            let This_cartoon_s_haw_s_dir = cartoon_s_dir + "/" + This_cartoons_haws[ii];
+            let This_cartoon_s_haw_s_images_list = fs.readdirSync(This_cartoon_s_haw_s_dir , "utf-8");
 
-            console.log("Complete Load profile named " + profile.replace(".json" , ""));
-            console.log("\n");
+            let idx = This_cartoon_s_haw_s_images_list.indexOf(".DS_Store");
+            if (idx > -1) This_cartoon_s_haw_s_images_list.splice(idx, 1);
+
+            if(People[Cartoons[i].split("_")[1]] == undefined) People[Cartoons[i].split("_")[1]] = 0;
+            People[Cartoons[i].split("_")[1]] += This_cartoon_s_haw_s_images_list.length;
+            console.log(Cartoons[i].split("_")[1] + ":" + People[Cartoons[i].split("_")[1]]);
         }
-    });
+    }
 
-    app.get("/profiles/" , (req , res) => {
-        let main = `<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Profile - Every Thing Is Not Seted</title>
-    </head>
-    <body>
-        <style>
-            img {
-                margin: 5%;
-                margin-left: 18%;
-                margin-right: 18%;
-                width: 60%;
-                border-radius: 10px;
-                border: 2px solid;
-            }
-            div {
-                margin-left: 18%;
-            }
-            p {
-                font-size: xx-small;
-            }
-            table {
-                border-spacing: 0 0px;
-            }
+    let PeopleList = fs.readdirSync(__dirname + "/../Profiles" , "utf-8");
 
-            body{ background-color:#36393F }
-            * { color : white; }
-        </style>
-        <img src="$4" onError="this.src='/No_profile.png';" />
-        <div>
-            <h1>
-                닉네임 : 아직 설정되지 않았어요
-                <p></p>
-                등급 : 아직 설정되지 않았어요
-                <p></p>
-                가입일 : 아직 설정되지 않았어요
-            </h1>
-        </div>
-        <div><div></div></div>
-    </body>
-</html>
-`;
+    for(let i = 0;i < PeopleList.length;i++){
+         if(PeopleList[i] == ".DS_Store") continue;
 
-            res.send(main);
-    })
-}
+         let HTML = main;
+         let rank;
+         let name = PeopleList[i].replace(".json" , "");
+
+         if(require("./d").d) console.log("Name : " , name);
+         for(let ii = 0;ii < Rank.length;ii++){
+             if(require("./d").d) console.log(name + " : " + People[name]);
+             if(Rank[ii]["Count"] > People[name]){
+                 rank = Rank[ii];
+                 if(require("./d").d) console.log("Befor for :  "  +  JSON.stringify(Rank[ii]).toString());
+                 break;
+             }
+         }
+         if(require("./d").d) console.log("After for : " + JSON.stringify(rank));
+
+         let rankHTMLTAG = rank["Rank"].toString().replace("+" , "").replace("+" , "");
+         let rankHTML = "<" + rankHTMLTAG + " style=\"color:" + rank["Color"] + "\">" + rank.Rank + "</" + rankHTMLTAG + ">";
+         
+         let nameHTML = "<" + rankHTMLTAG + " style=\"color:" + rank["Color"] + "\">" + name + "</" + rankHTMLTAG + ">";
+         
+         let  date = require("./../Profiles/" + name + ".json")["date"];
+
+         let image_src = require("./../Profiles/" + name + ".json")["image_src"];
+
+         HTML = HTML.replace("$1" , name);
+         HTML = HTML.replace("$1" , nameHTML);
+         HTML = HTML.replace("$2" , rankHTML);
+         HTML = HTML.replace("$3" , date);
+         HTML = HTML.replace("$4" , image_src);
+         HTML = HTML.replace("$5" , People[name]);
+
+         app.get("/profiles/" + encodeURI(name) , (req , res) => {
+            res.send(HTML);
+         });
+    }
+};
